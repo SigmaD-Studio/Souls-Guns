@@ -9,10 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("References")]
     private Transform aimTransform;
-
-
-    [Header("Attributes")]
-    [SerializeField] private float moveSpeed = 1f;
+    
 
     private void Awake()
     {
