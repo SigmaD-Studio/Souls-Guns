@@ -20,8 +20,17 @@ public class PlayerAim : MonoBehaviour
         // Calculate angle in radians
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x);
 
-        // Convert angle to degrees and clamp to avoid flipping upside down
-        float angleDegrees = Mathf.Clamp(angle * Mathf.Rad2Deg, angle, angle);
+        // Convert angle to degrees
+        float angleDegrees = angle * Mathf.Rad2Deg;
+
+        // Flip aimTransform based on direction
+        if (aimDirection.x < 0f)
+        {
+            angleDegrees += 180f; // Adjust angle to flip horizontally
+        }
+
+        // Clamp angle to avoid flipping upside down
+        angleDegrees = Mathf.Clamp(angleDegrees, -90f, 90f);
 
         // Rotate the aimTransform to face the mouse position horizontally
         aimTransform.eulerAngles = new Vector3(0, 0, angleDegrees);
