@@ -1,57 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAim : MonoBehaviour
+public class GunController : MonoBehaviour
 {
-    [Header("References")]
-    public Transform aimTransform; // Assign the Aim object in the Inspector
+    public Transform player;
+    [SerializeField] private Camera mainCamera;
+    [SerializeField] private Animator aimAnimator;
 
-    [Header("Attributes")]
-    [SerializeField] public float aimDistance = 1f; // Distance from player to aimTransform
+    private void Awake()
+    {
+        aimAnimator = player.GetComponent<Animator>();
+    }
+    void Start()
+    {
+        mainCamera = Camera.main;
+        
+    }
 
     void Update()
     {
-        Vector3 mousePosition = UtilsClass.GetMouseWorldPosition();
-
-        // Calculate direction from player to mouse position
-        Vector3 aimDirection = (mousePosition - transform.position).normalized;
-
-        // Calculate angle in radians
-        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x);
-
-        // Convert angle to degrees
-        float angleDegrees = angle * Mathf.Rad2Deg;
-
-        // Flip aimTransform based on direction
-        if (aimDirection.x < 0f)
-        {
-            angleDegrees += 180f; // Adjust angle to flip horizontally
-        }
-
-        // Clamp angle to avoid flipping upside down
-        angleDegrees = Mathf.Clamp(angleDegrees, -90f, 90f);
-
-        // Rotate the aimTransform to face the mouse position horizontally
-        aimTransform.eulerAngles = new Vector3(0, 0, angleDegrees);
-
-        // Position the aimTransform at a fixed distance from the player, freezing y position
-        Vector3 targetPosition = transform.position + aimDirection * aimDistance;
-        aimTransform.position = new Vector3(targetPosition.x, aimTransform.position.y, aimTransform.position.z);
+        RotateGun();
     }
 
-    public static class UtilsClass
+    private void RotateGun()
     {
-        public static Vector3 GetMouseWorldPosition()
-        {
-            return GetMouseWorldPositionWithZ(Input.mousePosition, Camera.main);
-        }
+        Vector3 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 direction = (mousePos - player.position).normalized;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+    }
 
-        public static Vector3 GetMouseWorldPositionWithZ(Vector3 screenPosition, Camera worldCamera)
+    private void HandleShooting()
+    {
+        if (Input.GetMouseButtonDown(0))
         {
-            Vector3 worldPosition = worldCamera.ScreenToWorldPoint(screenPosition);
-            worldPosition.z = 0f; // Ensure z position is correct for 2D games
-            return worldPosition;
+            aimAnimator.SetTrigger("Shoot");
         }
     }
 }
