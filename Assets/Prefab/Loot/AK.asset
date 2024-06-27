@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c045d2932e004da4388203c423861fa0, type: 3}
+  m_Name: AK
+  m_EditorClassIdentifier: 
+  lootPrefab: {fileID: 6150368512025258367, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
+  lootName: AK47
+  lootChance: 100
+  lootSprite: {fileID: -1249157444, guid: 4db22dcf79f38184997f8e1f31702ea0, type: 3}

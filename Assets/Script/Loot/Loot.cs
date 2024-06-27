@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Loot : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+[CreateAssetMenu]
 
-    // Update is called once per frame
-    void Update()
+public class Loot : ScriptableObject
+{
+    public GameObject lootPrefab;
+    public string lootName;
+    public int lootChance;
+    public Sprite lootSprite;
+
+    public Loot(string lootName, int lootChance, GameObject lootPrefab)
     {
-        
+        this.lootName = lootName;
+        this.lootChance = lootChance;   
+        this.lootPrefab = lootPrefab;
     }
 }
