@@ -7,12 +7,14 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement;
     private SpriteRenderer spriteRenderer;
     private Camera mainCamera;
+    private Animator ani;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         mainCamera = Camera.main;
+        ani = GetComponent<Animator>();
     }
 
     void Update()
@@ -30,10 +32,13 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
         movement = new Vector2(moveX, moveY).normalized;
+
     }
 
     void Move()
     {
         rb.velocity = movement * moveSpeed;
+
+        ani.SetFloat("Running", rb.velocity.magnitude);
     }
 }
