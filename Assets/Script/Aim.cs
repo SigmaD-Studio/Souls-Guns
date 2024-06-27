@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.XR;
 
 public class GunController : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class GunController : MonoBehaviour
     void Start()
     {
         mainCamera = Camera.main;
-        
+
     }
 
     void Update()
@@ -28,6 +29,7 @@ public class GunController : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
+
 
     private void HandleShooting()
     {
