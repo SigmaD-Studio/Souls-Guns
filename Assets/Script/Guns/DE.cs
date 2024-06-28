@@ -4,7 +4,9 @@ using System.Collections;
 public class DE : MonoBehaviour
 {
     public Transform firePoint; // The point where bullets are instantiated
+    public Transform muzzleFlashPoint; // The point where muzzle flash appears
     public GameObject bulletPrefab; // The bullet prefab to instantiate
+    public GameObject muzzleFlashPrefab; // The muzzle flash prefab to instantiate
     public float bulletSpeed = 20f; // Speed of the bullets
     public float fireRate = 0.3f; // Time between shots
     public int maxAmmo = 6; // Maximum ammo capacity
@@ -48,6 +50,10 @@ public class DE : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.velocity = firePoint.right * bulletSpeed;
+
+        // Instantiate muzzle flash at the muzzle flash point
+        GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, muzzleFlashPoint.position, muzzleFlashPoint.rotation);
+        Destroy(muzzleFlash, 0.1f); // Destroy the muzzle flash after a short delay
     }
 
     IEnumerator Reload()
