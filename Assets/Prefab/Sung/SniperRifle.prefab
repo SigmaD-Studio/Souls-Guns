@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2862762375086246488
+--- !u!1 &3333018303562420664
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,31 +8,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2535056755064323265}
+  - component: {fileID: 5319072481274753729}
   m_Layer: 0
-  m_Name: FiringPoint
+  m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2535056755064323265
+--- !u!4 &5319072481274753729
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2862762375086246488}
+  m_GameObject: {fileID: 3333018303562420664}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.54, y: 0.34, z: 0}
+  m_LocalPosition: {x: 1.52, y: 0.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9203573332396648113}
-  m_Father: {fileID: 2428183500888614070}
+  - {fileID: 5281404831259024292}
+  m_Father: {fileID: 7016307902026970221}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4359976476050511768
+--- !u!1 &5771658152243854440
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9203573332396648113}
+  - component: {fileID: 5281404831259024292}
   m_Layer: 0
   m_Name: FlashPoint
   m_TagString: Untagged
@@ -48,22 +48,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9203573332396648113
+--- !u!4 &5281404831259024292
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4359976476050511768}
+  m_GameObject: {fileID: 5771658152243854440}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.047999978, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.16, y: -0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2535056755064323265}
+  m_Father: {fileID: 5319072481274753729}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8761117762043677454
+--- !u!1 &6140525505751955079
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,39 +71,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2428183500888614070}
-  - component: {fileID: 4602268848471790892}
-  - component: {fileID: 1753761185518751911}
+  - component: {fileID: 7016307902026970221}
+  - component: {fileID: 1076548505665241726}
+  - component: {fileID: 7609301440491883546}
   m_Layer: 0
-  m_Name: Uzi
+  m_Name: SniperRifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2428183500888614070
+--- !u!4 &7016307902026970221
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8761117762043677454}
+  m_GameObject: {fileID: 6140525505751955079}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.65, y: -0.62, z: -0.078286305}
-  m_LocalScale: {x: 0.64, y: 0.64, z: 0.64}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.45, y: -0.046000004, z: 0}
+  m_LocalScale: {x: 0.73, y: 0.73, z: 0.73}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 2535056755064323265}
+  - {fileID: 5319072481274753729}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4602268848471790892
+--- !u!212 &1076548505665241726
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8761117762043677454}
+  m_GameObject: {fileID: 6140525505751955079}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -138,36 +138,35 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: -1626189185, guid: 4db22dcf79f38184997f8e1f31702ea0, type: 3}
+  m_Sprite: {fileID: 2034726525, guid: 4db22dcf79f38184997f8e1f31702ea0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.9375, y: 0.9375}
+  m_Size: {x: 2.8125, y: 0.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1753761185518751911
+--- !u!114 &7609301440491883546
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8761117762043677454}
+  m_GameObject: {fileID: 6140525505751955079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf50263b842c8e444bc06b49aed422bd, type: 3}
+  m_Script: {fileID: 11500000, guid: cddf03ed315165d449956b76b3e28179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 2535056755064323265}
-  flashPoint: {fileID: 9203573332396648113}
-  bulletPrefab: {fileID: 4339391016594838844, guid: 26b7b9d18d637c04488fb5bea3257149, type: 3}
-  muzzleFlashPrefab: {fileID: 618758049582583760, guid: 4c6e1bb63ae723f448c25e2e30989ee2, type: 3}
-  bulletSpeed: 20
-  fireRate: 0.05
-  maxAmmo: 30
-  reloadTime: 2
-  muzzleFlashDuration: 0.05
-  spreadAngle: 22.5
+  firePoint: {fileID: 5319072481274753729}
+  flashPoint: {fileID: 5281404831259024292}
+  bulletPrefab: {fileID: 5681074721203630710, guid: 33695fa6020ac534a814b8dbf5a98a36, type: 3}
+  muzzleFlashPrefab: {fileID: 618758049582583760, guid: e1f466132fbb00441bd83be847da4eab, type: 3}
+  bulletSpeed: 50
+  fireRate: 1
+  maxAmmo: 5
+  reloadTime: 3
+  muzzleFlashDuration: 0.1

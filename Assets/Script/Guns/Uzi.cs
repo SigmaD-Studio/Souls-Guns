@@ -1,18 +1,18 @@
 using UnityEngine;
 using System.Collections;
 
-public class AssaultRifle : MonoBehaviour
+public class Uzi : MonoBehaviour
 {
     public Transform firePoint; // The point where bullets are instantiated
     public Transform flashPoint; // The point where muzzle flash appears
     public GameObject bulletPrefab; // The bullet prefab to instantiate
     public GameObject muzzleFlashPrefab; // The muzzle flash prefab to instantiate
     public float bulletSpeed = 20f; // Speed of the bullet
-    public float fireRate = 0.1f; // Time between shots
+    public float fireRate = 0.05f; // Time between shots
     public int maxAmmo = 30; // Maximum ammo capacity
     public float reloadTime = 2f; // Time it takes to reload
     public float muzzleFlashDuration = 0.05f; // Duration of the muzzle flash
-    public float spreadAngle = 5f; // Bullet spread angle
+    public float spreadAngle = 10f; // Bullet spread angle
 
     private int currentAmmo; // Current ammo count
     private float fireTimer; // Timer to handle fire rate

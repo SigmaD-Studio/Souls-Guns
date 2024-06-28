@@ -1,22 +1,23 @@
 using UnityEngine;
 using System.Collections;
 
-public class AssaultRifle : MonoBehaviour
+public class Sniper : MonoBehaviour
 {
     public Transform firePoint; // The point where bullets are instantiated
-    public Transform flashPoint; // The point where muzzle flash appears
+    public Transform flashPoint; // The point where muzzle flash is instantiated
     public GameObject bulletPrefab; // The bullet prefab to instantiate
     public GameObject muzzleFlashPrefab; // The muzzle flash prefab to instantiate
-    public float bulletSpeed = 20f; // Speed of the bullet
-    public float fireRate = 0.1f; // Time between shots
-    public int maxAmmo = 30; // Maximum ammo capacity
-    public float reloadTime = 2f; // Time it takes to reload
-    public float muzzleFlashDuration = 0.05f; // Duration of the muzzle flash
-    public float spreadAngle = 5f; // Bullet spread angle
+    public float bulletSpeed = 50f; // Speed of the bullet
+    public float fireRate = 1f; // Time between shots
+    public int maxAmmo = 5; // Maximum ammo capacity
+    public float reloadTime = 3f; // Time it takes to reload
+    public float muzzleFlashDuration = 0.1f; // Duration of the muzzle flash
+
 
     private int currentAmmo; // Current ammo count
     private float fireTimer; // Timer to handle fire rate
     private bool isReloading = false; // Flag to check if reloading
+    private bool isZoomed = false; // Flag to check if zoomed in
 
     void Start()
     {
@@ -36,12 +37,11 @@ public class AssaultRifle : MonoBehaviour
             return;
         }
 
-        if (Input.GetButton("Fire1") && fireTimer <= 0)
+        if (Input.GetButtonDown("Fire1") && fireTimer <= 0)
         {
             Shoot();
             fireTimer = fireRate;
         }
-
         fireTimer -= Time.deltaTime;
     }
 
@@ -49,12 +49,9 @@ public class AssaultRifle : MonoBehaviour
     {
         currentAmmo--;
 
-        // Instantiate the bullet with spread
-        float angle = Random.Range(-spreadAngle / 2, spreadAngle / 2);
-        Quaternion rotation = firePoint.rotation * Quaternion.Euler(0, 0, angle);
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, rotation);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.velocity = rotation * Vector2.right * bulletSpeed;
+        rb.velocity = firePoint.right * bulletSpeed;
 
         StartCoroutine(ShowMuzzleFlash());
     }
@@ -69,7 +66,7 @@ public class AssaultRifle : MonoBehaviour
 
     IEnumerator ShowMuzzleFlash()
     {
-        GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, flashPoint.position, flashPoint.rotation, firePoint);
+        GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, flashPoint.position, flashPoint.rotation, flashPoint);
         muzzleFlash.SetActive(true);
         yield return new WaitForSeconds(muzzleFlashDuration);
         muzzleFlash.SetActive(false);

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2862762375086246488
+--- !u!1 &459495558734346316
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,62 +8,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2535056755064323265}
+  - component: {fileID: 7391478821169055356}
   m_Layer: 0
-  m_Name: FiringPoint
+  m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2535056755064323265
+--- !u!4 &7391478821169055356
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2862762375086246488}
+  m_GameObject: {fileID: 459495558734346316}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.54, y: 0.34, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 9203573332396648113}
-  m_Father: {fileID: 2428183500888614070}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4359976476050511768
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9203573332396648113}
-  m_Layer: 0
-  m_Name: FlashPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9203573332396648113
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4359976476050511768}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.047999978, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2535056755064323265}
+  m_Father: {fileID: 9152194503701008918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8761117762043677454
+--- !u!1 &6801215160067233934
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,39 +39,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2428183500888614070}
-  - component: {fileID: 4602268848471790892}
-  - component: {fileID: 1753761185518751911}
+  - component: {fileID: 9152194503701008918}
+  - component: {fileID: 7845868963518570042}
+  - component: {fileID: 3075729445537376707}
   m_Layer: 0
-  m_Name: Uzi
+  m_Name: Molotov
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2428183500888614070
+--- !u!4 &9152194503701008918
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8761117762043677454}
+  m_GameObject: {fileID: 6801215160067233934}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.65, y: -0.62, z: -0.078286305}
-  m_LocalScale: {x: 0.64, y: 0.64, z: 0.64}
+  m_LocalPosition: {x: -0.01, y: -0.28, z: 0}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 2535056755064323265}
+  - {fileID: 7391478821169055356}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4602268848471790892
+--- !u!212 &7845868963518570042
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8761117762043677454}
+  m_GameObject: {fileID: 6801215160067233934}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -137,37 +105,61 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 20
-  m_Sprite: {fileID: -1626189185, guid: 4db22dcf79f38184997f8e1f31702ea0, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 1665424950, guid: 4db22dcf79f38184997f8e1f31702ea0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.9375, y: 0.9375}
+  m_Size: {x: 0.375, y: 0.5625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1753761185518751911
+--- !u!114 &3075729445537376707
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8761117762043677454}
+  m_GameObject: {fileID: 6801215160067233934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf50263b842c8e444bc06b49aed422bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c4f2115d849df24fa6dcb860a9d88b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 2535056755064323265}
-  flashPoint: {fileID: 9203573332396648113}
-  bulletPrefab: {fileID: 4339391016594838844, guid: 26b7b9d18d637c04488fb5bea3257149, type: 3}
-  muzzleFlashPrefab: {fileID: 618758049582583760, guid: 4c6e1bb63ae723f448c25e2e30989ee2, type: 3}
-  bulletSpeed: 20
-  fireRate: 0.05
-  maxAmmo: 30
-  reloadTime: 2
-  muzzleFlashDuration: 0.05
-  spreadAngle: 22.5
+  firePoint: {fileID: 7391478821169055356}
+  molotovPrefab: {fileID: 6801215160067233934, guid: 9cdd1bad5f369b74e86ce00a9cf433d6, type: 3}
+  explosionPrefab: {fileID: 8031150421528493329, guid: c2257f08816d3ee4c83903ffb0b8c5bd, type: 3}
+  firePrefab: {fileID: 6220318856177460377, guid: fbad3e1fc2acdc2489ea93f2a1ceb803, type: 3}
+  throwSpeed: 10
+  fireDuration: 5
+  maxAmmo: 2
+  reloadTime: 90
+  throwCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  throwHeight: -1
+  gravity: 9.81
