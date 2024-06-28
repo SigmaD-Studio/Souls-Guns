@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c045d2932e004da4388203c423861fa0, type: 3}
   m_Name: PSHOTY
   m_EditorClassIdentifier: 
-  lootPrefab: {fileID: 0}
-  lootName: 
-  lootChance: 0
-  lootSprite: {fileID: 0}
+  lootPrefab: {fileID: 522923638847569862, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
+  lootName: PumpShotgun
+  lootChance: 50
+  lootSprite: {fileID: -1988068279, guid: 4db22dcf79f38184997f8e1f31702ea0, type: 3}
