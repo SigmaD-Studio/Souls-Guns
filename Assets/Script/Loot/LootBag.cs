@@ -49,7 +49,7 @@ public class LootBag : MonoBehaviour
             float dropForce = 300f;
             Vector2 dropPosition = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
             lootGO.GetComponent<Rigidbody2D>().AddForce(dropPosition * dropForce);
-            lootGO.GetComponent<Transform>().localScale = new Vector3(1.5f, 1.5f, 0f);
+            lootGO.GetComponent<Transform>().localScale = new Vector3(0.5f, 0.5f, 0f);
 
         }
     }

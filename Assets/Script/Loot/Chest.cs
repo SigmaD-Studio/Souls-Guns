@@ -17,11 +17,12 @@ public class Chest : MonoBehaviour
     }*/
 
 
-    private void Start()
+    private void Update()
     {
-        GetComponent<LootBag>().InstanateLoot(drop.transform.position);
-
-
-        
+     if (Input.GetKeyDown(KeyCode.F))
+        {
+            GetComponent<LootBag>().InstanateLoot(drop.transform.position);
+        }
+  
     }
 }
