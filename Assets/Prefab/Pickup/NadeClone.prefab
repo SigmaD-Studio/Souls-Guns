@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6058177365176575889}
   - component: {fileID: -3800660548552902697}
   - component: {fileID: -2304711064965963890}
-  - component: {fileID: 4725545539903622818}
   m_Layer: 0
   m_Name: NadeClone
   m_TagString: Untagged
@@ -149,17 +148,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.375, y: 0.5625}
   m_Direction: 0
---- !u!114 &4725545539903622818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4132976507404337027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 850da4ae27d7a98438d8eb3938665099, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 8233201982723361400, guid: 4f8a14f90c97b524fac71a3f68ea0e38, type: 3}
-  destroyDelay: 0.1
