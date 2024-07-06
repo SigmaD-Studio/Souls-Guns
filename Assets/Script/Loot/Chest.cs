@@ -15,30 +15,16 @@ public class Chest : MonoBehaviour
         col = GetComponent<Collision2D>();  
     }
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(KeyCode.E)) 
+            Debug.Log("Get tagged Player");
+            if (Input.GetKey(KeyCode.F)) 
             {
-                GetComponent<LootBag>().InstanateLoot(transform.position);
+                Debug.Log("Get key f");
+                ani.SetTrigger("Open");
             }
-        }
-    }*/
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        /*if (collision.gameObject.tag == "Player")
-        {*/
-            
-        
-    }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            ani.SetTrigger("Open");
         }
     }
 

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c045d2932e004da4388203c423861fa0, type: 3}
+  m_Name: QUADROCKET
+  m_EditorClassIdentifier: 
+  lootPrefab: {fileID: 1007662650296789812, guid: 52592ef524948164f8899f0cdfbeb3b9, type: 3}
+  lootName: QuadRocket
+  lootChance: 5
+  lootSprite: {fileID: -892130446, guid: 4db22dcf79f38184997f8e1f31702ea0, type: 3}
