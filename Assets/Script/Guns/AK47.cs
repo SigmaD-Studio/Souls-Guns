@@ -56,10 +56,7 @@ public class AssaultRifle : MonoBehaviour
             {
                 StartCoroutine(Reload());
             }
-            else
-            {
-                Destroy(gameObject); // Destroy the gun object
-            }
+            // No need to destroy the gun object when out of ammo
             return;
         }
 
@@ -118,7 +115,7 @@ public class AssaultRifle : MonoBehaviour
 
         if (reloadSlider != null)
         {
-            reloadSlider.gameObject.SetActive(false); // Hide the reload slider
+            reloadSlider.gameObject.SetActive(true); // Hide the reload slider
         }
 
         UpdateAmmoUI();

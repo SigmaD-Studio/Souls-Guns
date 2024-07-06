@@ -31,7 +31,7 @@ public class FlamethrowerController : MonoBehaviour
         {
             reloadSlider.maxValue = fuelCapacity; // Set the max value of the slider to the fuel capacity
             reloadSlider.value = currentFuel; // Set the current value of the slider to the current fuel level
-            reloadSlider.gameObject.SetActive(false); // Initially hide the slider
+            reloadSlider.gameObject.SetActive(true); // Initially hide the slider
         }
         if (flamethrowerNameText != null)
         {
@@ -138,7 +138,7 @@ public class FlamethrowerController : MonoBehaviour
 
         if (reloadSlider != null)
         {
-            reloadSlider.gameObject.SetActive(false); // Hide the reload slider
+            reloadSlider.gameObject.SetActive(true); // Hide the reload slider
         }
 
         UpdateFuelUI();
