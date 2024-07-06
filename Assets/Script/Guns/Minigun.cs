@@ -1,40 +1,41 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using TMPro;
-using UnityEngine.UI;
 
 public class Minigun : MonoBehaviour
 {
     public Transform firePoint; // The point where bullets are instantiated
-    public Transform muzzleFlashPoint; // The point where muzzle flash appears
+    public Transform flashPoint; // The point where muzzle flash appears
     public GameObject bulletPrefab; // The bullet prefab to instantiate
     public GameObject muzzleFlashPrefab; // The muzzle flash prefab to instantiate
-    public float bulletSpeed = 20f; // Speed of the bullets
-    public float fireRate = 0.05f; // Time between shots (high fire rate)
-    public float spreadAngle = 5f; // Bullet spread angle
+    public float bulletSpeed = 20f; // Speed of the bullet
+    public float fireRate = 0.05f; // Time between shots
     public int maxAmmo = 100; // Maximum ammo capacity
+    public int maxAmmoStorage = 500; // Maximum ammo storage capacity
     public float reloadTime = 4f; // Time it takes to reload
-    public int maxAmmoStorage = 500; // Maximum ammo storage
+    public float muzzleFlashDuration = 0.05f; // Duration of the muzzle flash
+    public float spreadAngle = 5f; // Bullet spread angle
+    public string gunName = "Minigun"; // Name of the gun
     public TextMeshProUGUI ammoText; // Reference to UI text for displaying ammo count
     public TextMeshProUGUI gunNameText; // Reference to UI text for displaying gun name
-    public string gunName = "Minigun"; // Name of the gun
     public Slider reloadSlider; // Reference to UI Slider for reload progress
 
-    private int currentAmmo; // Current ammo count in the gun
+    private int currentAmmo; // Current ammo count
     private int ammoStorage; // Ammo storage count
     private float fireTimer; // Timer to handle fire rate
     private bool isReloading = false; // Flag to check if reloading
+    private Coroutine reloadCoroutine; // Coroutine reference for reloading
 
     void Start()
     {
-        currentAmmo = maxAmmo;
-        ammoStorage = maxAmmoStorage;
+        InitializeAmmo();
         UpdateAmmoUI();
         if (reloadSlider != null)
         {
-            reloadSlider.maxValue = 1f; // Set the max value of the slider to 1 for normalized progress
-            reloadSlider.value = 0f; // Initialize the slider value to 0
-            reloadSlider.gameObject.SetActive(false); // Initially hide the slider
+            reloadSlider.maxValue = maxAmmo; // Set the max value of the slider to the max ammo
+            reloadSlider.value = currentAmmo; // Set the current value of the slider to the current ammo
+            reloadSlider.gameObject.SetActive(true); // Initially hide the slider
         }
         if (gunNameText != null)
         {
@@ -51,8 +52,15 @@ public class Minigun : MonoBehaviour
 
         if (currentAmmo <= 0)
         {
-            StartCoroutine(Reload());
-            return;
+            if (ammoStorage > 0)
+            {
+                reloadCoroutine = StartCoroutine(Reload()); // Start reloading
+            }
+            else
+            {
+                // Handle out of ammo condition here (e.g., stop shooting)
+                return;
+            }
         }
 
         if (Input.GetButton("Fire1") && fireTimer <= 0)
@@ -68,6 +76,14 @@ public class Minigun : MonoBehaviour
     {
         currentAmmo--;
 
+        // Stop reloading if shooting during reload
+        if (isReloading && reloadCoroutine != null)
+        {
+            StopCoroutine(reloadCoroutine);
+            isReloading = false;
+            reloadSlider.gameObject.SetActive(true); // Hide the reload slider
+        }
+
         // Instantiate the bullet with spread
         float angle = Random.Range(-spreadAngle / 2, spreadAngle / 2);
         Quaternion rotation = firePoint.rotation * Quaternion.Euler(0, 0, angle);
@@ -75,9 +91,7 @@ public class Minigun : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.velocity = rotation * Vector2.right * bulletSpeed;
 
-        // Instantiate muzzle flash at the muzzle flash point
-        GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, muzzleFlashPoint.position, muzzleFlashPoint.rotation);
-        Destroy(muzzleFlash, 0.05f); // Destroy the muzzle flash after a short delay
+        StartCoroutine(ShowMuzzleFlash());
 
         UpdateAmmoUI();
     }
@@ -97,7 +111,7 @@ public class Minigun : MonoBehaviour
         {
             if (reloadSlider != null)
             {
-                reloadSlider.value = elapsedTime / reloadTime; // Update slider value based on elapsed time
+                reloadSlider.value = Mathf.Lerp(0f, maxAmmo, elapsedTime / reloadTime); // Update slider value based on reload progress
             }
             elapsedTime += Time.deltaTime;
             yield return null;
@@ -119,11 +133,17 @@ public class Minigun : MonoBehaviour
 
         if (reloadSlider != null)
         {
-            reloadSlider.value = 1f; // Ensure slider value is set to 1 after reload
-            reloadSlider.gameObject.SetActive(false); // Hide the reload slider
+            reloadSlider.value = currentAmmo; // Ensure slider value is set to current ammo after reload
+            reloadSlider.gameObject.SetActive(true); // Hide the reload slider
         }
 
         UpdateAmmoUI();
+    }
+
+    void InitializeAmmo()
+    {
+        currentAmmo = maxAmmo;
+        ammoStorage = maxAmmoStorage; // Initialize ammo storage
     }
 
     void UpdateAmmoUI()
@@ -132,5 +152,31 @@ public class Minigun : MonoBehaviour
         {
             ammoText.text = $"{currentAmmo} / {ammoStorage}";
         }
+
+        if (reloadSlider != null)
+        {
+            reloadSlider.value = currentAmmo; // Update slider value based on current ammo
+
+            bool shouldShowReloadSlider = ammoStorage > 0 || currentAmmo > 0; // Show slider if either storage or ammo is greater than zero
+            reloadSlider.gameObject.SetActive(shouldShowReloadSlider);
+
+            if (currentAmmo == 0 && !isReloading)
+            {
+                reloadSlider.value = 1f; // Set the slider value to maximum to indicate completed reload
+            }
+            else if (isReloading && currentAmmo < maxAmmo)
+            {
+                reloadSlider.value = Mathf.Lerp(0f, maxAmmo, (maxAmmo - currentAmmo) / (float)maxAmmo); // Update slider value based on reload progress
+            }
+        }
+    }
+
+    IEnumerator ShowMuzzleFlash()
+    {
+        GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, flashPoint.position, flashPoint.rotation);
+        muzzleFlash.SetActive(true);
+        yield return new WaitForSeconds(muzzleFlashDuration);
+        muzzleFlash.SetActive(false);
+        Destroy(muzzleFlash);
     }
 }

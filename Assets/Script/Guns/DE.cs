@@ -29,9 +29,9 @@ public class DE : MonoBehaviour
         UpdateAmmoUI();
         if (reloadSlider != null)
         {
-            reloadSlider.maxValue = maxAmmo; // Set the max value of the slider to the max ammo
-            reloadSlider.value = currentAmmo; // Set the current value of the slider to the current ammo
-            reloadSlider.gameObject.SetActive(false); // Initially hide the slider
+            reloadSlider.maxValue = 1f; // Set the max value of the slider to 1 for normalized progress
+            reloadSlider.value = 1f; // Set the current value of the slider to full (max ammo)
+            reloadSlider.gameObject.SetActive(true); // Initially hide the slider
         }
         if (gunNameText != null)
         {
@@ -93,14 +93,14 @@ public class DE : MonoBehaviour
             reloadSlider.value = 0f; // Reset the slider value
         }
 
-        float elapsedTime = 0f;
-        while (elapsedTime < reloadTime)
+        float timer = 0f;
+        while (timer < reloadTime)
         {
             if (reloadSlider != null)
             {
-                reloadSlider.value = elapsedTime / reloadTime; // Update slider value based on elapsed time
+                reloadSlider.value = timer / reloadTime; // Update slider value based on reload progress
             }
-            elapsedTime += Time.deltaTime;
+            timer += Time.deltaTime;
             yield return null;
         }
 
@@ -110,8 +110,7 @@ public class DE : MonoBehaviour
 
         if (reloadSlider != null)
         {
-            reloadSlider.value = maxAmmo; // Ensure slider value is set to maxAmmo after reload
-            reloadSlider.gameObject.SetActive(false); // Hide the reload slider
+            reloadSlider.gameObject.SetActive(true); // Hide the reload slider
         }
 
         UpdateAmmoUI();
@@ -131,10 +130,7 @@ public class DE : MonoBehaviour
 
         if (reloadSlider != null)
         {
-            reloadSlider.value = currentAmmo; // Update slider value based on current ammo
-
-            bool shouldShowReloadSlider = currentAmmo < maxAmmo; // Show slider if ammo is not at maximum
-            reloadSlider.gameObject.SetActive(shouldShowReloadSlider);
+            reloadSlider.value = (float)currentAmmo / maxAmmo; // Update slider value based on current ammo
 
             if (currentAmmo == 0 && !isReloading)
             {
