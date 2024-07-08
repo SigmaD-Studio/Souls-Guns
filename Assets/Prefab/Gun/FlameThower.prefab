@@ -105,6 +105,11 @@ MonoBehaviour:
   reloadTime: 2
   shootForce: 10
   shootSpread: 15
+  flamethrowerName: Flamethrower
+  fuelText: {fileID: 0}
+  flamethrowerNameText: {fileID: 0}
+  reloadSlider: {fileID: 0}
+  maxStorage: 300
 --- !u!1 &1354180038233256970
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +135,7 @@ Transform:
   m_GameObject: {fileID: 1354180038233256970}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.162, y: 0.071, z: 0}
+  m_LocalPosition: {x: 1.396, y: 0.107, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

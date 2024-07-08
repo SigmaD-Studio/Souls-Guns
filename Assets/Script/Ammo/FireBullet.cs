@@ -10,7 +10,7 @@ public class FlamethrowerBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!hasCollided)
+        if (!hasCollided && other.CompareTag("Enemy"))
         {
             // Check if the bullet collided with an enemy
             Enemy enemy = other.GetComponent<Enemy>();
@@ -27,7 +27,6 @@ public class FlamethrowerBullet : MonoBehaviour
             hasCollided = true;
 
             // Destroy the bullet after collision
-            Destroy(gameObject);
         }
     }
 
@@ -45,5 +44,12 @@ public class FlamethrowerBullet : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
+    }
+
+    void burnOut()
+    {
+        Collider2D collider2D = GetComponent<Collider2D>();
+        collider2D.enabled = false;
+        Destroy(gameObject, 0.3f);
     }
 }
