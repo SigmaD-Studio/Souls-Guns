@@ -164,4 +164,3 @@ MonoBehaviour:
   collisionDamage: 2
   burnDamagePerSecond: 5
   burnDuration: 3
-  range: 2

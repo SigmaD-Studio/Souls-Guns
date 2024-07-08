@@ -219,7 +219,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 8233201982723361400, guid: 4f8a14f90c97b524fac71a3f68ea0e38, type: 3}
   explosionRadius: 5
   explosionDamage: 200
-  explosionDuration: 0.1
+  explosionDuration: 0.2
 --- !u!1 &7159722929390471619
 GameObject:
   m_ObjectHideFlags: 0
