@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Camera mainCamera;
     private Collider2D playerCollider; // Reference to the player's collider
+    private Animator ani;
+
 
     void Start()
     {
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         mainCamera = Camera.main;
         playerCollider = GetComponent<Collider2D>(); // Assuming the collider is on the same GameObject
+        ani = GetComponent<Animator>();
     }
 
     void Update()
@@ -54,6 +57,8 @@ public class PlayerController : MonoBehaviour
     {
         // Regular movement
         rb.velocity = movement * moveSpeed;
+        float speed = rb.velocity.magnitude;
+        ani.SetFloat("Running", speed);
     }
 
     IEnumerator Dash()
