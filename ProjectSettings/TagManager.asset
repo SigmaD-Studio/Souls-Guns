@@ -48,3 +48,6 @@ TagManager:
   - name: Enemy
     uniqueID: 4130283395
     locked: 0
+  - name: New Layer 2
+    uniqueID: 4285885145
+    locked: 0
