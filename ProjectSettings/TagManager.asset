@@ -54,3 +54,6 @@ TagManager:
   - name: Item TM
     uniqueID: 948795691
     locked: 0
+  - name: Item2 TM
+    uniqueID: 3192914153
+    locked: 0
