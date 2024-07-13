@@ -24,24 +24,34 @@ public class Enemy_Attack : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(player.transform.position, transform.position);
-        inRangeAttack();
+        
+        
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //inRangeAttack();
+    }
+
 
     void inRangeAttack()
     {
         if (distance <= atk_range)
         {
-            ani.SetTrigger("Attack");
+            StartCoroutine("Attack");
             //player.GetComponent<Player_Health>().TakeDamage(atk_damage);
-
-            
         }
     }
 
-    
+    IEnumerator Attack()
+    {
+        ani.SetTrigger("Attack");
+        yield return new WaitForSeconds(rof);
+    }
 
     public void AttackEnd()
     {
-        ani.SetTrigger("AttackEnd");
+        //ani.SetTrigger("AttackEnd");
+        ani.SetBool("Attack1", false);
     }
 }
