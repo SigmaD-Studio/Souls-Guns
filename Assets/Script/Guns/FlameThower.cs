@@ -61,10 +61,10 @@ public class FlamethrowerController : MonoBehaviour
         }
 
         // Check if out of fuel and storage to destroy the flamethrower
-        if (currentFuel <= 0 && currentStorage <= 0)
-        {
-            Destroy(gameObject);
-        }
+        //if (currentFuel <= 0 && currentStorage <= 0)
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 
     void StartFlamethrower()
