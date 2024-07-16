@@ -11,22 +11,23 @@ public class EnemyAK : MonoBehaviour
     public GameObject bulletPrefab; // The bullet prefab to instantiate
     public GameObject muzzleFlashPrefab; // The muzzle flash prefab to instantiate
     public float bulletSpeed = 20f; // Speed of the bullet
-    public float fireRate = 0.1f; // Time between shots
     public float muzzleFlashDuration = 0.05f; // Duration of the muzzle flash
     public float spreadAngle = 5f; // Bullet spread angle
 
 
     public void Shoot()
     {
-
-        float angle = Random.Range(-spreadAngle / 2, spreadAngle / 2);
-        Quaternion rotation = firePoint.rotation * Quaternion.Euler(0, 0, angle);
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.velocity = rotation * Vector2.right * bulletSpeed;
-
        
-        StartCoroutine(ShowMuzzleFlash());
+            float angle = Random.Range(-spreadAngle / 2, spreadAngle / 2);
+            Quaternion rotation = firePoint.rotation * Quaternion.Euler(0, 0, angle);
+            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, rotation);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.velocity = rotation * Vector2.right * bulletSpeed;
+
+
+            StartCoroutine(ShowMuzzleFlash());
+        
+        
     }
 
     IEnumerator ShowMuzzleFlash()

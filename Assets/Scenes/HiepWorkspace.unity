@@ -279,11 +279,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1134377956}
   m_SourcePrefab: {fileID: 100100000, guid: ebec9bc84816f4743be663453371d527, type: 3}
---- !u!1 &1033352958 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1764512788191582932, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
-  m_PrefabInstance: {fileID: 1551673192}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1033352959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3063833276576854509, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
@@ -372,8 +367,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  atkRange: 5
-  bust: 3
+  atkRange: 10
+  burstCount: 5
+  gun: {fileID: 1716093582}
+  rof: 0.2
+  burstDelay: 2
 --- !u!212 &1158234566
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -534,6 +532,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1356486389}
     m_Modifications:
+    - target: {fileID: 1764512788191582932, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3533841969416694776, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.54
@@ -576,7 +578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6150368512025258367, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
       propertyPath: m_Name
-      value: AK47
+      value: AK47Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7775031665894845876, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
       propertyPath: maxAmmo
@@ -619,10 +621,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2064792974}
   flashPoint: {fileID: 1033352959}
-  bulletPrefab: {fileID: 5026842911119241668, guid: 51a939213012050449cb77c7bdf75661, type: 3}
-  muzzleFlashPrefab: {fileID: 1033352958}
-  bulletSpeed: 20
-  fireRate: 3
+  bulletPrefab: {fileID: 5026842911119241668, guid: 389a49f5148c7794fbcc9a7ed1fab7bc, type: 3}
+  muzzleFlashPrefab: {fileID: 618758049582583760, guid: 4c6e1bb63ae723f448c25e2e30989ee2, type: 3}
+  bulletSpeed: 2
   muzzleFlashDuration: 0.05
   spreadAngle: 5
 --- !u!1 &1909661875
@@ -646,7 +647,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1909661876
 MonoBehaviour:
   m_ObjectHideFlags: 0

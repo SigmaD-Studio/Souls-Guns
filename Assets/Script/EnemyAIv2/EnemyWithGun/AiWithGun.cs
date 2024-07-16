@@ -7,10 +7,14 @@ public class AiWithGun : MonoBehaviour
 {
     public float speed;
     public float atkRange;
-    public float bust;
+    public float burstCount;
     public GameObject gun;
+    public float rof;
+    public float burstDelay;
+
 
     private float distance;
+    private bool isBursting = false;
 
 
     private Rigidbody2D rb;
@@ -31,7 +35,6 @@ public class AiWithGun : MonoBehaviour
         Vector2 direction = player.transform.position - transform.position;
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Flip(angle);
 
         if (distance > atkRange)
         {
@@ -52,29 +55,41 @@ public class AiWithGun : MonoBehaviour
 
     private void InRangeAttack(float distance)
     {
-        
-        if (distance <= atkRange)
+
+        /*timer += Time.deltaTime;
+        if (distance <= atkRange && timer >= rof)
+        {     
+            gun.SendMessage("Shoot");
+            timer = 0f;
+
+        }*/
+        if (distance <= atkRange && !isBursting)
         {
-            for (int i = 0; i < bust; i++)
+            StartCoroutine("BurstFire");
+        }
+        
+    }
+
+    private IEnumerator BurstFire()
+    {
+        isBursting = true;
+
+        for (int i = 0; i < burstCount; i++)
+        {
+            gun.SendMessage("Shoot");
+
+            if (i < burstCount - 1) // Delay between shots in a burst
             {
-                gun.SendMessage("Shoot");
+                yield return new WaitForSeconds(rof);
             }
         }
+
+        yield return new WaitForSeconds(burstDelay); // Delay between bursts
+        isBursting = false;
     }
 
 
-
-    private void Flip(float angle)
-    {
-        if (angle > 90 || angle < -90)
-        {
-            transform.localScale = new Vector3(-1f, 1f, 0f);
-        }
-        else if (angle < 90 || angle > -90)
-        {
-            transform.localScale = new Vector3(1f, 1f, 0f);
-        }
-    }
+    
 
     
 }
