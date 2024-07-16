@@ -77,6 +77,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -89,6 +90,7 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -2210,6 +2212,7 @@ ScriptedImporter:
     cells:
     - name: hobbit showcase_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2218,6 +2221,7 @@ ScriptedImporter:
       spriteId: 3ded8f2304dfee24aa8a067ad75177b2
     - name: hobbit showcase_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2226,6 +2230,7 @@ ScriptedImporter:
       spriteId: e6166562377f15c4a9299de64922ba8a
     - name: hobbit showcase_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2234,6 +2239,7 @@ ScriptedImporter:
       spriteId: 020e7683e08b18746a83f9f5c1eb654c
     - name: hobbit showcase_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2242,6 +2248,7 @@ ScriptedImporter:
       spriteId: 05b00e5dd0194fc4f98e39a26e94bf10
     - name: hobbit showcase_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2250,6 +2257,7 @@ ScriptedImporter:
       spriteId: 41937440cdc493f439b7ce626ca91252
     - name: hobbit showcase_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2258,6 +2266,7 @@ ScriptedImporter:
       spriteId: a2060af18350f27449b36fc28ad342f5
     - name: hobbit showcase_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2266,6 +2275,7 @@ ScriptedImporter:
       spriteId: f127748a88ee4e4449937256af17ad34
     - name: hobbit showcase_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2274,6 +2284,7 @@ ScriptedImporter:
       spriteId: 737f1c7d202af024bb1d6f133476a78e
     - name: hobbit showcase_Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2282,6 +2293,7 @@ ScriptedImporter:
       spriteId: 05b84cf2fb0f1794fb66b5843bfe6fe4
     - name: hobbit showcase_Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2290,6 +2302,7 @@ ScriptedImporter:
       spriteId: ae1b41676e2c0994bb5be5170e50078a
     - name: hobbit showcase_Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2298,6 +2311,7 @@ ScriptedImporter:
       spriteId: 48b7385975507004e95bbcdc9b1c739a
     - name: hobbit showcase_Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2306,6 +2320,7 @@ ScriptedImporter:
       spriteId: d793e1f7f649c5f4cb67766911eff810
     - name: hobbit showcase_Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2314,6 +2329,7 @@ ScriptedImporter:
       spriteId: cc375e4512b32204787f0a7fe5a6e855
     - name: hobbit showcase_Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2322,6 +2338,7 @@ ScriptedImporter:
       spriteId: 0d797d8e9643b184b9e0c19465e9cff9
     - name: hobbit showcase_Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2330,6 +2347,7 @@ ScriptedImporter:
       spriteId: ef7ce587c2f5512419133c16fa9f3f88
     - name: hobbit showcase_Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2338,6 +2356,7 @@ ScriptedImporter:
       spriteId: c3338e5f381408549a3f6acd9f55e58c
     - name: hobbit showcase_Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2346,6 +2365,7 @@ ScriptedImporter:
       spriteId: 408767d2440e02147b22d09d6d8bafa2
     - name: hobbit showcase_Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2354,6 +2374,7 @@ ScriptedImporter:
       spriteId: 2f6bf71705d7d9c408d101729a3be170
     - name: hobbit showcase_Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2362,6 +2383,7 @@ ScriptedImporter:
       spriteId: 80f2abb3c3f1ccf4882b96dce9ab25ac
     - name: hobbit showcase_Frame_19
       frameIndex: 19
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2370,6 +2392,7 @@ ScriptedImporter:
       spriteId: e3d8f2dacb7479c4bacddf71ee43a7b2
     - name: hobbit showcase_Frame_20
       frameIndex: 20
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2378,6 +2401,7 @@ ScriptedImporter:
       spriteId: 56f91d99dabe5a644a202ed03cb47de3
     - name: hobbit showcase_Frame_21
       frameIndex: 21
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2386,6 +2410,7 @@ ScriptedImporter:
       spriteId: 316fba0aaad0a914986eebdc079665f4
     - name: hobbit showcase_Frame_22
       frameIndex: 22
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2394,6 +2419,7 @@ ScriptedImporter:
       spriteId: 5678931371dc91145891ec85788d6ce8
     - name: hobbit showcase_Frame_23
       frameIndex: 23
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2402,6 +2428,7 @@ ScriptedImporter:
       spriteId: e5e4aa5ebf144ed418cd7a4d1e59745f
     - name: hobbit showcase_Frame_24
       frameIndex: 24
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2410,6 +2437,7 @@ ScriptedImporter:
       spriteId: 9ab5b69035d0d534fa09004b56a9b9d9
     - name: hobbit showcase_Frame_25
       frameIndex: 25
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2418,6 +2446,7 @@ ScriptedImporter:
       spriteId: 85ed03f08089a424ba3f956cd7787870
     - name: hobbit showcase_Frame_26
       frameIndex: 26
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2426,6 +2455,7 @@ ScriptedImporter:
       spriteId: f2c1a0b880516074a8571232d53747a4
     - name: hobbit showcase_Frame_27
       frameIndex: 27
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2434,6 +2464,7 @@ ScriptedImporter:
       spriteId: de4b57b5b4c7fe0499542055daa93787
     - name: hobbit showcase_Frame_28
       frameIndex: 28
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2442,6 +2473,7 @@ ScriptedImporter:
       spriteId: bee29103f04e2504d81e71938e51e402
     - name: hobbit showcase_Frame_29
       frameIndex: 29
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2450,6 +2482,7 @@ ScriptedImporter:
       spriteId: 6576a53bacde7184595efb0ef8dada2d
     - name: hobbit showcase_Frame_30
       frameIndex: 30
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2458,6 +2491,7 @@ ScriptedImporter:
       spriteId: 7104afd374259f149a306f3a7176a7f7
     - name: hobbit showcase_Frame_31
       frameIndex: 31
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2466,6 +2500,7 @@ ScriptedImporter:
       spriteId: 9615e68c37a7370429ecbbfa1f9983d9
     - name: hobbit showcase_Frame_32
       frameIndex: 32
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2474,6 +2509,7 @@ ScriptedImporter:
       spriteId: b12c5530a644e6e4bbae06cd8070ff34
     - name: hobbit showcase_Frame_33
       frameIndex: 33
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2482,6 +2518,7 @@ ScriptedImporter:
       spriteId: 58a15d8b579a1114bbccf4cef7c0c8be
     - name: hobbit showcase_Frame_34
       frameIndex: 34
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2490,6 +2527,7 @@ ScriptedImporter:
       spriteId: fffa13b05ec11f34f82c72164fc16e0a
     - name: hobbit showcase_Frame_35
       frameIndex: 35
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2498,6 +2536,7 @@ ScriptedImporter:
       spriteId: e57e556164bebdc43af1c053ba348e3d
     - name: hobbit showcase_Frame_36
       frameIndex: 36
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2506,6 +2545,7 @@ ScriptedImporter:
       spriteId: 8af622071538b4543b912df19566b724
     - name: hobbit showcase_Frame_37
       frameIndex: 37
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2514,6 +2554,7 @@ ScriptedImporter:
       spriteId: c75d7506591ce954481a42f316b81ae5
     - name: hobbit showcase_Frame_38
       frameIndex: 38
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2522,6 +2563,7 @@ ScriptedImporter:
       spriteId: 5ef3922f07b3c8e4b8b61b0097827ea5
     - name: hobbit showcase_Frame_39
       frameIndex: 39
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2530,6 +2572,7 @@ ScriptedImporter:
       spriteId: 63bc7ccfb572f194591f25648be056ad
     - name: hobbit showcase_Frame_40
       frameIndex: 40
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2538,6 +2581,7 @@ ScriptedImporter:
       spriteId: db746aa3b9a98ed4eb47c971797d6f28
     - name: hobbit showcase_Frame_41
       frameIndex: 41
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2546,6 +2590,7 @@ ScriptedImporter:
       spriteId: d069f7a684034a640865195e26744bba
     - name: hobbit showcase_Frame_42
       frameIndex: 42
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2554,6 +2599,7 @@ ScriptedImporter:
       spriteId: d4f68f385fe41124da7eec7f3d4f7804
     - name: hobbit showcase_Frame_43
       frameIndex: 43
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2562,6 +2608,7 @@ ScriptedImporter:
       spriteId: 3d68bf85710146b4f844625ac8360532
     - name: hobbit showcase_Frame_44
       frameIndex: 44
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2570,6 +2617,7 @@ ScriptedImporter:
       spriteId: 3afd20a61185f1449bdf16da85c2ae34
     - name: hobbit showcase_Frame_45
       frameIndex: 45
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2578,6 +2626,7 @@ ScriptedImporter:
       spriteId: a2b38b8cabca42c4a92152d6264dc24f
     - name: hobbit showcase_Frame_46
       frameIndex: 46
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2586,6 +2635,7 @@ ScriptedImporter:
       spriteId: cd4aedcf94559c74bb66930a0e6d898d
     - name: hobbit showcase_Frame_47
       frameIndex: 47
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2594,6 +2644,7 @@ ScriptedImporter:
       spriteId: 19dcf911a59218649965c7f8cffdc3a9
     - name: hobbit showcase_Frame_48
       frameIndex: 48
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2602,6 +2653,7 @@ ScriptedImporter:
       spriteId: 85f11076f21610740b47ef71d10247d9
     - name: hobbit showcase_Frame_49
       frameIndex: 49
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2610,6 +2662,7 @@ ScriptedImporter:
       spriteId: 45b9b3c47c02f4044a4a4215918bade0
     - name: hobbit showcase_Frame_50
       frameIndex: 50
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2618,6 +2671,7 @@ ScriptedImporter:
       spriteId: c1b8301f37fbee24ea32358a70aa5b80
     - name: hobbit showcase_Frame_51
       frameIndex: 51
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2626,6 +2680,7 @@ ScriptedImporter:
       spriteId: f600f43bac1488447bb404aec39c51d2
     - name: hobbit showcase_Frame_52
       frameIndex: 52
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2634,6 +2689,7 @@ ScriptedImporter:
       spriteId: 70c3c5a440456644ea1e4bc0e7d57fc0
     - name: hobbit showcase_Frame_53
       frameIndex: 53
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2642,6 +2698,7 @@ ScriptedImporter:
       spriteId: 2e12eebdc0697b040b3b3eca05cc7f4d
     - name: hobbit showcase_Frame_54
       frameIndex: 54
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2650,6 +2707,7 @@ ScriptedImporter:
       spriteId: 29f01a7ea8b95fa4c8c784e5bd5708d9
     - name: hobbit showcase_Frame_55
       frameIndex: 55
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2658,6 +2716,7 @@ ScriptedImporter:
       spriteId: fd2eb8cb0d3533a42b665866de9a9b4a
     - name: hobbit showcase_Frame_56
       frameIndex: 56
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2666,6 +2725,7 @@ ScriptedImporter:
       spriteId: 10aff494fba9ca34c90d65d60662aa17
     - name: hobbit showcase_Frame_57
       frameIndex: 57
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2674,6 +2734,7 @@ ScriptedImporter:
       spriteId: 206c25a576ebb4f478c4d2d981c63acc
     - name: hobbit showcase_Frame_58
       frameIndex: 58
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2682,6 +2743,7 @@ ScriptedImporter:
       spriteId: 401a2ef464ed28b4d8b5f6581bac405d
     - name: hobbit showcase_Frame_59
       frameIndex: 59
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2690,6 +2752,7 @@ ScriptedImporter:
       spriteId: 6b0ef25c13551924ba9af5ac26c70bfc
     - name: hobbit showcase_Frame_60
       frameIndex: 60
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2698,6 +2761,7 @@ ScriptedImporter:
       spriteId: 7155d9ef718066c4e8bab4ba0134c6a1
     - name: hobbit showcase_Frame_61
       frameIndex: 61
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2706,6 +2770,7 @@ ScriptedImporter:
       spriteId: 17fa5a75593118743957b4ef6577c5e9
     - name: hobbit showcase_Frame_62
       frameIndex: 62
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2714,6 +2779,7 @@ ScriptedImporter:
       spriteId: a30377ead490990418e63ad78e0cc97a
     - name: hobbit showcase_Frame_63
       frameIndex: 63
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2722,6 +2788,7 @@ ScriptedImporter:
       spriteId: 3cad304260d54144d94ccca246a3f808
     - name: hobbit showcase_Frame_64
       frameIndex: 64
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2730,6 +2797,7 @@ ScriptedImporter:
       spriteId: bb8b608c5ccf80f45885a61ce2082983
     - name: hobbit showcase_Frame_65
       frameIndex: 65
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2738,6 +2806,7 @@ ScriptedImporter:
       spriteId: 07a68782904a4e24693f73892219e234
     - name: hobbit showcase_Frame_66
       frameIndex: 66
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2746,6 +2815,7 @@ ScriptedImporter:
       spriteId: 68627cc80a1358940a337decacfb7b3d
     - name: hobbit showcase_Frame_67
       frameIndex: 67
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2754,6 +2824,7 @@ ScriptedImporter:
       spriteId: 8780e9ea9d16abf47afa94aa603124e4
     - name: hobbit showcase_Frame_68
       frameIndex: 68
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2762,6 +2833,7 @@ ScriptedImporter:
       spriteId: 7cfde9a877fafed49a4a5f457a2c4893
     - name: hobbit showcase_Frame_69
       frameIndex: 69
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2770,6 +2842,7 @@ ScriptedImporter:
       spriteId: 388fd0418c072a54ca4a6db06f753a71
     - name: hobbit showcase_Frame_70
       frameIndex: 70
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2778,6 +2851,7 @@ ScriptedImporter:
       spriteId: d0b64449560406942956e79d1922101b
     - name: hobbit showcase_Frame_71
       frameIndex: 71
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2786,6 +2860,7 @@ ScriptedImporter:
       spriteId: fb3f1236826bce041ad02b2be184bf84
     - name: hobbit showcase_Frame_72
       frameIndex: 72
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2794,6 +2869,7 @@ ScriptedImporter:
       spriteId: 07ae664b5c34d2445905f3fa5daa100c
     - name: hobbit showcase_Frame_73
       frameIndex: 73
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2802,6 +2878,7 @@ ScriptedImporter:
       spriteId: 961860488abbc9445a901f71fcc7e9c7
     - name: hobbit showcase_Frame_74
       frameIndex: 74
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2810,6 +2887,7 @@ ScriptedImporter:
       spriteId: 34929a345680de54cbda86ceeaf01489
     - name: hobbit showcase_Frame_75
       frameIndex: 75
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2818,6 +2896,7 @@ ScriptedImporter:
       spriteId: ef06af11acce43e418e8d4afbf856cd0
     - name: hobbit showcase_Frame_76
       frameIndex: 76
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2826,6 +2905,7 @@ ScriptedImporter:
       spriteId: bb617f30492f7044b9591451e92f25fc
     - name: hobbit showcase_Frame_77
       frameIndex: 77
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2834,6 +2914,7 @@ ScriptedImporter:
       spriteId: fd49b7075eb97d441897aeaf0804eaf6
     - name: hobbit showcase_Frame_78
       frameIndex: 78
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2842,6 +2923,7 @@ ScriptedImporter:
       spriteId: 8e35b344055b61a48bd793d8599ec226
     - name: hobbit showcase_Frame_79
       frameIndex: 79
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2850,6 +2932,7 @@ ScriptedImporter:
       spriteId: 48c5aa8bc09a37f4fba9a46cb43738a8
     - name: hobbit showcase_Frame_80
       frameIndex: 80
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2858,6 +2941,7 @@ ScriptedImporter:
       spriteId: 168315eaec252ee40a5c7dabe2c485b8
     - name: hobbit showcase_Frame_81
       frameIndex: 81
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2866,6 +2950,7 @@ ScriptedImporter:
       spriteId: 6a4e757ed9b846a4f8f24c2fc28745ea
     - name: hobbit showcase_Frame_82
       frameIndex: 82
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2874,6 +2959,7 @@ ScriptedImporter:
       spriteId: a06576b368e840040aaa51c4d6763ab2
     - name: hobbit showcase_Frame_83
       frameIndex: 83
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2882,6 +2968,7 @@ ScriptedImporter:
       spriteId: c5af7ea37daf0594ca6aed6eb633f124
     - name: hobbit showcase_Frame_84
       frameIndex: 84
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2890,6 +2977,7 @@ ScriptedImporter:
       spriteId: 6bc5b536c73b2ab47aedd6e40a288c7c
     - name: hobbit showcase_Frame_85
       frameIndex: 85
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2898,6 +2986,7 @@ ScriptedImporter:
       spriteId: faafa8c86b520f5429b179f7ab335249
     - name: hobbit showcase_Frame_86
       frameIndex: 86
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2906,6 +2995,7 @@ ScriptedImporter:
       spriteId: b83afd95e5bc56e4baf2bcde273bd1b6
     - name: hobbit showcase_Frame_87
       frameIndex: 87
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2914,6 +3004,7 @@ ScriptedImporter:
       spriteId: c6efa65d91013594599258516e04d9de
     - name: hobbit showcase_Frame_88
       frameIndex: 88
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2922,6 +3013,7 @@ ScriptedImporter:
       spriteId: 8e3efb75bb6ea5d4a8a0d5ec9fe19a2d
     - name: hobbit showcase_Frame_89
       frameIndex: 89
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2930,6 +3022,7 @@ ScriptedImporter:
       spriteId: fc92c2af0a18fd04b81697fad87b8fd8
     - name: hobbit showcase_Frame_90
       frameIndex: 90
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2938,6 +3031,7 @@ ScriptedImporter:
       spriteId: 119e4303343bf424fb6d753bb0c664f8
     - name: hobbit showcase_Frame_91
       frameIndex: 91
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2946,6 +3040,7 @@ ScriptedImporter:
       spriteId: cf33ed02a0828c44bb8d2292fe75afb2
     - name: hobbit showcase_Frame_92
       frameIndex: 92
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2954,6 +3049,7 @@ ScriptedImporter:
       spriteId: 5e214200e7ef4d943b8a23086e55b99b
     - name: hobbit showcase_Frame_93
       frameIndex: 93
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2962,6 +3058,7 @@ ScriptedImporter:
       spriteId: 60518c8c09a148743bb23fb0de0fe9bd
     - name: hobbit showcase_Frame_94
       frameIndex: 94
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2970,6 +3067,7 @@ ScriptedImporter:
       spriteId: 2640ad3220b77cc449f8d38dd603c96a
     - name: hobbit showcase_Frame_95
       frameIndex: 95
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2978,6 +3076,7 @@ ScriptedImporter:
       spriteId: 23c6ba490c2a3c94ab21bbe33e69152e
     - name: hobbit showcase_Frame_96
       frameIndex: 96
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2986,6 +3085,7 @@ ScriptedImporter:
       spriteId: e091ae9abe2162f4d9a3efdb29cd6303
     - name: hobbit showcase_Frame_97
       frameIndex: 97
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -2994,6 +3094,7 @@ ScriptedImporter:
       spriteId: a570c0423196c4842a39cbfa3056c470
     - name: hobbit showcase_Frame_98
       frameIndex: 98
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -3002,6 +3103,7 @@ ScriptedImporter:
       spriteId: 2321b92b588f3834ca7bb26b6a00ea1e
     - name: hobbit showcase_Frame_99
       frameIndex: 99
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -3010,6 +3112,7 @@ ScriptedImporter:
       spriteId: 664ab811a645a524caacfc2be1e45542
     - name: hobbit showcase_Frame_100
       frameIndex: 100
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -3018,6 +3121,7 @@ ScriptedImporter:
       spriteId: 6de7558d310eb144786838ff3caf951a
     - name: hobbit showcase_Frame_101
       frameIndex: 101
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -3026,6 +3130,7 @@ ScriptedImporter:
       spriteId: c140719f0784cad4cb80709d226c063d
     - name: hobbit showcase_Frame_102
       frameIndex: 102
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -3034,6 +3139,7 @@ ScriptedImporter:
       spriteId: d7dace96b8299bc4da110c83f75b96d0
     - name: hobbit showcase_Frame_103
       frameIndex: 103
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -3043,6 +3149,7 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
+  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 112, y: 64}
