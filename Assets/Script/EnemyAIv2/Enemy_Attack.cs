@@ -49,9 +49,5 @@ public class Enemy_Attack : MonoBehaviour
         yield return new WaitForSeconds(rof);
     }
 
-    public void AttackEnd()
-    {
-        //ani.SetTrigger("AttackEnd");
-        ani.SetBool("Attack1", false);
-    }
+    
 }
