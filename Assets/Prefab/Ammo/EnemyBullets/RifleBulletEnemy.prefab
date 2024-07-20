@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3544483496585855222}
   - component: {fileID: 8813933283651926335}
   m_Layer: 0
-  m_Name: RifleBullet 1
+  m_Name: RifleBulletEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,7 +143,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
