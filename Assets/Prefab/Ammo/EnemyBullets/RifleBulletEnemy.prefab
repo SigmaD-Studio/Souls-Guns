@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8813933283651926335}
   m_Layer: 0
   m_Name: RifleBulletEnemy
-  m_TagString: Untagged
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,4 +163,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   range: 50
-  damage: 15

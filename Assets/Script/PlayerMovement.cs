@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public float dashSpeed = 10f; // Speed multiplier for dashing
     public float dashDistance = 5f; // Distance to dash forward
     public float dashCooldown = 1f; // Cooldown time between dashes
-    public float dashDuration = 0.3f; // Duration of the dash in seconds
+    public float dashDuration = 1f; // Duration of the dash in seconds
     public bool isImmuneToDamage = false; // Flag for immunity to damage during dash
     public Collider2D playerHurtCollider; // Reference to the player's damage collider
     public Collider2D playerCollitionCollider; // Reference to the player's collision collider
