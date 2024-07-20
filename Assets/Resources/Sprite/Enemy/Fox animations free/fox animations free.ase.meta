@@ -1,0 +1,1067 @@
+fileFormatVersion: 2
+guid: da0d7ec6244c8a54f802bca5b0266d68
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: fox animations free_Frame_0
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 212
+      y: 151
+      width: 95
+      height: 26
+    spriteID: 4210a58eec9796842a9a6fb8d6ede31a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 212, y: 151}
+  - name: fox animations free_Frame_1
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 315
+      y: 151
+      width: 95
+      height: 26
+    spriteID: 9eacbb9dbecf15149a76bd32786d9452
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 315, y: 151}
+  - name: fox animations free_Frame_2
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 186
+      width: 95
+      height: 26
+    spriteID: 50d5237361912f642940ee9abda857b5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 186}
+  - name: fox animations free_Frame_3
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.5925926}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 116
+      width: 95
+      height: 27
+    spriteID: c7413bba6cba312448843dc371e53954
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 116}
+  - name: fox animations free_Frame_4
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 107
+      y: 186
+      width: 95
+      height: 26
+    spriteID: 6de7b45d03578b2499bef560e4278860
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 107, y: 186}
+  - name: fox animations free_Frame_5
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 210
+      y: 186
+      width: 95
+      height: 26
+    spriteID: 22cd705f3d9a87d48b50c9d25d38321d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 210, y: 186}
+  - name: fox animations free_Frame_6
+    originalName: 
+    pivot: {x: 0.13829787, y: -0.5714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 210
+      y: 80
+      width: 94
+      height: 28
+    spriteID: bbfffad338de81942801092f0bfffb5a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 210, y: 80}
+  - name: fox animations free_Frame_7
+    originalName: 
+    pivot: {x: 0.119565204, y: -0.53333336}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 415
+      y: 4
+      width: 92
+      height: 30
+    spriteID: 8492fd6c655f1224aa1a46a8716fba1c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 415, y: 4}
+  - name: fox animations free_Frame_8
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.5714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 80
+      width: 95
+      height: 28
+    spriteID: 1510467c25daade45a7342c7ad656b2d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 80}
+  - name: fox animations free_Frame_9
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.5714286}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 107
+      y: 80
+      width: 95
+      height: 28
+    spriteID: ecf87216699c42846ae750c449c5c1d5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 107, y: 80}
+  - name: fox animations free_Frame_10
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 186
+      width: 95
+      height: 26
+    spriteID: 701f1019da8a46349b09c1b5d34be72a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 186}
+  - name: fox animations free_Frame_11
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 220
+      width: 95
+      height: 26
+    spriteID: 6a7ef0369be7ba946aa23f3e2852ec36
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 220}
+  - name: fox animations free_Frame_12
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.516129}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 209
+      y: 4
+      width: 95
+      height: 31
+    spriteID: c899af119abf2ec4884ae3bc9e70fc4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 209, y: 4}
+  - name: fox animations free_Frame_13
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.516129}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 312
+      y: 4
+      width: 95
+      height: 31
+    spriteID: b9b8479ce54a3fb4ab7098a54b5978e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 312, y: 4}
+  - name: fox animations free_Frame_14
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.5555556}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 107
+      y: 116
+      width: 95
+      height: 27
+    spriteID: 0fe3435cb1c501d4cbcf94f156b89703
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 107, y: 116}
+  - name: fox animations free_Frame_15
+    originalName: 
+    pivot: {x: 0.15625, y: -0.5925926}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 312
+      y: 80
+      width: 96
+      height: 27
+    spriteID: 00d912372ba1b1140aa254fe5604a2d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 312, y: 80}
+  - name: fox animations free_Frame_16
+    originalName: 
+    pivot: {x: 0.13829787, y: -0.4848485}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 107
+      y: 4
+      width: 94
+      height: 33
+    spriteID: f2c9f3037a525404586fe3ae0921bf87
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 107, y: 4}
+  - name: fox animations free_Frame_17
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.44117647}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 95
+      height: 34
+    spriteID: 41f7d48750304554dacdc8893d30d5fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: fox animations free_Frame_18
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.5555556}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 210
+      y: 116
+      width: 95
+      height: 27
+    spriteID: afed8a85948714a4b9ec17d64d1ea2a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 210, y: 116}
+  - name: fox animations free_Frame_19
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 107
+      y: 220
+      width: 95
+      height: 26
+    spriteID: 5489cf4beba01524fad419f7cb3c1b4d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 107, y: 220}
+  - name: fox animations free_Frame_20
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 210
+      y: 220
+      width: 95
+      height: 26
+    spriteID: b6493df113bd85841bc9e38f327fdd90
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 210, y: 220}
+  - name: fox animations free_Frame_21
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.5925926}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 116
+      width: 95
+      height: 27
+    spriteID: 185d2d3c737d52c42b09be34c6191427
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 116}
+  - name: fox animations free_Frame_22
+    originalName: 
+    pivot: {x: 0.13829787, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 107
+      y: 254
+      width: 94
+      height: 26
+    spriteID: 6f74a41d30c903743b0608af4f826551
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 107, y: 254}
+  - name: fox animations free_Frame_23
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.5925926}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 151
+      width: 95
+      height: 27
+    spriteID: 2999f58fe50ec5947a314c1082af7530
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 151}
+  - name: fox animations free_Frame_24
+    originalName: 
+    pivot: {x: 0.13829787, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 209
+      y: 254
+      width: 94
+      height: 26
+    spriteID: b77eee3b98e45e0498611146a5fc3f55
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 209, y: 254}
+  - name: fox animations free_Frame_25
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 313
+      y: 220
+      width: 95
+      height: 26
+    spriteID: 1e3113846ae72d14992b1fed2c38efca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 313, y: 220}
+  - name: fox animations free_Frame_26
+    originalName: 
+    pivot: {x: 0.16494845, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 231
+      y: 46
+      width: 97
+      height: 26
+    spriteID: aeb53dbe19b749c4d8789643a1b9ca20
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 231, y: 46}
+  - name: fox animations free_Frame_27
+    originalName: 
+    pivot: {x: 0.16494845, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 336
+      y: 46
+      width: 97
+      height: 26
+    spriteID: 4a3e57ba775213844a296d62e945bda4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 336, y: 46}
+  - name: fox animations free_Frame_28
+    originalName: 
+    pivot: {x: 0.14736843, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 254
+      width: 95
+      height: 26
+    spriteID: 4f4af950e33e80b4891f12f91dc0ab69
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 254}
+  - name: fox animations free_Frame_29
+    originalName: 
+    pivot: {x: 0.16494845, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 107
+      y: 151
+      width: 97
+      height: 26
+    spriteID: fe3a389a3c151d14cba2ac48e2135a2f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 107, y: 151}
+  - name: fox animations free_Frame_30
+    originalName: 
+    pivot: {x: 0.21359223, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 120
+      y: 46
+      width: 103
+      height: 26
+    spriteID: af991dca018df4044a71b7babca2e7b0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 120, y: 46}
+  - name: fox animations free_Frame_31
+    originalName: 
+    pivot: {x: 0.25, y: -0.61538464}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 46
+      width: 108
+      height: 26
+    spriteID: 124e153c03f69594787c4d1d5f95f48d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 46}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1815507172
+    name: fox animations free
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: fox animations free_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 26
+      spriteId: 4210a58eec9796842a9a6fb8d6ede31a
+    - name: fox animations free_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 26
+      spriteId: 9eacbb9dbecf15149a76bd32786d9452
+    - name: fox animations free_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 26
+      spriteId: 50d5237361912f642940ee9abda857b5
+    - name: fox animations free_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 27
+      spriteId: c7413bba6cba312448843dc371e53954
+    - name: fox animations free_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 26
+      spriteId: 6de7b45d03578b2499bef560e4278860
+    - name: fox animations free_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 26
+      spriteId: 22cd705f3d9a87d48b50c9d25d38321d
+    - name: fox animations free_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 27
+        y: 16
+        width: 94
+        height: 28
+      spriteId: bbfffad338de81942801092f0bfffb5a
+    - name: fox animations free_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 29
+        y: 16
+        width: 92
+        height: 30
+      spriteId: 8492fd6c655f1224aa1a46a8716fba1c
+    - name: fox animations free_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 28
+      spriteId: 1510467c25daade45a7342c7ad656b2d
+    - name: fox animations free_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 28
+      spriteId: ecf87216699c42846ae750c449c5c1d5
+    - name: fox animations free_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 26
+      spriteId: 701f1019da8a46349b09c1b5d34be72a
+    - name: fox animations free_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 26
+      spriteId: 6a7ef0369be7ba946aa23f3e2852ec36
+    - name: fox animations free_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 31
+      spriteId: c899af119abf2ec4884ae3bc9e70fc4f
+    - name: fox animations free_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 31
+      spriteId: b9b8479ce54a3fb4ab7098a54b5978e3
+    - name: fox animations free_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 15
+        width: 95
+        height: 27
+      spriteId: 0fe3435cb1c501d4cbcf94f156b89703
+    - name: fox animations free_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 25
+        y: 16
+        width: 96
+        height: 27
+      spriteId: 00d912372ba1b1140aa254fe5604a2d3
+    - name: fox animations free_Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 27
+        y: 16
+        width: 94
+        height: 33
+      spriteId: f2c9f3037a525404586fe3ae0921bf87
+    - name: fox animations free_Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 15
+        width: 95
+        height: 34
+      spriteId: 41f7d48750304554dacdc8893d30d5fc
+    - name: fox animations free_Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 15
+        width: 95
+        height: 27
+      spriteId: afed8a85948714a4b9ec17d64d1ea2a5
+    - name: fox animations free_Frame_19
+      frameIndex: 19
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 26
+      spriteId: 5489cf4beba01524fad419f7cb3c1b4d
+    - name: fox animations free_Frame_20
+      frameIndex: 20
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 26
+      spriteId: b6493df113bd85841bc9e38f327fdd90
+    - name: fox animations free_Frame_21
+      frameIndex: 21
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 27
+      spriteId: 185d2d3c737d52c42b09be34c6191427
+    - name: fox animations free_Frame_22
+      frameIndex: 22
+      additiveSortOrder: 0
+      cellRect:
+        x: 27
+        y: 16
+        width: 94
+        height: 26
+      spriteId: 6f74a41d30c903743b0608af4f826551
+    - name: fox animations free_Frame_23
+      frameIndex: 23
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 27
+      spriteId: 2999f58fe50ec5947a314c1082af7530
+    - name: fox animations free_Frame_24
+      frameIndex: 24
+      additiveSortOrder: 0
+      cellRect:
+        x: 27
+        y: 16
+        width: 94
+        height: 26
+      spriteId: b77eee3b98e45e0498611146a5fc3f55
+    - name: fox animations free_Frame_25
+      frameIndex: 25
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 26
+      spriteId: 1e3113846ae72d14992b1fed2c38efca
+    - name: fox animations free_Frame_26
+      frameIndex: 26
+      additiveSortOrder: 0
+      cellRect:
+        x: 24
+        y: 16
+        width: 97
+        height: 26
+      spriteId: aeb53dbe19b749c4d8789643a1b9ca20
+    - name: fox animations free_Frame_27
+      frameIndex: 27
+      additiveSortOrder: 0
+      cellRect:
+        x: 24
+        y: 16
+        width: 97
+        height: 26
+      spriteId: 4a3e57ba775213844a296d62e945bda4
+    - name: fox animations free_Frame_28
+      frameIndex: 28
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 16
+        width: 95
+        height: 26
+      spriteId: 4f4af950e33e80b4891f12f91dc0ab69
+    - name: fox animations free_Frame_29
+      frameIndex: 29
+      additiveSortOrder: 0
+      cellRect:
+        x: 24
+        y: 16
+        width: 97
+        height: 26
+      spriteId: fe3a389a3c151d14cba2ac48e2135a2f
+    - name: fox animations free_Frame_30
+      frameIndex: 30
+      additiveSortOrder: 0
+      cellRect:
+        x: 18
+        y: 16
+        width: 103
+        height: 26
+      spriteId: af991dca018df4044a71b7babca2e7b0
+    - name: fox animations free_Frame_31
+      frameIndex: 31
+      additiveSortOrder: 0
+      cellRect:
+        x: 13
+        y: 16
+        width: 108
+        height: 26
+      spriteId: 124e153c03f69594787c4d1d5f95f48d
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 80, y: 64}
