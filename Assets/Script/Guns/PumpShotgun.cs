@@ -27,7 +27,7 @@ public class ShotgunController : MonoBehaviour
     private int pelletCount; // Total count of pellets fired
 
     // Number of pellets per shot
-    private int pelletsPerShot = 5;
+    [SerializeField] private int pelletsPerShot = 5;
 
     void Start()
     {
