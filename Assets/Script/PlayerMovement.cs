@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
         isDashing = true;
         canDash = false;
         ani.SetTrigger("Dash");
-
+        dmh.setIsDashing(isDashing);
         // Disable trigger collider during dash
         dmh.enabled = false;
 
@@ -98,7 +98,8 @@ public class PlayerController : MonoBehaviour
 
         canDash = true;
         isDashing = false;
-        
+        dmh.setIsDashing(isDashing);
+
 
     }
     void endDash() 
@@ -107,5 +108,4 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    
 }

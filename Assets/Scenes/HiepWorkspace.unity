@@ -1110,6 +1110,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5512197195933220681, guid: f52f5d973918d234b823b9e57903607d, type: 3}
+      propertyPath: atkRange
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5893775315533934816, guid: f52f5d973918d234b823b9e57903607d, type: 3}
       propertyPath: m_Sprite
       value: 

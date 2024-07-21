@@ -10,6 +10,7 @@ public class DamagedHandle : MonoBehaviour
 
     private SpriteRenderer sr;
     bool isTakingDamage = false;
+    bool isDashing;
 
 
     private void Start()
@@ -17,6 +18,7 @@ public class DamagedHandle : MonoBehaviour
         ui = GetComponent<UIHPHandler>();
         sr = GetComponent<SpriteRenderer>();
     }
+
 
     public void DamageTaken()
     {
@@ -57,11 +59,16 @@ public class DamagedHandle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (ui != null && collision.tag == "EnemyBullet") 
+        if (ui != null && collision.tag == "EnemyBullet" && !isDashing) 
         {
             Destroy(collision.gameObject);
             DamageTaken();
         }
+    }
+
+    public void setIsDashing(bool value)
+    {
+        isDashing = value;
     }
 }
 
