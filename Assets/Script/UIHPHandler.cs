@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIHPHandler : MonoBehaviour
 {
     [SerializeField] int life;
     [SerializeField] GameObject[] lifeHearts;
-
 
     private void Start()
     {

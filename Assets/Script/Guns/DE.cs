@@ -23,20 +23,20 @@ public class DE : MonoBehaviour
     private float fireTimer; // Timer to handle fire rate
     private bool isReloading = false; // Flag to check if reloading
 
+
+    void FindUI()
+    {
+        ammoText = GameObject.Find("AmmoStorage").GetComponent<TextMeshProUGUI>();
+        gunNameText = GameObject.Find("GunName").GetComponent<TextMeshProUGUI>();
+        reloadSlider = GameObject.Find("GunSlider").GetComponent<Slider>();
+    }
+
+
     void Start()
     {
+        FindUI();
         InitializeAmmo();
-        UpdateAmmoUI();
-        if (reloadSlider != null)
-        {
-            reloadSlider.maxValue = 1f; // Set the max value of the slider to 1 for normalized progress
-            reloadSlider.value = 1f; // Set the current value of the slider to full (max ammo)
-            reloadSlider.gameObject.SetActive(true); // Initially hide the slider
-        }
-        if (gunNameText != null)
-        {
-            gunNameText.text = gunName; // Set the gun name text
-        }
+        UpdateUI();
     }
 
     void Update()
@@ -71,7 +71,7 @@ public class DE : MonoBehaviour
 
         StartCoroutine(ShowMuzzleFlash());
 
-        UpdateAmmoUI();
+        UpdateUI();
     }
 
     IEnumerator ShowMuzzleFlash()
@@ -113,7 +113,7 @@ public class DE : MonoBehaviour
             reloadSlider.gameObject.SetActive(true); // Hide the reload slider
         }
 
-        UpdateAmmoUI();
+        UpdateUI();
     }
 
     void InitializeAmmo()
@@ -121,21 +121,30 @@ public class DE : MonoBehaviour
         currentAmmo = maxAmmo;
     }
 
-    void UpdateAmmoUI()
+    void UpdateUI()
     {
-        if (ammoText != null)
+
+        gunNameText.text = gunName;
+        ammoText.text = "" + currentAmmo + " / " + maxAmmo;
+        reloadSlider.value = currentAmmo; // Update slider value based on current ammo
+        reloadSlider.maxValue = maxAmmo;  // Set the max value of the slider to the max ammo
+
+        bool shouldShowReloadSlider = maxAmmo > 0 || currentAmmo > 0; // Show slider if either storage or ammo is greater than zero
+        reloadSlider.gameObject.SetActive(shouldShowReloadSlider);
+
+        if (currentAmmo == 0 && !isReloading)
         {
-            ammoText.text = $"{currentAmmo} / {maxAmmo}";
+            reloadSlider.value = 1f; // Set the slider value to maximum to indicate completed reload
+        }
+        else if (isReloading && currentAmmo < maxAmmo)
+        {
+            reloadSlider.value = Mathf.Lerp(0f, maxAmmo, (maxAmmo - currentAmmo) / (float)maxAmmo); // Update slider value based on reload progress
         }
 
-        if (reloadSlider != null)
-        {
-            reloadSlider.value = (float)currentAmmo / maxAmmo; // Update slider value based on current ammo
-
-            if (currentAmmo == 0 && !isReloading)
-            {
-                reloadSlider.value = 1f; // Set the slider value to maximum to indicate completed reload
-            }
-        }
+    }
+    private bool isEquiped = false;
+    public void isEquiping(bool value)
+    {
+        isEquiped = value;
     }
 }

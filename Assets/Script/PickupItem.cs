@@ -33,7 +33,7 @@ public class PickupItem : MonoBehaviour
         {
             equipingWepNum++;
             if (equipingWepNum >= weaponHolder.transform.childCount)
-            {s
+            {
                 equipingWepNum = 0;
             }
 
@@ -68,15 +68,20 @@ public class PickupItem : MonoBehaviour
 
     void EquipWeapon(int index)
     {
-
-        if (currentWeapon != null)
-        {
-            currentWeapon.SetActive(false);
-        }
+        GameObject lastWeapon;
 
         currentWeapon = weaponHolder.GetChild(index).gameObject;
         currentWeapon.SetActive(true);
-        GameObject lastWeapon = weaponHolder.GetChild(index - 1).gameObject;
+        currentWeapon.SendMessage("isEquiping", true);
+        if (index == 0)
+        {
+            lastWeapon = weaponHolder.GetChild(transform.childCount - 1).gameObject;
+        }
+        else
+        {
+            lastWeapon = weaponHolder.GetChild(index - 1).gameObject;
+        }
+        lastWeapon.SendMessage("isEquiping", false);
         lastWeapon.SetActive(false);
     }
 }

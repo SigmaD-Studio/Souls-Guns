@@ -325,6 +325,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4914158993682193811, guid: ebec9bc84816f4743be663453371d527, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1743314230}
     - targetCorrespondingSourceObject: {fileID: 4889152547614808429, guid: ebec9bc84816f4743be663453371d527, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1786801103}
@@ -371,8 +374,12 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1134377964}
     m_Modifications:
+    - target: {fileID: 131126135826726317, guid: 62506765e07b7b3408b9bf26a115b861, type: 3}
+      propertyPath: m_Name
+      value: GunSlider
+      objectReference: {fileID: 0}
     - target: {fileID: 519930965314397523, guid: 62506765e07b7b3408b9bf26a115b861, type: 3}
       propertyPath: m_Follow
       value: 
@@ -381,17 +388,21 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 1134377964}
+    - target: {fileID: 1623640381519453300, guid: 62506765e07b7b3408b9bf26a115b861, type: 3}
+      propertyPath: m_Name
+      value: UICanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 3123641610751333709, guid: 62506765e07b7b3408b9bf26a115b861, type: 3}
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
     - target: {fileID: 5976685120365858734, guid: 62506765e07b7b3408b9bf26a115b861, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.33
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5976685120365858734, guid: 62506765e07b7b3408b9bf26a115b861, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.21
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5976685120365858734, guid: 62506765e07b7b3408b9bf26a115b861, type: 3}
       propertyPath: m_LocalPosition.z
@@ -403,15 +414,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5976685120365858734, guid: 62506765e07b7b3408b9bf26a115b861, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5976685120365858734, guid: 62506765e07b7b3408b9bf26a115b861, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5976685120365858734, guid: 62506765e07b7b3408b9bf26a115b861, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5976685120365858734, guid: 62506765e07b7b3408b9bf26a115b861, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -880,6 +891,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4375, y: 0.625}
   m_EdgeRadius: 0
+--- !u!4 &1743314230 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5976685120365858734, guid: 62506765e07b7b3408b9bf26a115b861, type: 3}
+  m_PrefabInstance: {fileID: 755925936}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1786801103 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5415660446676195502, guid: 94e2735dae5456e488fd5e0db1ea3566, type: 3}
@@ -1540,7 +1556,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 755925936}
   - {fileID: 2080656288}
   - {fileID: 499927322}
   - {fileID: 1909661881}
