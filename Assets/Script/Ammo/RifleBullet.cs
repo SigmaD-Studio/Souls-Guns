@@ -3,8 +3,7 @@ using UnityEngine;
 public class RifleBullet : MonoBehaviour
 {
     public float speed = 20f; // Speed of the bullet
-    public float range = 50f; // Maximum distance the bullet can travel
-    public float damage = 7f; // Damage inflicted by the bullet
+    public float range = 20f; // Maximum distance the bullet can travel
 
     private float distanceTraveled = 0f; // Distance the bullet has traveled
 
@@ -23,16 +22,12 @@ public class RifleBullet : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    /*private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the bullet collided with an enemy
-        Enemy enemy = other.GetComponent<Enemy>();
-        if (enemy != null)
+        DamagedHandle player = other.GetComponent<DamagedHandle>();
+        if (player != null)
         {
-            // Deal damage to the enemy
-            enemy.TakeDamage(damage);
-
-            // Destroy the bullet upon hitting the enemy
             DestroyBullet();
         }
         else
@@ -40,7 +35,7 @@ public class RifleBullet : MonoBehaviour
             // Destroy the bullet if it hits any other object
             DestroyBullet();
         }
-    }
+    }*/
 
     void DestroyBullet()
     {

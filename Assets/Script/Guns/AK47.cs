@@ -26,25 +26,43 @@ public class AssaultRifle : MonoBehaviour
     private float fireTimer; // Timer to handle fire rate
     private bool isReloading = false; // Flag to check if reloading
 
+    
+
+    void FindUI()
+    {
+        ammoText = GameObject.Find("AmmoStorage").GetComponent<TextMeshProUGUI>();
+        gunNameText = GameObject.Find("GunName").GetComponent<TextMeshProUGUI>();
+        reloadSlider = GameObject.Find("GunSlider").GetComponent<Slider>();
+    }
+
+
+
     void Start()
     {
-        currentAmmo = maxAmmo;
-        currentAmmoStorage = maxAmmoStorage;
-        UpdateAmmoUI();
-        if (reloadSlider != null)
+        
+        if (isEquiped == true)
         {
-            reloadSlider.maxValue = maxAmmo; // Set the max value of the slider to the max ammo
-            reloadSlider.value = currentAmmo; // Set the current value of the slider to the current ammo
-            reloadSlider.gameObject.SetActive(false); // Initially hide the slider
+            FindUI();
+            currentAmmo = maxAmmo;
+            currentAmmoStorage = maxAmmoStorage;
+            UpdateUI();
+            if (reloadSlider != null)
+            {
+                reloadSlider.maxValue = maxAmmo; // Set the max value of the slider to the max ammo
+                reloadSlider.value = currentAmmo; // Set the current value of the slider to the current ammo
+                reloadSlider.gameObject.SetActive(false); // Initially hide the slider
+            }
+            if (gunNameText != null)
+            {
+                gunNameText.text = gunName; // Set the gun name text
+            }
         }
-        if (gunNameText != null)
-        {
-            gunNameText.text = gunName; // Set the gun name text
-        }
+        
     }
 
     void Update()
     {
+        
         if (isReloading)
         {
             return;
@@ -82,7 +100,7 @@ public class AssaultRifle : MonoBehaviour
 
         StartCoroutine(ShowMuzzleFlash());
 
-        UpdateAmmoUI();
+        UpdateUI();
     }
 
     IEnumerator Reload()
@@ -118,7 +136,7 @@ public class AssaultRifle : MonoBehaviour
             reloadSlider.gameObject.SetActive(true); // Hide the reload slider
         }
 
-        UpdateAmmoUI();
+        UpdateUI();
     }
 
     IEnumerator ShowMuzzleFlash()
@@ -130,18 +148,15 @@ public class AssaultRifle : MonoBehaviour
         Destroy(muzzleFlash);
     }
 
-    void UpdateAmmoUI()
+    void UpdateUI()
     {
-        if (ammoText != null)
-        {
+
+            gunNameText.text = gunName;
             ammoText.text = "" + currentAmmo + " / " + currentAmmoStorage;
-        }
-
-        if (reloadSlider != null)
-        {
             reloadSlider.value = currentAmmo; // Update slider value based on current ammo
+            reloadSlider.maxValue = maxAmmo;  // Set the max value of the slider to the max ammo
 
-            bool shouldShowReloadSlider = currentAmmoStorage > 0 || currentAmmo > 0; // Show slider if either storage or ammo is greater than zero
+             bool shouldShowReloadSlider = currentAmmoStorage > 0 || currentAmmo > 0; // Show slider if either storage or ammo is greater than zero
             reloadSlider.gameObject.SetActive(shouldShowReloadSlider);
 
             if (currentAmmo == 0 && !isReloading)
@@ -152,6 +167,12 @@ public class AssaultRifle : MonoBehaviour
             {
                 reloadSlider.value = Mathf.Lerp(0f, maxAmmo, (maxAmmo - currentAmmo) / (float)maxAmmo); // Update slider value based on reload progress
             }
-        }
+        
+    }
+
+    private bool isEquiped = false;
+    public void isEquiping(bool value)
+    {
+        isEquiped = value;
     }
 }

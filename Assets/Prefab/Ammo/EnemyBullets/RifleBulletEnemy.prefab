@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 6183912491747712266}
   - component: {fileID: -8940736397254171120}
   - component: {fileID: 3544483496585855222}
-  - component: {fileID: 8813933283651926335}
+  - component: {fileID: 7827670043691559296}
   m_Layer: 0
-  m_Name: RifleBullet 1
-  m_TagString: Untagged
+  m_Name: RifleBulletEnemy
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,13 +143,13 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.25, y: 0.078125}
   m_Direction: 1
---- !u!114 &8813933283651926335
+--- !u!114 &7827670043691559296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,9 +158,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5026842911119241668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f81036fc164f434b8bafa0ab8ef2718, type: 3}
+  m_Script: {fileID: 11500000, guid: 9973e9e57f19a294c8f71c0aaab1e37e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  range: 50
-  damage: 15
+  speed: 5
+  range: 5
+  BulletTimeOut: 5
