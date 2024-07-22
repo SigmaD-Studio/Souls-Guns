@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR;
 
-public class GunController : MonoBehaviour
+public class Aim : MonoBehaviour
 {
     public Transform player;
     [SerializeField] private Camera mainCamera;

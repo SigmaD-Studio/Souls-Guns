@@ -9,6 +9,7 @@ TagManager:
   - Map
   - BurnArea
   - EnemyBullet
+  - Weapon
   layers:
   - Default
   - TransparentFX

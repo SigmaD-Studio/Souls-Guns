@@ -167,6 +167,8 @@ MonoBehaviour:
   dashCooldown: 1
   dashDuration: 0.3
   isImmuneToDamage: 0
+  playerHurtCollider: {fileID: 0}
+  playerCollitionCollider: {fileID: 0}
 --- !u!1 &8756906931436508432
 GameObject:
   m_ObjectHideFlags: 0
