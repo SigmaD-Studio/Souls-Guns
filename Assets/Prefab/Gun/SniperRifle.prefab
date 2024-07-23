@@ -90,10 +90,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5905163117559566392}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.0976353, y: -7.1550245, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2252151812689383755}
   m_Father: {fileID: 0}
@@ -169,7 +169,7 @@ MonoBehaviour:
   bulletSpeed: 50
   fireRate: 1
   maxAmmo: 5
-  maxAmmoStorage: 90
+  maxAmmoStorage: 25
   reloadTime: 3
   muzzleFlashDuration: 0.1
   spreadAngle: 0
@@ -209,7 +209,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.2600217, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -220,5 +220,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8125, y: 0.75}
+  m_Size: {x: 2.2924566, y: 0.75}
   m_EdgeRadius: 0

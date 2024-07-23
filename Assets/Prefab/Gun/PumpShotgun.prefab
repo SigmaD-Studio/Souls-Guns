@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8442106366433196222}
   - component: {fileID: 2232287776102458929}
   - component: {fileID: 940964422293124799}
+  - component: {fileID: 2084498494495517435}
   m_Layer: 0
   m_Name: PumpShotgun
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,10 +27,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522923638847569862}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.719, y: -0.613, z: -0.078286305}
-  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6211476232231397070}
   m_Father: {fileID: 0}
@@ -102,13 +103,62 @@ MonoBehaviour:
   flashPoint: {fileID: 1886288025984121900}
   bulletPrefab: {fileID: 4339391016594838844, guid: cf119e5fcd09f4a4a8dfcc344ab73626, type: 3}
   muzzleFlashPrefab: {fileID: 618758049582583760, guid: e1f466132fbb00441bd83be847da4eab, type: 3}
-  pelletsPerShot: 10
-  bulletSpeed: 20
+  bulletSpeed: 10
   fireRate: 1
-  spreadAngle: 10
   maxAmmo: 8
-  reloadTime: 2
+  maxAmmoStorage: 24
+  reloadTime: 0.5
   muzzleFlashDuration: 0.05
+  spreadAngle: 10
+  gunName: Pump Shotgun
+  ammoText: {fileID: 0}
+  gunNameText: {fileID: 0}
+  reloadSlider: {fileID: 0}
+--- !u!61 &2084498494495517435
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522923638847569862}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.22456455, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.1875, y: 0.4375}
+    newSize: {x: 2.1875, y: 0.4375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.7383709, y: 0.4375}
+  m_EdgeRadius: 0
 --- !u!1 &5967821378090887337
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +184,7 @@ Transform:
   m_GameObject: {fileID: 5967821378090887337}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.08, y: 0.16, z: 0}
+  m_LocalPosition: {x: 1.311, y: 0.147, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -166,7 +216,7 @@ Transform:
   m_GameObject: {fileID: 7700281658849896815}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.197, y: -0.005, z: 0}
+  m_LocalPosition: {x: 0.103, y: -0.005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

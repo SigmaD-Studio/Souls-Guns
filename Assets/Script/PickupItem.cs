@@ -77,8 +77,5 @@ public class PickupItem : MonoBehaviour
         currentWeapon.SetActive(true);
         currentWeapon.SendMessage("isEquiping", true);
         currentWeapon.SendMessage("UpdateUI");
-        
-        
-        
     }
 }

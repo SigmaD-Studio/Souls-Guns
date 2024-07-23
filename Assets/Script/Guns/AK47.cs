@@ -171,8 +171,4 @@ public class AssaultRifle : MonoBehaviour
         muzzleFlash.SetActive(false);
         Destroy(muzzleFlash);
     }
-
-    
-
-    
 }

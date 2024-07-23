@@ -132,14 +132,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 550202587307734297, guid: 4b731435cc429ca47a0dea774819fa3f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 550202587307734297, guid: 4b731435cc429ca47a0dea774819fa3f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 550202587307734297, guid: 4b731435cc429ca47a0dea774819fa3f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.99
       objectReference: {fileID: 0}
@@ -183,10 +175,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniGun
       objectReference: {fileID: 0}
-    - target: {fileID: 3198062809190854246, guid: 4b731435cc429ca47a0dea774819fa3f, type: 3}
-      propertyPath: m_TagString
-      value: Weapon
-      objectReference: {fileID: 0}
     - target: {fileID: 3409230327127931297, guid: 4b731435cc429ca47a0dea774819fa3f, type: 3}
       propertyPath: m_Size.x
       value: 1.9258728
@@ -199,10 +187,6 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6841182417118246739, guid: 4b731435cc429ca47a0dea774819fa3f, type: 3}
-      propertyPath: flashPoint
-      value: 
-      objectReference: {fileID: 364422949}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -326,11 +310,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3539c130099a81b49bc8121180ad7502, type: 3}
---- !u!4 &364422949 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6274789402783239052, guid: 4b731435cc429ca47a0dea774819fa3f, type: 3}
-  m_PrefabInstance: {fileID: 106950278}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &379606227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -342,10 +321,6 @@ PrefabInstance:
     - target: {fileID: 522923638847569862, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
       propertyPath: m_Name
       value: PumpShotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 522923638847569862, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
-      propertyPath: m_TagString
-      value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 940964422293124799, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
       propertyPath: gunName
@@ -366,10 +341,6 @@ PrefabInstance:
     - target: {fileID: 1886288025984121900, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.103
-      objectReference: {fileID: 0}
-    - target: {fileID: 2232287776102458929, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
-      propertyPath: m_FlipX
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6211476232231397070, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -438,10 +409,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 522923638847569862, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1417102374}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
 --- !u!1001 &499813954
 PrefabInstance:
@@ -618,14 +586,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuadRocket
       objectReference: {fileID: 0}
-    - target: {fileID: 1007662650296789812, guid: 52592ef524948164f8899f0cdfbeb3b9, type: 3}
-      propertyPath: m_TagString
-      value: Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 2998965920990150225, guid: 52592ef524948164f8899f0cdfbeb3b9, type: 3}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3958722269279953486, guid: 52592ef524948164f8899f0cdfbeb3b9, type: 3}
       propertyPath: gunName
       value: QuadRocky
@@ -705,10 +665,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1007662650296789812, guid: 52592ef524948164f8899f0cdfbeb3b9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1666705510}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52592ef524948164f8899f0cdfbeb3b9, type: 3}
 --- !u!61 &1134377956 stripped
 BoxCollider2D:
@@ -720,106 +677,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2177235958848772446, guid: 52592ef524948164f8899f0cdfbeb3b9, type: 3}
   m_PrefabInstance: {fileID: 902386608}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1417102370 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 522923638847569862, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
-  m_PrefabInstance: {fileID: 379606227}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1417102374
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417102370}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.22456455, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.1875, y: 0.4375}
-    newSize: {x: 2.1875, y: 0.4375}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.7383709, y: 0.4375}
-  m_EdgeRadius: 0
---- !u!1 &1666705506 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1007662650296789812, guid: 52592ef524948164f8899f0cdfbeb3b9, type: 3}
-  m_PrefabInstance: {fileID: 902386608}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1666705510
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666705506}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.16546845, y: -0.18393993}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 1.5}
-    newSize: {x: 2, y: 1.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.6690631, y: 1.1321201}
-  m_EdgeRadius: 0
 --- !u!1001 &1693545639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -906,18 +763,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3533841969416694776, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3533841969416694776, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3533841969416694776, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3533841969416694776, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.89
       objectReference: {fileID: 0}
@@ -972,10 +817,6 @@ PrefabInstance:
     - target: {fileID: 6150368512025258367, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
       propertyPath: m_Name
       value: AK47
-      objectReference: {fileID: 0}
-    - target: {fileID: 6150368512025258367, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
-      propertyPath: m_TagString
-      value: Weapon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
