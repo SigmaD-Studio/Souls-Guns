@@ -7,8 +7,10 @@ public class PlayerController : MonoBehaviour
     public float dashSpeed = 10f; // Speed multiplier for dashing
     public float dashDistance = 5f; // Distance to dash forward
     public float dashCooldown = 1f; // Cooldown time between dashes
-    public float dashDuration = 0.3f; // Duration of the dash in seconds
+    public float dashDuration = 1f; // Duration of the dash in seconds
     public bool isImmuneToDamage = false; // Flag for immunity to damage during dash
+    public Collider2D playerHurtCollider; // Reference to the player's damage collider
+    public Collider2D playerCollitionCollider; // Reference to the player's collision collider
 
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -16,7 +18,8 @@ public class PlayerController : MonoBehaviour
     private bool isDashing = false;
     private SpriteRenderer spriteRenderer;
     private Camera mainCamera;
-    private Collider2D playerCollider; // Reference to the player's collider
+    private DamagedHandle dmh;
+    
     private Animator ani;
 
 
@@ -25,7 +28,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         mainCamera = Camera.main;
-        playerCollider = GetComponent<Collider2D>(); // Assuming the collider is on the same GameObject
+        dmh = GetComponent <DamagedHandle>();
+        
         ani = GetComponent<Animator>();
     }
 
@@ -66,9 +70,9 @@ public class PlayerController : MonoBehaviour
         isDashing = true;
         canDash = false;
         ani.SetTrigger("Dash");
-
+        dmh.setIsDashing(isDashing);
         // Disable trigger collider during dash
-        playerCollider.isTrigger = true;
+        dmh.enabled = false;
 
         // Calculate target position for dash
         Vector2 targetPosition = rb.position + movement.normalized * dashDistance;
@@ -83,7 +87,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Re-enable trigger collider after dash ends
-        playerCollider.isTrigger = false;
+        dmh.enabled = true;
 
         // Disable immunity and reset velocity after dash ends
         isImmuneToDamage = false;
@@ -94,11 +98,14 @@ public class PlayerController : MonoBehaviour
 
         canDash = true;
         isDashing = false;
-        
+        dmh.setIsDashing(isDashing);
+
 
     }
     void endDash() 
     {
         ani.SetTrigger("EndDash");
     }
+
+
 }

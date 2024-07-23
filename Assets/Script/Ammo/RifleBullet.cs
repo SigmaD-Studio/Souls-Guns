@@ -2,25 +2,30 @@ using UnityEngine;
 
 public class RifleBullet : MonoBehaviour
 {
-    public float speed = 20f; // Speed of the bullet
+    public float speed = 30f; // Speed of the bullet
+    public float damage = 10f; // Damage inflicted on collision
     public float range = 50f; // Maximum distance the bullet can travel
-    public float damage = 7f; // Damage inflicted by the bullet
 
     private float distanceTraveled = 0f; // Distance the bullet has traveled
 
     void Update()
     {
-        // Move the bullet forward based on its speed
-        transform.Translate(Vector3.right * speed * Time.deltaTime);
+        MoveBullet();
 
-        // Track the distance the bullet has traveled
-        distanceTraveled += speed * Time.deltaTime;
-
-        // Check if the bullet has reached its maximum range
+        // Check if the bullet has exceeded its range
         if (distanceTraveled >= range)
         {
             DestroyBullet();
         }
+    }
+
+    void MoveBullet()
+    {
+        // Move the bullet forward based on its speed (assuming it moves in the x-axis)
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
+
+        // Track the distance the bullet has traveled
+        distanceTraveled += speed * Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

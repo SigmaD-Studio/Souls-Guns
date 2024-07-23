@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1283096824390249547}
   - component: {fileID: 357823277500913605}
   - component: {fileID: 7038200560527727188}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flame 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4844,7 +4844,7 @@ GameObject:
   - component: {fileID: 8412454036980215363}
   - component: {fileID: 8506336431440559511}
   - component: {fileID: 459375538233536820}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -7,7 +7,7 @@ public class Rocket : MonoBehaviour
     public float explosionDamage; // Damage dealt by the explosion
     public float explosionDuration = 0.1f; // Duration of the explosion effect
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Explode();
     }

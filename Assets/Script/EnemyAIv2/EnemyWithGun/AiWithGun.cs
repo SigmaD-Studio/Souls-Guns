@@ -40,11 +40,11 @@ public class AiWithGun : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
             float speeding = rb.velocity.magnitude;
-            //ani.SetFloat("Speed", speed);
+            ani.SetFloat("Speed", speed);
         }
         else
         {
-            //ani.SetFloat("Speed", 0);
+            ani.SetFloat("Speed", 0);
 
         }
 

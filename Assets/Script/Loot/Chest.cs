@@ -1,25 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 
 public class Chest : MonoBehaviour
 {
-    [SerializeField] GameObject drop;
+    [SerializeField]GameObject drop;
     Animator ani;
-    bool playerInTrigger = false; // Flag to check if the player is in the trigger area
-
+    
     private void Start()
     {
-        ani = GetComponent<Animator>();
-    }
 
-    private void Update()
-    {
-        if (playerInTrigger && Input.GetKeyDown(KeyCode.F))
-        {
-            Debug.Log("Get key f");
-            ani.SetTrigger("Open");
-        }
+        ani = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,20 +19,17 @@ public class Chest : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Debug.Log("Get tagged Player");
-            playerInTrigger = true; // Player entered the trigger area
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            playerInTrigger = false; // Player exited the trigger area
+            /*if (Input.GetKey(KeyCode.F)) 
+            {*/
+                Debug.Log("Get key f");
+                ani.SetTrigger("Open");
+            
         }
     }
 
     public void OpenChest()
     {
         GetComponent<LootBag>().InstanateLoot(drop.transform.position);
+        Destroy(gameObject);
     }
 }

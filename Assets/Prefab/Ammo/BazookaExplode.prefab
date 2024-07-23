@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5873433469107129287}
   - component: {fileID: 8180844277132386693}
   - component: {fileID: 8896680079152111838}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BazookaExplode
   m_TagString: Untagged
   m_Icon: {fileID: 0}

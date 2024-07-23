@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2060890604155657269}
   - component: {fileID: 6135413718613019618}
   - component: {fileID: 3281748659050651383}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d205de7e0fa6614986cf56e6798435c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionDamage: 2
-  burnDamagePerSecond: 5
+  collisionDamage: 10
+  burnDamagePerSecond: 10
   burnDuration: 3
 --- !u!95 &3281748659050651383
 Animator:

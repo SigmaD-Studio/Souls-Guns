@@ -3,106 +3,129 @@ using UnityEngine.UI;
 using System.Collections;
 using TMPro;
 
-public class FlamethrowerController : MonoBehaviour
+public class FlameThrower : MonoBehaviour
 {
-    public Transform firePoint; // The point where flames are emitted
-    public GameObject flamePrefab; // Prefab for the flame physics object
-    public float fuelCapacity = 100f; // Maximum fuel capacity
-    public float fuelConsumptionRate = 10f; // Rate at which fuel is consumed per second
-    public float reloadTime = 2f; // Time it takes to reload fuel
-    public float shootForce = 10f; // Force applied to the flames
-    public float shootSpread = 15f; // Spread angle of flame direction
-    public string flamethrowerName = "Flamethrower"; // Name of the flamethrower
-    public TextMeshProUGUI fuelText; // Reference to UI text for displaying fuel level
-    public TextMeshProUGUI flamethrowerNameText; // Reference to UI text for displaying flamethrower name
-    public Slider reloadSlider; // Reference to UI Slider for reload progress
-    public float maxStorage = 300f; // Maximum storage capacity
+    public Transform firePoint; // The point where bullets are instantiated
+    public Transform flashPoint; // The point where muzzle flash appears
+    public GameObject bulletPrefab; // The bullet prefab to instantiate
+    public GameObject muzzleFlashPrefab; // The muzzle flash prefab to instantiate
+    public float bulletSpeed = 20f; // Speed of the bullet
+    public float fireRate = 0.1f; // Time between shots
+    public int maxAmmo = 30; // Maximum ammo capacity
+    public int maxAmmoStorage = 90; // Maximum ammo storage capacity
+    public float reloadTime = 2f; // Time it takes to reload
+    public float muzzleFlashDuration = 0.05f; // Duration of the muzzle flash
+    public float spreadAngle = 5f; // Bullet spread angle
+    public string gunName = "Assault Rifle"; // Name of the gun
 
-    private float currentFuel; // Current fuel level
-    private float currentStorage; // Current storage level
-    private bool isShooting; // Flag to check if flamethrower is shooting
-    private bool isReloading; // Flag to check if reloading fuel
+    private int currentAmmo; // Current ammo count
+    private int currentAmmoStorage; // Current ammo storage count
+    private float fireTimer; // Timer to handle fire rate
+    private bool isReloading = false; // Flag to check if reloading
+
+
+    public TextMeshProUGUI ammoText; // Reference to UI text for displaying ammo count
+    public TextMeshProUGUI gunNameText; // Reference to UI text for displaying gun name
+    public Slider reloadSlider; // Reference to UI Slider for reload progress
+
+    void FindUI()
+    {
+        ammoText = GameObject.Find("AmmoStorage").GetComponent<TextMeshProUGUI>();
+        gunNameText = GameObject.Find("GunName").GetComponent<TextMeshProUGUI>();
+        reloadSlider = GameObject.Find("GunSlider").GetComponent<Slider>();
+    }
+
+    private bool isEquiped = false;
+    public void isEquiping(bool value)
+    {
+        isEquiped = value;
+    }
 
     void Start()
     {
-        InitializeFuel();
-        UpdateFuelUI();
-        if (reloadSlider != null)
+        FindUI();
+        currentAmmo = maxAmmo;
+        currentAmmoStorage = maxAmmoStorage;
+
+    }
+
+    private void OnEnable()
+    {
+        if (isEquiped)
         {
-            reloadSlider.maxValue = fuelCapacity; // Set the max value of the slider to the fuel capacity
-            reloadSlider.value = currentFuel; // Set the current value of the slider to the current fuel level
-            reloadSlider.gameObject.SetActive(true); // Initially hide the slider
+            UpdateUI();
         }
-        if (flamethrowerNameText != null)
+
+    }
+
+    void UpdateUI()
+    {
+
+        gunNameText.text = gunName;
+        ammoText.text = "" + currentAmmo + " / " + currentAmmoStorage;
+        reloadSlider.value = currentAmmo; // Update slider value based on current ammo
+        reloadSlider.maxValue = maxAmmo;  // Set the max value of the slider to the max ammo
+
+        bool shouldShowReloadSlider = currentAmmoStorage > 0 || currentAmmo > 0; // Show slider if either storage or ammo is greater than zero
+        reloadSlider.gameObject.SetActive(shouldShowReloadSlider);
+
+        if (currentAmmo == 0 && !isReloading)
         {
-            flamethrowerNameText.text = flamethrowerName; // Set the flamethrower name text
+            reloadSlider.value = 1f; // Set the slider value to maximum to indicate completed reload
         }
+        else if (isReloading && currentAmmo < maxAmmo)
+        {
+            reloadSlider.value = Mathf.Lerp(0f, maxAmmo, (maxAmmo - currentAmmo) / (float)maxAmmo); // Update slider value based on reload progress
+        }
+
     }
 
     void Update()
     {
-        if (isReloading)
+        if (isEquiped == true)
         {
-            return;
-        }
+            if (isReloading)
+            {
+                return;
+            }
 
-        if (Input.GetButton("Fire1") && currentFuel > 0)
-        {
-            StartFlamethrower();
-        }
-        else
-        {
-            StopFlamethrower();
-        }
+            if (currentAmmo <= 0)
+            {
+                if (currentAmmoStorage > 0)
+                {
+                    StartCoroutine(Reload());
+                }
+                // No need to destroy the gun object when out of ammo
+                return;
+            }
 
-        if (currentFuel <= 0 && !isReloading && currentStorage > 0)
-        {
-            StartCoroutine(ReloadFuel());
-        }
+            if (Input.GetButton("Fire1") && fireTimer <= 0)
+            {
+                Shoot();
+                fireTimer = fireRate;
+            }
 
-        // Check if out of fuel and storage to destroy the flamethrower
-        //if (currentFuel <= 0 && currentStorage <= 0)
-        //{
-        //    Destroy(gameObject);
-        //}
+            fireTimer -= Time.deltaTime;
+        }
     }
 
-    void StartFlamethrower()
+    void Shoot()
     {
-        if (!isShooting)
-        {
-            isShooting = true;
-            StartCoroutine(ShootFlames());
-        }
+        currentAmmo--;
 
-        currentFuel -= fuelConsumptionRate * Time.deltaTime;
-        UpdateFuelUI();
+        // Instantiate the bullet with spread
+        float angle = Random.Range(-spreadAngle / 2, spreadAngle / 2);
+        Quaternion rotation = firePoint.rotation * Quaternion.Euler(0, 0, angle);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.velocity = rotation * Vector2.right * bulletSpeed;
+
+        StartCoroutine(ShowMuzzleFlash());
+
+        UpdateUI();
     }
 
-    void StopFlamethrower()
-    {
-        if (isShooting)
-        {
-            isShooting = false;
-        }
-    }
-
-    IEnumerator ShootFlames()
-    {
-        while (isShooting && currentFuel > 0)
-        {
-            float spreadAngle = Random.Range(-shootSpread / 2f, shootSpread / 2f);
-            Quaternion rotation = Quaternion.Euler(0f, 0f, spreadAngle);
-
-            GameObject flame = Instantiate(flamePrefab, firePoint.position, firePoint.rotation * rotation);
-            Rigidbody2D rb = flame.GetComponent<Rigidbody2D>();
-            rb.AddForce(flame.transform.right * shootForce, ForceMode2D.Impulse);
-
-            yield return new WaitForSeconds(0.1f); // Adjust delay between each flame shot
-        }
-    }
-
-    IEnumerator ReloadFuel()
+    IEnumerator Reload()
     {
         isReloading = true;
 
@@ -117,22 +140,16 @@ public class FlamethrowerController : MonoBehaviour
         {
             if (reloadSlider != null)
             {
-                reloadSlider.value = Mathf.Lerp(0f, fuelCapacity, timer / reloadTime); // Update slider value based on reload progress
+                reloadSlider.value = Mathf.Lerp(0f, maxAmmo, timer / reloadTime); // Update slider value based on reload progress
             }
             timer += Time.deltaTime;
             yield return null;
         }
 
-        if (currentStorage > fuelCapacity)
-        {
-            currentFuel = fuelCapacity;
-            currentStorage -= fuelCapacity;
-        }
-        else
-        {
-            currentFuel = currentStorage;
-            currentStorage = 0;
-        }
+        int ammoNeeded = maxAmmo - currentAmmo;
+        int ammoToReload = Mathf.Min(currentAmmoStorage, ammoNeeded);
+        currentAmmo += ammoToReload;
+        currentAmmoStorage -= ammoToReload;
 
         isReloading = false;
 
@@ -141,43 +158,19 @@ public class FlamethrowerController : MonoBehaviour
             reloadSlider.gameObject.SetActive(true); // Hide the reload slider
         }
 
-        UpdateFuelUI();
-
-        // Check again if out of fuel and storage to destroy the flamethrower
-        if (currentFuel <= 0 && currentStorage <= 0)
-        {
-            Destroy(gameObject);
-        }
+        UpdateUI();
     }
 
-    void InitializeFuel()
+    IEnumerator ShowMuzzleFlash()
     {
-        currentFuel = fuelCapacity;
-        currentStorage = maxStorage;
+        GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, flashPoint.position, flashPoint.rotation, firePoint);
+        muzzleFlash.SetActive(true);
+        yield return new WaitForSeconds(muzzleFlashDuration);
+        muzzleFlash.SetActive(false);
+        Destroy(muzzleFlash);
     }
 
-    void UpdateFuelUI()
-    {
-        if (fuelText != null)
-        {
-            fuelText.text = "" + currentFuel.ToString("F1") + " / "+ currentStorage.ToString("F1");
-        }
 
-        if (reloadSlider != null)
-        {
-            reloadSlider.value = currentFuel; // Update slider value based on current fuel
 
-            bool shouldShowReloadSlider = currentFuel < fuelCapacity; // Show slider if fuel is not at maximum
-            reloadSlider.gameObject.SetActive(shouldShowReloadSlider);
 
-            if (currentFuel == 0 && !isReloading)
-            {
-                reloadSlider.value = 1f; // Set the slider value to maximum to indicate completed reload
-            }
-            else if (isReloading && currentFuel < fuelCapacity)
-            {
-                reloadSlider.value = Mathf.Lerp(0f, fuelCapacity, (fuelCapacity - currentFuel) / fuelCapacity); // Update slider value based on reload progress
-            }
-        }
-    }
 }

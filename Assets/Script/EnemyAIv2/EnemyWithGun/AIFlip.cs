@@ -26,7 +26,6 @@ public class AIFlip : MonoBehaviour
         
         Vector3 playerToMouseDir = player.transform.position - transform.position;
 
-        // Flip the sprite based on the mouse position
         if (playerToMouseDir.x != 0)
         {
             spriteRenderer.flipX = playerToMouseDir.x < 0;
