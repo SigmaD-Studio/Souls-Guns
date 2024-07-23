@@ -41,11 +41,11 @@ public class Aim : MonoBehaviour
     {
         if (handAngle > 90 || handAngle < -90)
         {
-            transform.localScale = new Vector3(1.5f, -1.5f, 0f);
+            transform.localScale = new Vector3(1f, -1f, 0f);
         }
         else if (handAngle < 90|| handAngle > -90)
         {
-            transform.localScale = new Vector3(1.5f, 1.5f, 0f);
+            transform.localScale = new Vector3(1f, 1f, 0f);
         }
     }
 

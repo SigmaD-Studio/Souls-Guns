@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9002962842860693379}
   - component: {fileID: 7367557562696515121}
   - component: {fileID: 132612730838344085}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RocketTail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 4844290509566549579}
   - component: {fileID: 6045432577326242327}
   - component: {fileID: -6592224012669000945}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1597929079811664158}
   - component: {fileID: 3079550239481123301}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RocketHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}

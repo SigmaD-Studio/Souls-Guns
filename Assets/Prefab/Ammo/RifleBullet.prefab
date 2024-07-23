@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -8940736397254171120}
   - component: {fileID: 3544483496585855222}
   - component: {fileID: 8813933283651926335}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RifleBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,5 +162,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  range: 50
   damage: 15
+  range: 50

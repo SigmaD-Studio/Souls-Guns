@@ -22,54 +22,69 @@ public class Minigun : MonoBehaviour
     public Slider reloadSlider; // Reference to UI Slider for reload progress
 
     private int currentAmmo; // Current ammo count
-    private int ammoStorage; // Ammo storage count
+    private int currentAmmoStorage; // Ammo storage count
     private float fireTimer; // Timer to handle fire rate
     private bool isReloading = false; // Flag to check if reloading
     private Coroutine reloadCoroutine; // Coroutine reference for reloading
 
+    void FindUI()
+    {
+        ammoText = GameObject.Find("AmmoStorage").GetComponent<TextMeshProUGUI>();
+        gunNameText = GameObject.Find("GunName").GetComponent<TextMeshProUGUI>();
+        reloadSlider = GameObject.Find("GunSlider").GetComponent<Slider>();
+    }
+
+    private bool isEquiped = false;
+    public void isEquiping(bool value)
+    {
+        isEquiped = value;
+    }
+
     void Start()
     {
-        InitializeAmmo();
-        UpdateAmmoUI();
-        if (reloadSlider != null)
+            FindUI();
+            currentAmmo = maxAmmo;
+            currentAmmoStorage = maxAmmoStorage;
+            
+    }
+
+    private void OnEnable()
+    {
+        if (isEquiped)
         {
-            reloadSlider.maxValue = maxAmmo; // Set the max value of the slider to the max ammo
-            reloadSlider.value = currentAmmo; // Set the current value of the slider to the current ammo
-            reloadSlider.gameObject.SetActive(true); // Initially hide the slider
+            GetComponent<Collider2D>().enabled = false;
+            UpdateUI();
         }
-        if (gunNameText != null)
-        {
-            gunNameText.text = gunName; // Set the gun name text
-        }
+
     }
 
     void Update()
     {
-        if (isReloading)
+        if (isEquiped == true)
         {
-            return;
-        }
-
-        if (currentAmmo <= 0)
-        {
-            if (ammoStorage > 0)
+            if (isReloading)
             {
-                reloadCoroutine = StartCoroutine(Reload()); // Start reloading
-            }
-            else
-            {
-                // Handle out of ammo condition here (e.g., stop shooting)
                 return;
             }
-        }
 
-        if (Input.GetButton("Fire1") && fireTimer <= 0)
-        {
-            Shoot();
-            fireTimer = fireRate;
-        }
+            if (currentAmmo <= 0)
+            {
+                if (currentAmmoStorage > 0)
+                {
+                    StartCoroutine(Reload());
+                }
+                // No need to destroy the gun object when out of ammo
+                return;
+            }
 
-        fireTimer -= Time.deltaTime;
+            if (Input.GetButton("Fire1") && fireTimer <= 0)
+            {
+                Shoot();
+                fireTimer = fireRate;
+            }
+
+            fireTimer -= Time.deltaTime;
+        }
     }
 
     void Shoot()
@@ -93,7 +108,7 @@ public class Minigun : MonoBehaviour
 
         StartCoroutine(ShowMuzzleFlash());
 
-        UpdateAmmoUI();
+        UpdateUI();
     }
 
     IEnumerator Reload()
@@ -118,15 +133,15 @@ public class Minigun : MonoBehaviour
         }
 
         int ammoNeeded = maxAmmo - currentAmmo;
-        if (ammoStorage >= ammoNeeded)
+        if (currentAmmoStorage >= ammoNeeded)
         {
             currentAmmo = maxAmmo;
-            ammoStorage -= ammoNeeded;
+            currentAmmoStorage -= ammoNeeded;
         }
         else
         {
-            currentAmmo += ammoStorage;
-            ammoStorage = 0;
+            currentAmmo += currentAmmoStorage;
+            currentAmmoStorage = 0;
         }
 
         isReloading = false;
@@ -137,38 +152,35 @@ public class Minigun : MonoBehaviour
             reloadSlider.gameObject.SetActive(true); // Hide the reload slider
         }
 
-        UpdateAmmoUI();
+        UpdateUI();
     }
 
     void InitializeAmmo()
     {
         currentAmmo = maxAmmo;
-        ammoStorage = maxAmmoStorage; // Initialize ammo storage
+        currentAmmoStorage = maxAmmoStorage; // Initialize ammo storage
     }
 
-    void UpdateAmmoUI()
+    void UpdateUI()
     {
-        if (ammoText != null)
+
+        gunNameText.text = gunName;
+        ammoText.text = "" + currentAmmo + " / " + currentAmmoStorage;
+        reloadSlider.value = currentAmmo; // Update slider value based on current ammo
+        reloadSlider.maxValue = maxAmmo;  // Set the max value of the slider to the max ammo
+
+        bool shouldShowReloadSlider = currentAmmoStorage > 0 || currentAmmo > 0; // Show slider if either storage or ammo is greater than zero
+        reloadSlider.gameObject.SetActive(shouldShowReloadSlider);
+
+        if (currentAmmo == 0 && !isReloading)
         {
-            ammoText.text = $"{currentAmmo} / {ammoStorage}";
+            reloadSlider.value = 1f; // Set the slider value to maximum to indicate completed reload
+        }
+        else if (isReloading && currentAmmo < maxAmmo)
+        {
+            reloadSlider.value = Mathf.Lerp(0f, maxAmmo, (maxAmmo - currentAmmo) / (float)maxAmmo); // Update slider value based on reload progress
         }
 
-        if (reloadSlider != null)
-        {
-            reloadSlider.value = currentAmmo; // Update slider value based on current ammo
-
-            bool shouldShowReloadSlider = ammoStorage > 0 || currentAmmo > 0; // Show slider if either storage or ammo is greater than zero
-            reloadSlider.gameObject.SetActive(shouldShowReloadSlider);
-
-            if (currentAmmo == 0 && !isReloading)
-            {
-                reloadSlider.value = 1f; // Set the slider value to maximum to indicate completed reload
-            }
-            else if (isReloading && currentAmmo < maxAmmo)
-            {
-                reloadSlider.value = Mathf.Lerp(0f, maxAmmo, (maxAmmo - currentAmmo) / (float)maxAmmo); // Update slider value based on reload progress
-            }
-        }
     }
 
     IEnumerator ShowMuzzleFlash()
