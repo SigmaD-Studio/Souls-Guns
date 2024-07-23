@@ -42,9 +42,10 @@ GameObject:
   - component: {fileID: 3533841969416694776}
   - component: {fileID: 5283464956566332326}
   - component: {fileID: 7775031665894845876}
+  - component: {fileID: 4188461389124243146}
   m_Layer: 0
   m_Name: AK47
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +60,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.8, y: -0.58, z: 0}
-  m_LocalScale: {x: 0.82, y: 0.82, z: 0.82}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6603815006141406927}
@@ -144,6 +145,51 @@ MonoBehaviour:
   ammoText: {fileID: 6361949038439842468, guid: 8229e33f3b6c8a8428db8f6e6d659b50, type: 3}
   gunNameText: {fileID: 7548262403009988914, guid: 85651989da2c7314fbe047832d866a4d, type: 3}
   reloadSlider: {fileID: 6729958568823840524, guid: ded80e518df9cb04a8e1e208634e3168, type: 3}
+--- !u!61 &4188461389124243146
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6150368512025258367}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.4375, y: 0.625}
+    newSize: {x: 2.4375, y: 0.625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.4375, y: 0.625}
+  m_EdgeRadius: 0
 --- !u!1 &8000241247374249490
 GameObject:
   m_ObjectHideFlags: 0

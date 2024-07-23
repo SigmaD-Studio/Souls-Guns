@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootPrefab: {fileID: 6150368512025258367, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
   lootName: AK47
-  lootChance: 30
+  lootChance: 100
   lootSprite: {fileID: -1249157444, guid: 4db22dcf79f38184997f8e1f31702ea0, type: 3}

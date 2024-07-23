@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1915760004765302160}
   - component: {fileID: 3439331811127190978}
   - component: {fileID: 2728417548778980152}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DEBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,4 +164,3 @@ MonoBehaviour:
   speed: 20
   range: 100
   damage: 25
-  destructionEffectPrefab: {fileID: 0}

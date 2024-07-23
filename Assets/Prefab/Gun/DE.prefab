@@ -168,10 +168,6 @@ MonoBehaviour:
   bulletSpeed: 20
   fireRate: 0.3
   maxAmmo: 7
-  maxAmmoStorage: 42
   reloadTime: 1.5
   muzzleFlashDuration: 0.05
   gunName: Desert Eagle
-  ammoText: {fileID: 0}
-  gunNameText: {fileID: 0}
-  reloadSlider: {fileID: 0}

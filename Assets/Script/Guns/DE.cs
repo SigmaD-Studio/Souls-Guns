@@ -15,17 +15,21 @@ public class DE : MonoBehaviour
     public float reloadTime = 2f; // Time it takes to reload
     public float muzzleFlashDuration = 0.05f; // Duration of the muzzle flash
     public string gunName = "Desert Eagle"; // Name of the gun
-    public TextMeshProUGUI ammoText; // Reference to UI text for displaying ammo count
-    public TextMeshProUGUI gunNameText; // Reference to UI text for displaying gun name
-    public Slider reloadSlider; // Reference to UI Slider for reload progress
+
+    TextMeshProUGUI ammoText; // Reference to UI text for displaying ammo count
+    TextMeshProUGUI gunNameText; // Reference to UI text for displaying gun name
+    Slider reloadSlider; // Reference to UI Slider for reload progress
 
     private int currentAmmo; // Current ammo count
     private float fireTimer; // Timer to handle fire rate
     private bool isReloading = false; // Flag to check if reloading
 
+    GameObject UI;
+
 
     void FindUI()
     {
+        UI = GameObject.Find("UICanvas");
         ammoText = GameObject.Find("AmmoStorage").GetComponent<TextMeshProUGUI>();
         gunNameText = GameObject.Find("GunName").GetComponent<TextMeshProUGUI>();
         reloadSlider = GameObject.Find("GunSlider").GetComponent<Slider>();
@@ -36,28 +40,40 @@ public class DE : MonoBehaviour
     {
         FindUI();
         InitializeAmmo();
-        UpdateUI();
+        
+    }
+    private void OnEnable()
+    {
+        if (isEquiped)
+        {
+            GetComponent<Collider2D>().enabled = false;
+            UpdateUI();
+        }
+        
     }
 
     void Update()
     {
-        if (isReloading)
-        {
-            return;
-        }
 
-        if (currentAmmo <= 0)
-        {
-            StartCoroutine(Reload());
-            return;
-        }
+            if (isReloading)
+            {
+                return;
+            }
 
-        if (Input.GetButtonDown("Fire1") && fireTimer <= 0)
-        {
-            Shoot();
-            fireTimer = fireRate;
-        }
+            if (currentAmmo <= 0)
+            {
 
+                StartCoroutine(Reload());
+
+                // No need to destroy the gun object when out of ammo
+                return;
+            }
+
+            if (Input.GetButton("Fire1") && fireTimer <= 0)
+            {
+                Shoot();
+                fireTimer = fireRate;
+            }
         fireTimer -= Time.deltaTime;
     }
 
@@ -146,5 +162,6 @@ public class DE : MonoBehaviour
     public void isEquiping(bool value)
     {
         isEquiped = value;
+        Debug.Log("IsEquiped");
     }
 }

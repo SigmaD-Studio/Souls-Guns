@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2683292506283691531}
   - component: {fileID: 64500518259136963}
   - component: {fileID: 7788573371506161704}
+  - component: {fileID: 6125544992365442086}
   m_Layer: 0
   m_Name: FlameThower
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,17 +100,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 3787180448820693900}
-  flamePrefab: {fileID: 7466996168039293280, guid: 61833293818d2264b861c96eb8294c15, type: 3}
-  fuelCapacity: 100
-  fuelConsumptionRate: 17.5
+  flashPoint: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  muzzleFlashPrefab: {fileID: 0}
+  bulletSpeed: 20
+  fireRate: 0.1
+  maxAmmo: 30
+  maxAmmoStorage: 90
   reloadTime: 2
-  shootForce: 10
-  shootSpread: 15
-  flamethrowerName: Flamethrower
-  fuelText: {fileID: 0}
-  flamethrowerNameText: {fileID: 0}
+  muzzleFlashDuration: 0.05
+  spreadAngle: 5
+  gunName: Assault Rifle
+  ammoText: {fileID: 0}
+  gunNameText: {fileID: 0}
   reloadSlider: {fileID: 0}
-  maxStorage: 300
+--- !u!61 &6125544992365442086
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317723471862976240}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.25, y: 1.125}
+    newSize: {x: 2.25, y: 1.125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.25, y: 1.125}
+  m_EdgeRadius: 0
 --- !u!1 &1354180038233256970
 GameObject:
   m_ObjectHideFlags: 0

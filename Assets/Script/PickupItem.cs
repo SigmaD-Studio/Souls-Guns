@@ -68,20 +68,17 @@ public class PickupItem : MonoBehaviour
 
     void EquipWeapon(int index)
     {
-        GameObject lastWeapon;
 
+        for (int i = 0;i < weaponHolder.transform.childCount; i++)
+        {
+            weaponHolder.transform.GetChild(i).gameObject.SetActive(false);
+        }
         currentWeapon = weaponHolder.GetChild(index).gameObject;
         currentWeapon.SetActive(true);
         currentWeapon.SendMessage("isEquiping", true);
-        if (index == 0)
-        {
-            lastWeapon = weaponHolder.GetChild(transform.childCount - 1).gameObject;
-        }
-        else
-        {
-            lastWeapon = weaponHolder.GetChild(index - 1).gameObject;
-        }
-        lastWeapon.SendMessage("isEquiping", false);
-        lastWeapon.SetActive(false);
+        currentWeapon.SendMessage("UpdateUI");
+        
+        
+        
     }
 }
