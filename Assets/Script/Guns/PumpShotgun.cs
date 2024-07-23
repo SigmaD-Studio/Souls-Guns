@@ -92,7 +92,7 @@ public class ShotgunController : MonoBehaviour
 
             if (currentAmmo <= 0)
             {
-                if (currentAmmoStorage > 0)
+                if (currentAmmo <= 0 || Input.GetKeyDown(KeyCode.R))
                 {
                     StartCoroutine(ReloadOneBullet());
                 }

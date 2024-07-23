@@ -22,7 +22,7 @@ public class PickupItem : MonoBehaviour
     }
     void Update()
     {
-        if (UnityEngine.Input.GetKeyDown(KeyCode.E))
+        if (UnityEngine.Input.GetKeyDown(KeyCode.R))
         {
 
             
