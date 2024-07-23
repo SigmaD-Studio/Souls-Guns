@@ -91,7 +91,7 @@ public class FlameThrower : MonoBehaviour
 
             if (currentAmmo <= 0)
             {
-                if (currentAmmoStorage > 0)
+                if (currentAmmo <= 0 || Input.GetKeyDown(KeyCode.R))
                 {
                     StartCoroutine(Reload());
                 }
