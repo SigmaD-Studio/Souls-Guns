@@ -60,7 +60,7 @@ public class DE : MonoBehaviour
                 return;
             }
 
-            if (currentAmmo <= 0)
+            if (currentAmmo <= 0 || Input.GetKeyDown(KeyCode.R))
             {
 
                 StartCoroutine(Reload());
@@ -114,13 +114,16 @@ public class DE : MonoBehaviour
         {
             if (reloadSlider != null)
             {
-                reloadSlider.value = timer / reloadTime; // Update slider value based on reload progress
+                reloadSlider.value = Mathf.Lerp(0f, maxAmmo, timer / reloadTime); // Update slider value based on reload progress
             }
             timer += Time.deltaTime;
             yield return null;
         }
 
-        currentAmmo = maxAmmo;
+        int ammoNeeded = maxAmmo - currentAmmo;
+        int ammoToReload = Mathf.Min(maxAmmo, ammoNeeded);
+        currentAmmo += ammoToReload;
+        maxAmmo = ammoToReload;
 
         isReloading = false;
 

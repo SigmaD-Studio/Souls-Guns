@@ -90,7 +90,7 @@ public class AssaultRifle : MonoBehaviour
                 return;
             }
 
-            if (currentAmmo <= 0)
+            if (currentAmmo <= 0 || Input.GetKeyDown(KeyCode.R))
             {
                 if (currentAmmoStorage > 0)
                 {
@@ -128,6 +128,7 @@ public class AssaultRifle : MonoBehaviour
 
     IEnumerator Reload()
     {
+       
         isReloading = true;
 
         if (reloadSlider != null)
