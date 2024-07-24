@@ -130,21 +130,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357d793abd6f0c14781fa2156e8fd25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: AK 47
+  maxAmmo: 30
+  maxAmmoStorage: 90
+  reloadTime: 2
+  isReloading: 0
+  ammoText: {fileID: 6361949038439842468, guid: 8229e33f3b6c8a8428db8f6e6d659b50, type: 3}
+  gunNameText: {fileID: 7548262403009988914, guid: 85651989da2c7314fbe047832d866a4d, type: 3}
+  reloadSlider: {fileID: 6729958568823840524, guid: ded80e518df9cb04a8e1e208634e3168, type: 3}
   firePoint: {fileID: 6603815006141406927}
   flashPoint: {fileID: 3063833276576854509}
   bulletPrefab: {fileID: 5026842911119241668, guid: 51a939213012050449cb77c7bdf75661, type: 3}
   muzzleFlashPrefab: {fileID: 618758049582583760, guid: 4c6e1bb63ae723f448c25e2e30989ee2, type: 3}
   bulletSpeed: 20
   fireRate: 0.1
-  maxAmmo: 30
-  maxAmmoStorage: 90
-  reloadTime: 2
   muzzleFlashDuration: 0.05
   spreadAngle: 7
-  gunName: Assault Rifle
-  ammoText: {fileID: 6361949038439842468, guid: 8229e33f3b6c8a8428db8f6e6d659b50, type: 3}
-  gunNameText: {fileID: 7548262403009988914, guid: 85651989da2c7314fbe047832d866a4d, type: 3}
-  reloadSlider: {fileID: 6729958568823840524, guid: ded80e518df9cb04a8e1e208634e3168, type: 3}
 --- !u!61 &4188461389124243146
 BoxCollider2D:
   m_ObjectHideFlags: 0

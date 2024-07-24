@@ -162,21 +162,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cddf03ed315165d449956b76b3e28179, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: Sniper Rifle
+  maxAmmo: 5
+  maxAmmoStorage: 25
+  reloadTime: 3
+  isReloading: 0
+  ammoText: {fileID: 0}
+  gunNameText: {fileID: 0}
+  reloadSlider: {fileID: 0}
   firePoint: {fileID: 2252151812689383755}
   flashPoint: {fileID: 5124152310778934465}
   bulletPrefab: {fileID: 5681074721203630710, guid: 33695fa6020ac534a814b8dbf5a98a36, type: 3}
   muzzleFlashPrefab: {fileID: 618758049582583760, guid: e1f466132fbb00441bd83be847da4eab, type: 3}
   bulletSpeed: 50
   fireRate: 1
-  maxAmmo: 5
-  maxAmmoStorage: 25
-  reloadTime: 3
   muzzleFlashDuration: 0.1
   spreadAngle: 0
-  gunName: Sniper Rifle
-  ammoText: {fileID: 0}
-  gunNameText: {fileID: 0}
-  reloadSlider: {fileID: 0}
 --- !u!61 &1838500951324643814
 BoxCollider2D:
   m_ObjectHideFlags: 0

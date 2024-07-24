@@ -162,21 +162,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf50263b842c8e444bc06b49aed422bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: Uzi
+  maxAmmo: 30
+  maxAmmoStorage: 90
+  reloadTime: 2
+  isReloading: 0
+  ammoText: {fileID: 0}
+  gunNameText: {fileID: 0}
+  reloadSlider: {fileID: 0}
   firePoint: {fileID: 2535056755064323265}
   flashPoint: {fileID: 9203573332396648113}
   bulletPrefab: {fileID: 4339391016594838844, guid: 26b7b9d18d637c04488fb5bea3257149, type: 3}
   muzzleFlashPrefab: {fileID: 618758049582583760, guid: 4c6e1bb63ae723f448c25e2e30989ee2, type: 3}
   bulletSpeed: 20
   fireRate: 0.05
-  maxAmmo: 30
-  maxAmmoStorage: 90
-  reloadTime: 2
   muzzleFlashDuration: 0.05
   spreadAngle: 22.5
-  gunName: Uzi
-  ammoText: {fileID: 0}
-  gunNameText: {fileID: 0}
-  reloadSlider: {fileID: 0}
 --- !u!61 &5246963098705143826
 BoxCollider2D:
   m_ObjectHideFlags: 0

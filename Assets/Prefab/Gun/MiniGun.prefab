@@ -162,21 +162,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d87615731abefa46a9a5c8ba74be36e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: Mini Gun
+  maxAmmo: 100
+  maxAmmoStorage: 500
+  reloadTime: 4
+  isReloading: 0
+  ammoText: {fileID: 0}
+  gunNameText: {fileID: 0}
+  reloadSlider: {fileID: 0}
   firePoint: {fileID: 3131559166853407722}
   flashPoint: {fileID: 6274789402783239052}
   bulletPrefab: {fileID: 7624177806839151021, guid: 7fcd98b8da5d4264090d702c124a3383, type: 3}
   muzzleFlashPrefab: {fileID: 618758049582583760, guid: e1f466132fbb00441bd83be847da4eab, type: 3}
   bulletSpeed: 20
   fireRate: 0.05
-  maxAmmo: 100
-  maxAmmoStorage: 500
-  reloadTime: 4
   muzzleFlashDuration: 0.05
   spreadAngle: 20
-  gunName: Minigun
-  ammoText: {fileID: 0}
-  gunNameText: {fileID: 0}
-  reloadSlider: {fileID: 0}
 --- !u!61 &3409230327127931297
 BoxCollider2D:
   m_ObjectHideFlags: 0

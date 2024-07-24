@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootPrefab: {fileID: 3686456261599610040, guid: 94e2735dae5456e488fd5e0db1ea3566, type: 3}
   lootName: DE
-  lootChance: 100
+  lootChance: 5
   lootSprite: {fileID: -831567257, guid: 4db22dcf79f38184997f8e1f31702ea0, type: 3}

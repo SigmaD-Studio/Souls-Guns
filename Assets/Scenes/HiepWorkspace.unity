@@ -175,17 +175,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniGun
       objectReference: {fileID: 0}
-    - target: {fileID: 3409230327127931297, guid: 4b731435cc429ca47a0dea774819fa3f, type: 3}
-      propertyPath: m_Size.x
-      value: 1.9258728
-      objectReference: {fileID: 0}
-    - target: {fileID: 3409230327127931297, guid: 4b731435cc429ca47a0dea774819fa3f, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.2245636
-      objectReference: {fileID: 0}
-    - target: {fileID: 3409230327127931297, guid: 4b731435cc429ca47a0dea774819fa3f, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
+    - target: {fileID: 6841182417118246739, guid: 4b731435cc429ca47a0dea774819fa3f, type: 3}
+      propertyPath: weaponName
+      value: Mini Gun
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -331,8 +323,16 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 940964422293124799, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
+      propertyPath: weaponName
+      value: Pump Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 940964422293124799, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
       propertyPath: bulletSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 940964422293124799, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
+      propertyPath: spreadAngle
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 940964422293124799, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
       propertyPath: maxAmmoStorage
@@ -419,17 +419,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1838500951324643814, guid: 8a658853a74130c489f1d6b5c451d111, type: 3}
-      propertyPath: m_Size.x
-      value: 2.2924566
-      objectReference: {fileID: 0}
-    - target: {fileID: 1838500951324643814, guid: 8a658853a74130c489f1d6b5c451d111, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.2600217
-      objectReference: {fileID: 0}
     - target: {fileID: 3826994269876460818, guid: 8a658853a74130c489f1d6b5c451d111, type: 3}
-      propertyPath: maxAmmoStorage
-      value: 25
+      propertyPath: weaponName
+      value: Sniper Rifle
       objectReference: {fileID: 0}
     - target: {fileID: 4573287616913060315, guid: 8a658853a74130c489f1d6b5c451d111, type: 3}
       propertyPath: m_LocalPosition.x
@@ -471,10 +463,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4573287616913060315, guid: 8a658853a74130c489f1d6b5c451d111, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5905163117559566392, guid: 8a658853a74130c489f1d6b5c451d111, type: 3}
       propertyPath: m_Name
       value: SniperRifle
@@ -499,6 +487,22 @@ PrefabInstance:
     - target: {fileID: 2066002815015707271, guid: ebec9bc84816f4743be663453371d527, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3247867800300063752, guid: ebec9bc84816f4743be663453371d527, type: 3}
+      propertyPath: immunity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948254405293755033, guid: ebec9bc84816f4743be663453371d527, type: 3}
+      propertyPath: flashPoint
+      value: 
+      objectReference: {fileID: 1803454716}
+    - target: {fileID: 3948254405293755033, guid: ebec9bc84816f4743be663453371d527, type: 3}
+      propertyPath: weaponName
+      value: Desert Eagle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948254405293755033, guid: ebec9bc84816f4743be663453371d527, type: 3}
+      propertyPath: maxAmmoStorage
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4889152547614808429, guid: ebec9bc84816f4743be663453371d527, type: 3}
       propertyPath: m_LocalPosition.x
@@ -560,6 +564,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7020033201286257290, guid: ebec9bc84816f4743be663453371d527, type: 3}
+      propertyPath: isImmuneToDamage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020033201286257290, guid: ebec9bc84816f4743be663453371d527, type: 3}
+      propertyPath: playerHurtCollider
+      value: 
+      objectReference: {fileID: 1716246448}
     - target: {fileID: 7020033201286257290, guid: ebec9bc84816f4743be663453371d527, type: 3}
       propertyPath: playerCollitionCollider
       value: 
@@ -687,14 +699,26 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1960896190183349401, guid: 2d6dd5e3f0bdf554fb39498e40255301, type: 3}
       propertyPath: LootList.Array.size
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1960896190183349401, guid: 2d6dd5e3f0bdf554fb39498e40255301, type: 3}
       propertyPath: LootList.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 3881c60dcbdb77e43a6553a5c21671d1, type: 2}
+      objectReference: {fileID: 11400000, guid: 37bede2ce83c39e46958739435e0caac, type: 2}
     - target: {fileID: 1960896190183349401, guid: 2d6dd5e3f0bdf554fb39498e40255301, type: 3}
       propertyPath: LootList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 50e9125522cb05f43923aa7d5c9a54d8, type: 2}
+    - target: {fileID: 1960896190183349401, guid: 2d6dd5e3f0bdf554fb39498e40255301, type: 3}
+      propertyPath: LootList.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0a0ce27ffa6b9cb439a93b4a59d57bf7, type: 2}
+    - target: {fileID: 1960896190183349401, guid: 2d6dd5e3f0bdf554fb39498e40255301, type: 3}
+      propertyPath: LootList.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 764c19c5778d21245937ab1299acd440, type: 2}
+    - target: {fileID: 1960896190183349401, guid: 2d6dd5e3f0bdf554fb39498e40255301, type: 3}
+      propertyPath: LootList.Array.data[5]
       value: 
       objectReference: {fileID: 11400000, guid: 22f18376679442340bac26c50558211d, type: 2}
     - target: {fileID: 5160874883990390450, guid: 2d6dd5e3f0bdf554fb39498e40255301, type: 3}
@@ -754,6 +778,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d6dd5e3f0bdf554fb39498e40255301, type: 3}
+--- !u!70 &1716246448 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 516364976808359980, guid: ebec9bc84816f4743be663453371d527, type: 3}
+  m_PrefabInstance: {fileID: 499927322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1803454716 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4359361815217619295, guid: ebec9bc84816f4743be663453371d527, type: 3}
+  m_PrefabInstance: {fileID: 499927322}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1873383068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -802,21 +836,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3533841969416694776, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4188461389124243146, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
-      propertyPath: m_Size.x
-      value: 1.9368114
-      objectReference: {fileID: 0}
-    - target: {fileID: 4188461389124243146, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.25034428
-      objectReference: {fileID: 0}
     - target: {fileID: 6150368512025258367, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
       propertyPath: m_Name
       value: AK47
+      objectReference: {fileID: 0}
+    - target: {fileID: 7775031665894845876, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
+      propertyPath: weaponName
+      value: AK 47
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1207,6 +1233,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1753761185518751911, guid: 993f112678c6e04459acc53698e40b42, type: 3}
+      propertyPath: weaponName
+      value: Uzi
+      objectReference: {fileID: 0}
     - target: {fileID: 2428183500888614070, guid: 993f112678c6e04459acc53698e40b42, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.71
@@ -1246,18 +1276,6 @@ PrefabInstance:
     - target: {fileID: 2428183500888614070, guid: 993f112678c6e04459acc53698e40b42, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2428183500888614070, guid: 993f112678c6e04459acc53698e40b42, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5246963098705143826, guid: 993f112678c6e04459acc53698e40b42, type: 3}
-      propertyPath: m_Size.x
-      value: 0.6407728
-      objectReference: {fileID: 0}
-    - target: {fileID: 5246963098705143826, guid: 993f112678c6e04459acc53698e40b42, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.14836359
       objectReference: {fileID: 0}
     - target: {fileID: 8761117762043677454, guid: 993f112678c6e04459acc53698e40b42, type: 3}
       propertyPath: m_Name

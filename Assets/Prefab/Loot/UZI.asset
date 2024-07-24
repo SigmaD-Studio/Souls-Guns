@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootPrefab: {fileID: 8761117762043677454, guid: 993f112678c6e04459acc53698e40b42, type: 3}
   lootName: Uzi
-  lootChance: 80
+  lootChance: 60
   lootSprite: {fileID: -1626189185, guid: 4db22dcf79f38184997f8e1f31702ea0, type: 3}
