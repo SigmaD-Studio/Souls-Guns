@@ -1192,7 +1192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8091538191675153340, guid: f52f5d973918d234b823b9e57903607d, type: 3}
       propertyPath: maxHealth
-      value: 200
+      value: 999999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
