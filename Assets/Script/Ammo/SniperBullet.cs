@@ -43,21 +43,25 @@ public class SniperBullet : MonoBehaviour
             piercingCount++;
 
             // Destroy the bullet if it has pierced the maximum number of enemies
-            if (piercingCount > maxPiercingCount)
+            if (piercingCount >= maxPiercingCount)
             {
                 DestroyBullet();
             }
         }
-        else
+       
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Map"))
         {
-            // Destroy the bullet if it hits any other object
+            // Destroy the bullet when it hits other objects
             DestroyBullet();
         }
     }
-
     void DestroyBullet()
     {
         // Clean up the bullet GameObject
         Destroy(gameObject);
     }
+
 }

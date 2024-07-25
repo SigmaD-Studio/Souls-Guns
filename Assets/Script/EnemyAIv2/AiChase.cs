@@ -6,10 +6,11 @@ public class AiChase : MonoBehaviour
 {
     
     public float speed;
-
+    public float atkRange;
+    public float rof;
 
     private float distance;
-
+    
 
     private Rigidbody2D rb;
     private Animator ani;
@@ -31,13 +32,42 @@ public class AiChase : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Flip(angle);
         
-        transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-        float speeding = rb.velocity.magnitude;
-        ani.SetFloat("Speed", speed);
+        if (distance > atkRange)
+        {
+            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+            float speeding = rb.velocity.magnitude;
+            ani.SetFloat("Speed", speed);
+        }
+        else
+        {
+            ani.SetFloat("Speed", 0);
+            
+        }
+        
 
         
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            Attack();
+            
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            
+            AttackEnd();
+        }
+    }
+
+
 
     private void Flip(float angle)
     {
@@ -51,4 +81,14 @@ public class AiChase : MonoBehaviour
         }
     }
 
+    void Attack()
+    {
+        ani.SetBool("Attack", true);
+        
+    }
+
+    public void AttackEnd()
+    {
+        ani.SetBool("Attack", false);
+    }
 }
