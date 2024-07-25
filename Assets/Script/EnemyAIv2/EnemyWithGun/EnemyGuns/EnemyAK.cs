@@ -26,8 +26,6 @@ public class EnemyAK : MonoBehaviour
 
 
             StartCoroutine(ShowMuzzleFlash());
-        
-        
     }
 
     IEnumerator ShowMuzzleFlash()
