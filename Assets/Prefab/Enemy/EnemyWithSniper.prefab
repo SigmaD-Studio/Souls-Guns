@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2823027037117386707}
   m_Layer: 0
   m_Name: EnemyWithSniper
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
   speed: 1
   atkRange: 7
   burstCount: 5
-  gun: {fileID: 0}
+  gun: {fileID: 3627806717181781582}
   rof: 0.2
   burstDelay: 2
 --- !u!114 &5650471838844592396
@@ -182,7 +182,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 0
 --- !u!61 &2823027037117386707
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -342,6 +341,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fbcf17af42ba6a4592a91c794fd9b43, type: 3}
+--- !u!1 &3627806717181781582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7892869399270397798, guid: 4fbcf17af42ba6a4592a91c794fd9b43, type: 3}
+  m_PrefabInstance: {fileID: 6904462549592666408}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6199288321396761801 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 709844679249728993, guid: 4fbcf17af42ba6a4592a91c794fd9b43, type: 3}
