@@ -72,8 +72,9 @@ public class AiWithGun : MonoBehaviour
 
     private IEnumerator BurstFire()
     {
+        
         isBursting = true;
-
+        yield return new WaitForSeconds(burstDelay);
         for (int i = 0; i < burstCount; i++)
         {
             gun.SendMessage("Shoot");
@@ -84,7 +85,7 @@ public class AiWithGun : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(burstDelay); // Delay between bursts
+         // Delay between bursts
         isBursting = false;
     }
 

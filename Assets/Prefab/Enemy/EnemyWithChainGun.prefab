@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 4908484988161228149}
   m_Layer: 0
   m_Name: EnemyWithChainGun
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,7 +206,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 0
 --- !u!61 &976355392251554164
 BoxCollider2D:
   m_ObjectHideFlags: 0
