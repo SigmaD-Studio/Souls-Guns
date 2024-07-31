@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c045d2932e004da4388203c423861fa0, type: 3}
   m_Name: SNIPER
   m_EditorClassIdentifier: 
-  lootPrefab: {fileID: 6140525505751955079, guid: 66b7e138e4eaa0e458ca3372aa733bb0, type: 3}
+  lootPrefab: {fileID: 5905163117559566392, guid: 8a658853a74130c489f1d6b5c451d111, type: 3}
   lootName: Sniper
   lootChance: 30
   lootSprite: {fileID: 2034726525, guid: 4db22dcf79f38184997f8e1f31702ea0, type: 3}

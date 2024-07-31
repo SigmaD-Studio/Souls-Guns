@@ -123,7 +123,7 @@ public class DE : MonoBehaviour
         int ammoNeeded = maxAmmo - currentAmmo;
         int ammoToReload = Mathf.Min(maxAmmo, ammoNeeded);
         currentAmmo += ammoToReload;
-        maxAmmo = ammoToReload;
+        //maxAmmo = ammoToReload;
 
         isReloading = false;
 

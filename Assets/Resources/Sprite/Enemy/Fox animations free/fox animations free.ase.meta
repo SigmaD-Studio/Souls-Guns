@@ -77,7 +77,6 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
-    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -90,7 +89,6 @@ ScriptedImporter:
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
-    mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
     generateAnimationClips: 1
@@ -772,7 +770,6 @@ ScriptedImporter:
     cells:
     - name: fox animations free_Frame_0
       frameIndex: 0
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -781,7 +778,6 @@ ScriptedImporter:
       spriteId: 4210a58eec9796842a9a6fb8d6ede31a
     - name: fox animations free_Frame_1
       frameIndex: 1
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -790,7 +786,6 @@ ScriptedImporter:
       spriteId: 9eacbb9dbecf15149a76bd32786d9452
     - name: fox animations free_Frame_2
       frameIndex: 2
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -799,7 +794,6 @@ ScriptedImporter:
       spriteId: 50d5237361912f642940ee9abda857b5
     - name: fox animations free_Frame_3
       frameIndex: 3
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -808,7 +802,6 @@ ScriptedImporter:
       spriteId: c7413bba6cba312448843dc371e53954
     - name: fox animations free_Frame_4
       frameIndex: 4
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -817,7 +810,6 @@ ScriptedImporter:
       spriteId: 6de7b45d03578b2499bef560e4278860
     - name: fox animations free_Frame_5
       frameIndex: 5
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -826,7 +818,6 @@ ScriptedImporter:
       spriteId: 22cd705f3d9a87d48b50c9d25d38321d
     - name: fox animations free_Frame_6
       frameIndex: 6
-      additiveSortOrder: 0
       cellRect:
         x: 27
         y: 16
@@ -835,7 +826,6 @@ ScriptedImporter:
       spriteId: bbfffad338de81942801092f0bfffb5a
     - name: fox animations free_Frame_7
       frameIndex: 7
-      additiveSortOrder: 0
       cellRect:
         x: 29
         y: 16
@@ -844,7 +834,6 @@ ScriptedImporter:
       spriteId: 8492fd6c655f1224aa1a46a8716fba1c
     - name: fox animations free_Frame_8
       frameIndex: 8
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -853,7 +842,6 @@ ScriptedImporter:
       spriteId: 1510467c25daade45a7342c7ad656b2d
     - name: fox animations free_Frame_9
       frameIndex: 9
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -862,7 +850,6 @@ ScriptedImporter:
       spriteId: ecf87216699c42846ae750c449c5c1d5
     - name: fox animations free_Frame_10
       frameIndex: 10
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -871,7 +858,6 @@ ScriptedImporter:
       spriteId: 701f1019da8a46349b09c1b5d34be72a
     - name: fox animations free_Frame_11
       frameIndex: 11
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -880,7 +866,6 @@ ScriptedImporter:
       spriteId: 6a7ef0369be7ba946aa23f3e2852ec36
     - name: fox animations free_Frame_12
       frameIndex: 12
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -889,7 +874,6 @@ ScriptedImporter:
       spriteId: c899af119abf2ec4884ae3bc9e70fc4f
     - name: fox animations free_Frame_13
       frameIndex: 13
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -898,7 +882,6 @@ ScriptedImporter:
       spriteId: b9b8479ce54a3fb4ab7098a54b5978e3
     - name: fox animations free_Frame_14
       frameIndex: 14
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 15
@@ -907,7 +890,6 @@ ScriptedImporter:
       spriteId: 0fe3435cb1c501d4cbcf94f156b89703
     - name: fox animations free_Frame_15
       frameIndex: 15
-      additiveSortOrder: 0
       cellRect:
         x: 25
         y: 16
@@ -916,7 +898,6 @@ ScriptedImporter:
       spriteId: 00d912372ba1b1140aa254fe5604a2d3
     - name: fox animations free_Frame_16
       frameIndex: 16
-      additiveSortOrder: 0
       cellRect:
         x: 27
         y: 16
@@ -925,7 +906,6 @@ ScriptedImporter:
       spriteId: f2c9f3037a525404586fe3ae0921bf87
     - name: fox animations free_Frame_17
       frameIndex: 17
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 15
@@ -934,7 +914,6 @@ ScriptedImporter:
       spriteId: 41f7d48750304554dacdc8893d30d5fc
     - name: fox animations free_Frame_18
       frameIndex: 18
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 15
@@ -943,7 +922,6 @@ ScriptedImporter:
       spriteId: afed8a85948714a4b9ec17d64d1ea2a5
     - name: fox animations free_Frame_19
       frameIndex: 19
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -952,7 +930,6 @@ ScriptedImporter:
       spriteId: 5489cf4beba01524fad419f7cb3c1b4d
     - name: fox animations free_Frame_20
       frameIndex: 20
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -961,7 +938,6 @@ ScriptedImporter:
       spriteId: b6493df113bd85841bc9e38f327fdd90
     - name: fox animations free_Frame_21
       frameIndex: 21
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -970,7 +946,6 @@ ScriptedImporter:
       spriteId: 185d2d3c737d52c42b09be34c6191427
     - name: fox animations free_Frame_22
       frameIndex: 22
-      additiveSortOrder: 0
       cellRect:
         x: 27
         y: 16
@@ -979,7 +954,6 @@ ScriptedImporter:
       spriteId: 6f74a41d30c903743b0608af4f826551
     - name: fox animations free_Frame_23
       frameIndex: 23
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -988,7 +962,6 @@ ScriptedImporter:
       spriteId: 2999f58fe50ec5947a314c1082af7530
     - name: fox animations free_Frame_24
       frameIndex: 24
-      additiveSortOrder: 0
       cellRect:
         x: 27
         y: 16
@@ -997,7 +970,6 @@ ScriptedImporter:
       spriteId: b77eee3b98e45e0498611146a5fc3f55
     - name: fox animations free_Frame_25
       frameIndex: 25
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -1006,7 +978,6 @@ ScriptedImporter:
       spriteId: 1e3113846ae72d14992b1fed2c38efca
     - name: fox animations free_Frame_26
       frameIndex: 26
-      additiveSortOrder: 0
       cellRect:
         x: 24
         y: 16
@@ -1015,7 +986,6 @@ ScriptedImporter:
       spriteId: aeb53dbe19b749c4d8789643a1b9ca20
     - name: fox animations free_Frame_27
       frameIndex: 27
-      additiveSortOrder: 0
       cellRect:
         x: 24
         y: 16
@@ -1024,7 +994,6 @@ ScriptedImporter:
       spriteId: 4a3e57ba775213844a296d62e945bda4
     - name: fox animations free_Frame_28
       frameIndex: 28
-      additiveSortOrder: 0
       cellRect:
         x: 26
         y: 16
@@ -1033,7 +1002,6 @@ ScriptedImporter:
       spriteId: 4f4af950e33e80b4891f12f91dc0ab69
     - name: fox animations free_Frame_29
       frameIndex: 29
-      additiveSortOrder: 0
       cellRect:
         x: 24
         y: 16
@@ -1042,7 +1010,6 @@ ScriptedImporter:
       spriteId: fe3a389a3c151d14cba2ac48e2135a2f
     - name: fox animations free_Frame_30
       frameIndex: 30
-      additiveSortOrder: 0
       cellRect:
         x: 18
         y: 16
@@ -1051,7 +1018,6 @@ ScriptedImporter:
       spriteId: af991dca018df4044a71b7babca2e7b0
     - name: fox animations free_Frame_31
       frameIndex: 31
-      additiveSortOrder: 0
       cellRect:
         x: 13
         y: 16
@@ -1061,7 +1027,6 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   platformSettings: []
-  generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 80, y: 64}

@@ -184,6 +184,10 @@ PrefabInstance:
       value: MiniGun
       objectReference: {fileID: 0}
     - target: {fileID: 3198062809190854246, guid: 4b731435cc429ca47a0dea774819fa3f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198062809190854246, guid: 4b731435cc429ca47a0dea774819fa3f, type: 3}
       propertyPath: m_TagString
       value: Weapon
       objectReference: {fileID: 0}
@@ -224,6 +228,10 @@ PrefabInstance:
     - target: {fileID: 1317723471862976240, guid: 3539c130099a81b49bc8121180ad7502, type: 3}
       propertyPath: m_Name
       value: FlameThower
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317723471862976240, guid: 3539c130099a81b49bc8121180ad7502, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2683292506283691531, guid: 3539c130099a81b49bc8121180ad7502, type: 3}
       propertyPath: m_LocalScale.x
@@ -342,6 +350,10 @@ PrefabInstance:
     - target: {fileID: 522923638847569862, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
       propertyPath: m_Name
       value: PumpShotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 522923638847569862, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 522923638847569862, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
       propertyPath: m_TagString
@@ -511,6 +523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SniperRifle
       objectReference: {fileID: 0}
+    - target: {fileID: 5905163117559566392, guid: 8a658853a74130c489f1d6b5c451d111, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -617,6 +633,10 @@ PrefabInstance:
     - target: {fileID: 1007662650296789812, guid: 52592ef524948164f8899f0cdfbeb3b9, type: 3}
       propertyPath: m_Name
       value: QuadRocket
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007662650296789812, guid: 52592ef524948164f8899f0cdfbeb3b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1007662650296789812, guid: 52592ef524948164f8899f0cdfbeb3b9, type: 3}
       propertyPath: m_TagString
@@ -844,6 +864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Chest
       objectReference: {fileID: 0}
+    - target: {fileID: 5160874883990390450, guid: 2d6dd5e3f0bdf554fb39498e40255301, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7924254326206553672, guid: 2d6dd5e3f0bdf554fb39498e40255301, type: 3}
       propertyPath: m_SortingOrder
       value: -8
@@ -972,6 +996,10 @@ PrefabInstance:
     - target: {fileID: 6150368512025258367, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
       propertyPath: m_Name
       value: AK47
+      objectReference: {fileID: 0}
+    - target: {fileID: 6150368512025258367, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6150368512025258367, guid: a8a1c57327ff43c438e3c0443f84f942, type: 3}
       propertyPath: m_TagString
@@ -1301,6 +1329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyWithAK
       objectReference: {fileID: 0}
+    - target: {fileID: 2830120425766886760, guid: f52f5d973918d234b823b9e57903607d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5512197195933220681, guid: f52f5d973918d234b823b9e57903607d, type: 3}
       propertyPath: atkRange
       value: 7
@@ -1421,6 +1453,10 @@ PrefabInstance:
     - target: {fileID: 8761117762043677454, guid: 993f112678c6e04459acc53698e40b42, type: 3}
       propertyPath: m_Name
       value: Uzi
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761117762043677454, guid: 993f112678c6e04459acc53698e40b42, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

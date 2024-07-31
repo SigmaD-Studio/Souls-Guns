@@ -9,7 +9,7 @@ public class LootBag : MonoBehaviour
 {
     
     public List<Loot> LootList = new List<Loot>();
-    public GameObject lootPrefab;
+    GameObject lootPrefab;
 
 
 
