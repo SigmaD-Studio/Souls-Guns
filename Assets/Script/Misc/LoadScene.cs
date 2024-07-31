@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,13 +9,13 @@ public class LoadScene : MonoBehaviour
 {
      
     [SerializeField] Slider slider;
-
+    int index;
     // Start is called before the first frame update
     void Start()
     {
-        int RandomIndex = Random.Range(1, 4);
+        index = PlayerPrefs.GetInt("LoadNextScene");
         
-        LoadingScene(RandomIndex);
+        LoadingScene(index);
 
 
     }

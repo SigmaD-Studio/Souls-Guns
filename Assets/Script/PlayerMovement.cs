@@ -1,8 +1,14 @@
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
+
+
+   
 
 public class PlayerController : MonoBehaviour
 {
+    
+
     public float moveSpeed = 5f;
     public float dashSpeed = 10f; // Speed multiplier for dashing
     public float dashDistance = 5f; // Distance to dash forward
@@ -25,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad(this);
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         mainCamera = Camera.main;

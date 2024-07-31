@@ -1538,7 +1538,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -164683901
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 20
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1765,6 +1765,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2066002815015707271, guid: ebec9bc84816f4743be663453371d527, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066002815015707271, guid: ebec9bc84816f4743be663453371d527, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4889152547614808429, guid: ebec9bc84816f4743be663453371d527, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1849,6 +1857,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6667598637235925906, guid: ebec9bc84816f4743be663453371d527, type: 3}
+      propertyPath: orthographic size
+      value: 6.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7020033201286257290, guid: ebec9bc84816f4743be663453371d527, type: 3}
       propertyPath: collisionMask.m_Bits
       value: 8
@@ -1923,6 +1935,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5976685120365858734, guid: 62506765e07b7b3408b9bf26a115b861, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729519963298305586, guid: 62506765e07b7b3408b9bf26a115b861, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729519963298305586, guid: 62506765e07b7b3408b9bf26a115b861, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

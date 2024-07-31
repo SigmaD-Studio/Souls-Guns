@@ -181,13 +181,70 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6564018821435379719, guid: ebec9bc84816f4743be663453371d527, type: 3}
       propertyPath: m_Name
-      value: Shogun_ver1.0.1_1
+      value: Shogun
       objectReference: {fileID: 0}
+    - target: {fileID: 6667598637235925906, guid: ebec9bc84816f4743be663453371d527, type: 3}
+      propertyPath: orthographic size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9170737879598778569, guid: ebec9bc84816f4743be663453371d527, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1584760006}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebec9bc84816f4743be663453371d527, type: 3}
+--- !u!1 &1468572761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468572763}
+  - component: {fileID: 1468572762}
+  m_Layer: 0
+  m_Name: Reseter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1468572762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468572761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf3f83faf0e9f04dbec3f529604f3ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1468572763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468572761}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.9537795, y: -3.0560687, z: 1.3000009}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1584760006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6564018821435379719, guid: ebec9bc84816f4743be663453371d527, type: 3}
+  m_PrefabInstance: {fileID: 477012311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1585608470
 GameObject:
   m_ObjectHideFlags: 0
@@ -8215,6 +8272,7 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1468572763}
   - {fileID: 1585608472}
   - {fileID: 2287388499705664409}
   - {fileID: 477012311}

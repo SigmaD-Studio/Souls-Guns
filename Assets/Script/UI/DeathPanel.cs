@@ -5,12 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class DeathPanel : MonoBehaviour
 {
+    [SerializeField] GameObject player;
     private void OnEnable()
     {
-        Time.timeScale = 0;
+        
+        
     }
     public void ReturnLobby()
     {
-        SceneManager.LoadScene("0");
+        Time.timeScale = 1;
+        SceneManager.LoadScene("1");
+        Destroy(player);
     }
 }
