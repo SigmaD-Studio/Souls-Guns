@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8442106366433196222}
   - component: {fileID: 2232287776102458929}
   - component: {fileID: 940964422293124799}
+  - component: {fileID: -4576081894340068519}
   m_Layer: 0
   m_Name: PumpShotgun
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,13 +103,62 @@ MonoBehaviour:
   flashPoint: {fileID: 1886288025984121900}
   bulletPrefab: {fileID: 4339391016594838844, guid: cf119e5fcd09f4a4a8dfcc344ab73626, type: 3}
   muzzleFlashPrefab: {fileID: 618758049582583760, guid: e1f466132fbb00441bd83be847da4eab, type: 3}
-  pelletsPerShot: 10
   bulletSpeed: 20
   fireRate: 1
-  spreadAngle: 10
   maxAmmo: 8
+  maxAmmoStorage: 90
   reloadTime: 2
   muzzleFlashDuration: 0.05
+  spreadAngle: 10
+  gunName: Assault Rifle
+  ammoText: {fileID: 0}
+  gunNameText: {fileID: 0}
+  reloadSlider: {fileID: 0}
+--- !u!61 &-4576081894340068519
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522923638847569862}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.029845357, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.1875, y: 0.4375}
+    newSize: {x: 2.1875, y: 0.4375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4247944, y: 0.4375}
+  m_EdgeRadius: 0
 --- !u!1 &5967821378090887337
 GameObject:
   m_ObjectHideFlags: 0

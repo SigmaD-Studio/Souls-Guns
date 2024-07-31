@@ -15,6 +15,7 @@ public class PickupItem : MonoBehaviour
     private GameObject currentWeapon;
     bool equipped = false;
     int equipingWepNum = 0;
+    float checkLeft;
 
     private void Start()
     {
@@ -46,6 +47,7 @@ public class PickupItem : MonoBehaviour
             }
         }
 
+        checkLeft = weaponHolder.transform.localScale.y;
 
     }
 
@@ -61,6 +63,10 @@ public class PickupItem : MonoBehaviour
     void PickUpWeapon(GameObject weapon)
     {
         weapon.transform.SetParent(weaponHolder);
+        if (checkLeft < 0)
+        {
+            weapon.transform.localScale = new Vector3(1, 1, 1);
+        }
         weapon.transform.localPosition = new Vector3(0.35f, 0, 0);
         weapon.transform.localRotation = Quaternion.identity;
         weapon.SetActive(false); 

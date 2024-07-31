@@ -101,8 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 3787180448820693900}
   flashPoint: {fileID: 0}
-  bulletPrefab: {fileID: 0}
-  muzzleFlashPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 7466996168039293280, guid: 61833293818d2264b861c96eb8294c15, type: 3}
+  muzzleFlashPrefab: {fileID: 618758049582583760, guid: 4c6e1bb63ae723f448c25e2e30989ee2, type: 3}
   bulletSpeed: 20
   fireRate: 0.1
   maxAmmo: 30
@@ -143,7 +143,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
