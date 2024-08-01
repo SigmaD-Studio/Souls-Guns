@@ -13,6 +13,11 @@ public class PumpShotgun : BaseWeapon
     public int pellets = 8; // Number of pellets fired per shot
     public float spreadAngle = 15f; // Increased spread angle for shotguns
 
+
+    public AudioClip shootSound; // Audio clip for shooting sound
+    public AudioClip reloadSound; // Audio clip for reloading sound
+    private AudioSource audioSource; // Audio source component
+
     private float fireTimer;
 
     public override void Start()
@@ -21,6 +26,7 @@ public class PumpShotgun : BaseWeapon
         // Initialize ammo counts
         currentAmmo = Mathf.Min(maxAmmo, currentAmmo);
         currentAmmoStorage = Mathf.Max(0, currentAmmoStorage);
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -57,6 +63,11 @@ public class PumpShotgun : BaseWeapon
 
     void Shoot()
     {
+        if (shootSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(shootSound);
+        }
+
         currentAmmo--;
 
         for (int i = 0; i < pellets; i++)
@@ -95,6 +106,10 @@ public class PumpShotgun : BaseWeapon
         }
 
         yield return new WaitForSeconds(reloadTime); // Wait for reloadTime
+        if (reloadSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(reloadSound);
+        }
 
         currentAmmo = Mathf.Min(maxAmmo, currentAmmo + 1); // Reload one bullet
         currentAmmoStorage--;

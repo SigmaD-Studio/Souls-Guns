@@ -14,6 +14,13 @@ public class EnemyAK : MonoBehaviour
     public float muzzleFlashDuration = 0.05f; // Duration of the muzzle flash
     public float spreadAngle = 5f; // Bullet spread angle
 
+    public AudioClip shootSound; // Audio clip for shooting sound
+    private AudioSource audioSource; // Audio source component
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void Shoot()
     {
@@ -23,9 +30,12 @@ public class EnemyAK : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.velocity = rotation * Vector2.right * bulletSpeed;
+        if (shootSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(shootSound);
+        }
 
-
-            StartCoroutine(ShowMuzzleFlash());
+        StartCoroutine(ShowMuzzleFlash());
     }
 
     IEnumerator ShowMuzzleFlash()

@@ -14,9 +14,14 @@ public class MiniGun : BaseWeapon
 
     private float fireTimer;
 
+    public AudioClip shootSound; // Audio clip for shooting sound
+    //public AudioClip reloadSound; // Audio clip for reloading sound
+    private AudioSource audioSource; // Audio source component
+
     public override void Start()
     {
         base.Start();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -64,6 +69,11 @@ public class MiniGun : BaseWeapon
         StartCoroutine(ShowMuzzleFlash());
 
         UpdateUI();
+
+        if (shootSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(shootSound);
+        }
     }
 
     IEnumerator ShowMuzzleFlash()

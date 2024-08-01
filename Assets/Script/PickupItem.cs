@@ -1,54 +1,41 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Security.Cryptography;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Windows;
+using System.Collections.Generic;
 
 public class PickupItem : MonoBehaviour
 {
-
     [SerializeField] private Transform weaponHolder;
-    private GameObject currentWeapon;
-    bool equipped = false;
-    int equipingWepNum = 0;
-    float checkLeft;
+    private List<BaseWeapon> weapons = new List<BaseWeapon>();
+    private BaseWeapon currentWeapon;
+    private int equippingWepNum = 0;
 
     private void Start()
     {
-         
+        for (int i = 0; i < weaponHolder.childCount; i++)
+        {
+            BaseWeapon weapon = weaponHolder.GetChild(i).GetComponent<BaseWeapon>();
+            if (weapon != null)
+            {
+                weapons.Add(weapon);
+            }
+        }
     }
-    void Update()
+
+    private void Update()
     {
-        if (UnityEngine.Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Q) && (currentWeapon == null || !currentWeapon.isReloading))
         {
-
-            
+            EquipNextWeapon();
         }
+    }
 
-
-        if (UnityEngine.Input.GetKeyDown(KeyCode.Q))
+    private void EquipNextWeapon()
+    {
+        equippingWepNum++;
+        if (equippingWepNum >= weapons.Count)
         {
-            equipingWepNum++;
-            if (equipingWepNum >= weaponHolder.transform.childCount)
-            {
-                equipingWepNum = 0;
-            }
-
-            for (int i = 0; i < weaponHolder.transform.childCount; i++)
-            {
-                if (i == equipingWepNum)
-                {
-                    EquipWeapon(i);
-                }
-            }
+            equippingWepNum = 0;
         }
-
-        checkLeft = weaponHolder.transform.localScale.y;
-
+        EquipWeapon(equippingWepNum);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -56,35 +43,32 @@ public class PickupItem : MonoBehaviour
         if (collision.CompareTag("Weapon"))
         {
             PickUpWeapon(collision.gameObject);
-            
         }
     }
 
-    void PickUpWeapon(GameObject weapon)
+    private void PickUpWeapon(GameObject weapon)
     {
         weapon.transform.SetParent(weaponHolder);
-        if (checkLeft < 0)
-        {
-            weapon.transform.localScale = new Vector3(1, 1, 1);
-        }
         weapon.transform.localPosition = new Vector3(0.35f, 0, 0);
         weapon.transform.localRotation = Quaternion.identity;
-        weapon.SetActive(false); 
+        weapon.SetActive(false);
+
+        BaseWeapon baseWeapon = weapon.GetComponent<BaseWeapon>();
+        if (baseWeapon != null)
+        {
+            weapons.Add(baseWeapon);
+        }
     }
 
-    void EquipWeapon(int index)
+    private void EquipWeapon(int index)
     {
-
-        for (int i = 0;i < weaponHolder.transform.childCount; i++)
+        foreach (var weapon in weapons)
         {
-            weaponHolder.transform.GetChild(i).gameObject.SetActive(false);
+            weapon.gameObject.SetActive(false);
         }
-        currentWeapon = weaponHolder.GetChild(index).gameObject;
-        currentWeapon.SetActive(true);
-        currentWeapon.SendMessage("isEquiping", true);
-        currentWeapon.SendMessage("UpdateUI");
-        
-        
-        
+
+        currentWeapon = weapons[index];
+        currentWeapon.gameObject.SetActive(true);
+        currentWeapon.isEquiping(true);
     }
 }

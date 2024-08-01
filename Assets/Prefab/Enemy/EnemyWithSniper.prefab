@@ -103,9 +103,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e122f47721710049b199e7257eee8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   atkRange: 12
-  burstCount: 2
+  burstCount: 4
   gun: {fileID: 3627806717181781582}
   rof: 0.2
   burstDelay: 2
