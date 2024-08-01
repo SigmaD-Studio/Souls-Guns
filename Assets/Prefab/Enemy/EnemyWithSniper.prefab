@@ -104,11 +104,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  atkRange: 7
-  burstCount: 5
+  atkRange: 12
+  burstCount: 2
   gun: {fileID: 3627806717181781582}
   rof: 0.2
   burstDelay: 2
+  trackRange: 10
 --- !u!114 &5650471838844592396
 MonoBehaviour:
   m_ObjectHideFlags: 0

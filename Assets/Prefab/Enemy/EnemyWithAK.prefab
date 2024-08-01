@@ -109,6 +109,7 @@ MonoBehaviour:
   gun: {fileID: 6502812908829730578}
   rof: 0.2
   burstDelay: 2
+  trackRange: 5
 --- !u!114 &1542370519185420588
 MonoBehaviour:
   m_ObjectHideFlags: 0

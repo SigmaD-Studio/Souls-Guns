@@ -10,7 +10,7 @@ public class EndGame : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
 
-            PlayerPrefs.SetInt("LoadNextScene", 3);
+            PlayerPrefs.SetInt("LoadNextScene", 0);
             SceneManager.LoadScene("LoadingScene");
         }
     }

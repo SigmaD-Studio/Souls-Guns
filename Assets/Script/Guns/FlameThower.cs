@@ -107,6 +107,10 @@ public class FlameThrower : MonoBehaviour
 
             fireTimer -= Time.deltaTime;
         }
+        if (currentAmmo <= 0 && currentAmmoStorage <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Shoot()

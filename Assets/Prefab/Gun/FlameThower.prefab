@@ -105,8 +105,8 @@ MonoBehaviour:
   muzzleFlashPrefab: {fileID: 618758049582583760, guid: 4c6e1bb63ae723f448c25e2e30989ee2, type: 3}
   bulletSpeed: 20
   fireRate: 0.1
-  maxAmmo: 500
-  maxAmmoStorage: 5000
+  maxAmmo: 200
+  maxAmmoStorage: 2000
   reloadTime: 2
   muzzleFlashDuration: 0.05
   spreadAngle: 5

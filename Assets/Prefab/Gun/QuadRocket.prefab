@@ -109,7 +109,7 @@ MonoBehaviour:
   fireRate: 1
   maxAmmo: 4
   maxAmmoStorage: 40
-  reloadTime: 3
+  reloadTime: 5
   muzzleFlashDuration: 0.05
   spreadAngle: 5
   gunName: Assault Rifle
