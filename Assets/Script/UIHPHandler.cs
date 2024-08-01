@@ -23,6 +23,7 @@ public class UIHPHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        life = PlayerPrefs.GetInt("Life");
         for (int i = 0; i < life; i++)
         {
             lifeHearts[i].active = true;

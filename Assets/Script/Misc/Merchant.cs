@@ -34,7 +34,7 @@ public class Merchant : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             detectPlayer = false;
-            sign.gameObject.SetActive(true);
+            sign.gameObject.SetActive(false);
         }
     }
 }
