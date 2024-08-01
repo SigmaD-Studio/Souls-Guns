@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,12 +12,12 @@ public class RandomPortal : MonoBehaviour
         if (collision.CompareTag("Player") && check < 3)
         {
 
-            int counter = PlayerPrefs.GetInt("LoadNextScene");
+            int counter = PlayerPrefs.GetInt("SceneLoaded");
             counter = counter + 1;
             PlayerPrefs.SetInt("SceneLoaded", counter);
 
 
-            int index = Random.Range(4, 7);
+            int index = UnityEngine.Random.Range(4, 7);
             PlayerPrefs.SetInt("LoadNextScene", index);
             
             
@@ -27,7 +28,9 @@ public class RandomPortal : MonoBehaviour
         }
         else if (collision.CompareTag("Player") && check >= 3)
         {
-            SceneManager.LoadScene("BossScene");
+            PlayerPrefs.SetInt("LoadNextScene", 7);
+            SceneManager.LoadScene("LoadingScene");
+            
         }
     }
 }

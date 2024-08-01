@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootPrefab: {fileID: 3198062809190854246, guid: 4b731435cc429ca47a0dea774819fa3f, type: 3}
   lootName: MiniGun
-  lootChance: 50
+  lootChance: 20
   lootSprite: {fileID: -1913520986, guid: 4db22dcf79f38184997f8e1f31702ea0, type: 3}
