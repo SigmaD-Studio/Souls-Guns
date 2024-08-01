@@ -20,7 +20,7 @@ TagManager:
   - Player
   - Map
   - BulletLayer
-  - 
+  - Spawner
   - 
   - 
   - 
@@ -46,16 +46,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: "th\u1EA3m c\u1ECF"
-    uniqueID: 4285885145
-    locked: 0
-  - name: Platforms
-    uniqueID: 4130283395
-    locked: 0
-  - name: Item TM
-    uniqueID: 948795691
-    locked: 0
-  - name: Item2 TM
-    uniqueID: 3192914153
     locked: 0

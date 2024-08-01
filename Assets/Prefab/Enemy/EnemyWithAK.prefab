@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4389541124983119771}
   m_Layer: 0
   m_Name: EnemyWithAK
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1117739269, guid: e71a0887d0061a347b88d03dd0927a39, type: 3}
+  m_Sprite: {fileID: 1055875329, guid: cafd80dbd06834045aba0e1df1e456f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,6 +109,7 @@ MonoBehaviour:
   gun: {fileID: 6502812908829730578}
   rof: 0.2
   burstDelay: 2
+  trackRange: 5
 --- !u!114 &1542370519185420588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,18 +215,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.05669105, y: -0.0076760054}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.85714287, y: 1.4285715}
+    oldSize: {x: 0.875, y: 1.25}
     newSize: {x: 0.9375, y: 1.375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.85714287, y: 1.4285715}
+  m_Size: {x: 0.7437608, y: 1.2675545}
   m_EdgeRadius: 0
 --- !u!1 &4008939635368822546
 GameObject:
@@ -281,12 +282,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 4724878119751480695}
     m_Modifications:
     - target: {fileID: 709844679249728993, guid: 218d5e6d8430bc24f8d38ac7af5c32c1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.656316
+      objectReference: {fileID: 0}
+    - target: {fileID: 709844679249728993, guid: 218d5e6d8430bc24f8d38ac7af5c32c1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6674121
+      objectReference: {fileID: 0}
+    - target: {fileID: 709844679249728993, guid: 218d5e6d8430bc24f8d38ac7af5c32c1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.54
+      value: 0.474
       objectReference: {fileID: 0}
     - target: {fileID: 709844679249728993, guid: 218d5e6d8430bc24f8d38ac7af5c32c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.11
+      value: -0.1005
       objectReference: {fileID: 0}
     - target: {fileID: 709844679249728993, guid: 218d5e6d8430bc24f8d38ac7af5c32c1, type: 3}
       propertyPath: m_LocalPosition.z

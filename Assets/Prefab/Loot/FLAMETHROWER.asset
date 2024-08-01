@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootPrefab: {fileID: 1317723471862976240, guid: 3539c130099a81b49bc8121180ad7502, type: 3}
   lootName: FlameThrower
-  lootChance: 20
+  lootChance: 50
   lootSprite: {fileID: -352234833, guid: 4db22dcf79f38184997f8e1f31702ea0, type: 3}

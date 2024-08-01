@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootPrefab: {fileID: 522923638847569862, guid: 485adc1892a1e2541b50924721eef3f4, type: 3}
   lootName: PumpShotgun
-  lootChance: 25
+  lootChance: 80
   lootSprite: {fileID: -1988068279, guid: 4db22dcf79f38184997f8e1f31702ea0, type: 3}

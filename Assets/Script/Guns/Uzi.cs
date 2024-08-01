@@ -45,6 +45,10 @@ public class Uzi : BaseWeapon
 
             fireTimer -= Time.deltaTime;
         }
+        if (currentAmmo <= 0 && currentAmmoStorage <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Shoot()

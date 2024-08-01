@@ -1,28 +1,60 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
+using TMPro;
 
-public class DE : BaseWeapon
+public class DE : MonoBehaviour
 {
-    public Transform firePoint;
-    public Transform flashPoint;
-    public GameObject bulletPrefab;
-    public GameObject muzzleFlashPrefab;
-    public float bulletSpeed = 20f;
-    public float fireRate = 0.1f;
-    public float muzzleFlashDuration = 0.05f;
-    public float spreadAngle = 5f;
+    public Transform firePoint; // The point where bullets are instantiated
+    public Transform muzzleFlashPoint; // The point where muzzle flash appears
+    public GameObject bulletPrefab; // The bullet prefab to instantiate
+    public GameObject muzzleFlashPrefab; // The muzzle flash prefab to instantiate
+    public float bulletSpeed = 20f; // Speed of the bullets
+    public float fireRate = 0.3f; // Time between shots
+    public int maxAmmo = 6; // Maximum ammo capacity
+    public float reloadTime = 2f; // Time it takes to reload
+    public float muzzleFlashDuration = 0.05f; // Duration of the muzzle flash
+    public string gunName = "Desert Eagle"; // Name of the gun
 
-    private float fireTimer;
+    TextMeshProUGUI ammoText; // Reference to UI text for displaying ammo count
+    TextMeshProUGUI gunNameText; // Reference to UI text for displaying gun name
+    Slider reloadSlider; // Reference to UI Slider for reload progress
 
-    public override void Start()
+    private int currentAmmo; // Current ammo count
+    private float fireTimer; // Timer to handle fire rate
+    private bool isReloading = false; // Flag to check if reloading
+
+    GameObject UI;
+
+
+    void FindUI()
     {
-        base.Start();
+        UI = GameObject.Find("UICanvas");
+        ammoText = GameObject.Find("AmmoStorage").GetComponent<TextMeshProUGUI>();
+        gunNameText = GameObject.Find("GunName").GetComponent<TextMeshProUGUI>();
+        reloadSlider = GameObject.Find("GunSlider").GetComponent<Slider>();
+    }
+
+
+    void Start()
+    {
+        FindUI();
+        InitializeAmmo();
+        
+    }
+    private void OnEnable()
+    {
+        if (isEquiped)
+        {
+            GetComponent<Collider2D>().enabled = false;
+            UpdateUI();
+        }
+        
     }
 
     void Update()
     {
-        if (isEquipped)
-        {
+
             if (isReloading)
             {
                 return;
@@ -30,10 +62,10 @@ public class DE : BaseWeapon
 
             if (currentAmmo <= 0 || Input.GetKeyDown(KeyCode.R))
             {
-                if (currentAmmoStorage > 0)
-                {
-                    StartCoroutine(Reload());
-                }
+
+                StartCoroutine(Reload());
+
+                // No need to destroy the gun object when out of ammo
                 return;
             }
 
@@ -42,54 +74,16 @@ public class DE : BaseWeapon
                 Shoot();
                 fireTimer = fireRate;
             }
-
-            fireTimer -= Time.deltaTime;
-        }
+        fireTimer -= Time.deltaTime;
     }
-    public override IEnumerator Reload()
-    {
-        isReloading = true;
 
-        if (reloadSlider != null)
-        {
-            reloadSlider.gameObject.SetActive(true);
-            reloadSlider.value = 0f;
-        }
-
-        float timer = 0f;
-        while (timer < reloadTime)
-        {
-            if (reloadSlider != null)
-            {
-                reloadSlider.value = Mathf.Lerp(0f, maxAmmo, timer / reloadTime);
-            }
-            timer += Time.deltaTime;
-            yield return null;
-        }
-
-        int ammoNeeded = maxAmmo - currentAmmo;
-        int ammoToReload = Mathf.Min(currentAmmoStorage, ammoNeeded);
-        currentAmmo += ammoToReload;
-        currentAmmoStorage = ammoToReload;
-
-        isReloading = false;
-
-        if (reloadSlider != null)
-        {
-            reloadSlider.gameObject.SetActive(true);
-        }
-
-        UpdateUI();
-    }
     void Shoot()
     {
         currentAmmo--;
 
-        float angle = Random.Range(-spreadAngle / 2, spreadAngle / 2);
-        Quaternion rotation = firePoint.rotation * Quaternion.Euler(0, 0, angle);
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, rotation);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.velocity = rotation * Vector2.right * bulletSpeed;
+        rb.velocity = firePoint.right * bulletSpeed;
 
         StartCoroutine(ShowMuzzleFlash());
 
@@ -98,10 +92,79 @@ public class DE : BaseWeapon
 
     IEnumerator ShowMuzzleFlash()
     {
-        GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, flashPoint.position, flashPoint.rotation, firePoint);
+        GameObject muzzleFlash = Instantiate(muzzleFlashPrefab, muzzleFlashPoint.position, muzzleFlashPoint.rotation);
         muzzleFlash.SetActive(true);
         yield return new WaitForSeconds(muzzleFlashDuration);
         muzzleFlash.SetActive(false);
         Destroy(muzzleFlash);
+    }
+
+    IEnumerator Reload()
+    {
+        isReloading = true;
+
+        if (reloadSlider != null)
+        {
+            reloadSlider.gameObject.SetActive(true); // Show the reload slider
+            reloadSlider.value = 0f; // Reset the slider value
+        }
+
+        float timer = 0f;
+        while (timer < reloadTime)
+        {
+            if (reloadSlider != null)
+            {
+                reloadSlider.value = Mathf.Lerp(0f, maxAmmo, timer / reloadTime); // Update slider value based on reload progress
+            }
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        int ammoNeeded = maxAmmo - currentAmmo;
+        int ammoToReload = Mathf.Min(maxAmmo, ammoNeeded);
+        currentAmmo += ammoToReload;
+        //maxAmmo = ammoToReload;
+
+        isReloading = false;
+
+        if (reloadSlider != null)
+        {
+            reloadSlider.gameObject.SetActive(true); // Hide the reload slider
+        }
+
+        UpdateUI();
+    }
+
+    void InitializeAmmo()
+    {
+        currentAmmo = maxAmmo;
+    }
+
+    void UpdateUI()
+    {
+
+        gunNameText.text = gunName;
+        ammoText.text = "" + currentAmmo + " / " + maxAmmo;
+        reloadSlider.value = currentAmmo; // Update slider value based on current ammo
+        reloadSlider.maxValue = maxAmmo;  // Set the max value of the slider to the max ammo
+
+        bool shouldShowReloadSlider = maxAmmo > 0 || currentAmmo > 0; // Show slider if either storage or ammo is greater than zero
+        reloadSlider.gameObject.SetActive(shouldShowReloadSlider);
+
+        if (currentAmmo == 0 && !isReloading)
+        {
+            reloadSlider.value = 1f; // Set the slider value to maximum to indicate completed reload
+        }
+        else if (isReloading && currentAmmo < maxAmmo)
+        {
+            reloadSlider.value = Mathf.Lerp(0f, maxAmmo, (maxAmmo - currentAmmo) / (float)maxAmmo); // Update slider value based on reload progress
+        }
+
+    }
+    private bool isEquiped = false;
+    public void isEquiping(bool value)
+    {
+        isEquiped = value;
+        Debug.Log("IsEquiped");
     }
 }

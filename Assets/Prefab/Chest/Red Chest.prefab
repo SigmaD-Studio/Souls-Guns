@@ -102,10 +102,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LootList:
   - {fileID: 11400000, guid: 885930e77c3d5824e80666e9a4831f0e, type: 2}
-  - {fileID: 11400000, guid: bc6be8fc848093447a3f2db753978a56, type: 2}
+  - {fileID: 11400000, guid: 0a0ce27ffa6b9cb439a93b4a59d57bf7, type: 2}
   - {fileID: 11400000, guid: 50e9125522cb05f43923aa7d5c9a54d8, type: 2}
   - {fileID: 11400000, guid: 22f18376679442340bac26c50558211d, type: 2}
-  lootPrefab: {fileID: 3237234615776532037, guid: a9290d35da4dfe44c8cae9b4d1a1a7f8, type: 3}
+  - {fileID: 11400000, guid: 764c19c5778d21245937ab1299acd440, type: 2}
+  - {fileID: 11400000, guid: 37bede2ce83c39e46958739435e0caac, type: 2}
+  - {fileID: 11400000, guid: 3881c60dcbdb77e43a6553a5c21671d1, type: 2}
 --- !u!114 &3476988782313451582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +150,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.008823991, y: -0.6353379}
