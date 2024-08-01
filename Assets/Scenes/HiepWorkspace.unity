@@ -488,6 +488,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2128986945524853181, guid: ebec9bc84816f4743be663453371d527, type: 3}
+      propertyPath: m_text
+      value: Name
+      objectReference: {fileID: 0}
     - target: {fileID: 3247867800300063752, guid: ebec9bc84816f4743be663453371d527, type: 3}
       propertyPath: immunity
       value: 3
@@ -556,6 +560,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 545643445}
+    - target: {fileID: 6551576047060986061, guid: ebec9bc84816f4743be663453371d527, type: 3}
+      propertyPath: m_text
+      value: 0/0
+      objectReference: {fileID: 0}
     - target: {fileID: 6564018821435379719, guid: ebec9bc84816f4743be663453371d527, type: 3}
       propertyPath: m_Name
       value: Shogun_ver1.0.1_1
