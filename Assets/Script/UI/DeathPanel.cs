@@ -6,15 +6,16 @@ using UnityEngine.SceneManagement;
 public class DeathPanel : MonoBehaviour
 {
     [SerializeField] GameObject player;
-    private void OnEnable()
+    private void Update()
     {
-        
-        
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            ReturnLobby();
+        }
     }
     public void ReturnLobby()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("1");
+        SceneManager.LoadScene("MainMenu");
         Destroy(player);
     }
 }

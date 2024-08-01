@@ -30,9 +30,10 @@ public class AssaultRifle : MonoBehaviour
 
     void FindUI()
     {
-        ammoText = GameObject.Find("AmmoStorage").GetComponent<TextMeshProUGUI>();
+        
         gunNameText = GameObject.Find("GunName").GetComponent<TextMeshProUGUI>();
         reloadSlider = GameObject.Find("GunSlider").GetComponent<Slider>();
+        ammoText = GameObject.Find("AmmoStorage").GetComponent<TextMeshProUGUI>();
     }
 
     private bool isEquiped = false;

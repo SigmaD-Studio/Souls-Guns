@@ -169,7 +169,7 @@ MonoBehaviour:
   bulletSpeed: 20
   fireRate: 0.05
   maxAmmo: 100
-  maxAmmoStorage: 500
+  maxAmmoStorage: 1000
   reloadTime: 4
   muzzleFlashDuration: 0.05
   spreadAngle: 20
