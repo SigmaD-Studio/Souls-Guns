@@ -6,7 +6,7 @@ using UnityEngine;
 public class DamagedHandle : MonoBehaviour
 {
     UIHPHandler ui;
-    public float imutity;
+    public float immunity;
 
     private SpriteRenderer sr;
     bool isTakingDamage = false;
@@ -36,7 +36,7 @@ public class DamagedHandle : MonoBehaviour
         
         float timer = 0f;
         ui.Damaged();
-        while (timer < imutity)
+        while (timer < immunity)
         {
             StartCoroutine(Flashing());
             timer += Time.deltaTime;  
