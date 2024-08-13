@@ -15,4 +15,8 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+    private void Update()
+    {
+        Destroy(GameObject.FindWithTag("Player"));
+    }
 }

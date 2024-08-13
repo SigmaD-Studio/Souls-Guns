@@ -26,7 +26,7 @@ public class RandomPortal : MonoBehaviour
 
             SceneManager.LoadScene("LoadingScene");
         }
-        else if (collision.CompareTag("Player") && check >= 3)
+        else if (collision.CompareTag("Player") && check >= 2)
         {
             PlayerPrefs.SetInt("LoadNextScene", 7);
             SceneManager.LoadScene("LoadingScene");

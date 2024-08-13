@@ -10,6 +10,7 @@ public class Reseter : MonoBehaviour
         
         PlayerPrefs.SetInt("SceneLoaded", 0);
         PlayerPrefs.SetInt("Life", 6);
+        PlayerPrefs.SetInt("Money", 0);
     }
 
     

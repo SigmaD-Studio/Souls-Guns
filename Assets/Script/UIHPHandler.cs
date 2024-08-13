@@ -9,6 +9,7 @@ public class UIHPHandler : MonoBehaviour
     int life = 6;
     [SerializeField] GameObject[] lifeHearts;
     [SerializeField] GameObject Death;
+    [SerializeField] TextMeshProUGUI money;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class UIHPHandler : MonoBehaviour
         {
             go.active = false;
         }
+        
     }
 
 
@@ -28,7 +30,7 @@ public class UIHPHandler : MonoBehaviour
         {
             lifeHearts[i].active = true;
         }
-        
+        money.text = "Money: " + PlayerPrefs.GetInt("Money").ToString();
     }
 
 
@@ -49,6 +51,11 @@ public class UIHPHandler : MonoBehaviour
         PlayerPrefs.SetInt("Life", life);
     }
 
+    public void GainMoney(int amount)
+    {
+        int gain = PlayerPrefs.GetInt("Money") + amount;
+        PlayerPrefs.SetInt("Money", gain);
+    }
 
 
 }

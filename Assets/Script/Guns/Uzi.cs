@@ -5,6 +5,7 @@ using TMPro;
 
 public class Uzi : MonoBehaviour
 {
+<<<<<<< Updated upstream
     public Transform firePoint; // The point where bullets are instantiated
     public Transform flashPoint; // The point where muzzle flash appears
     public GameObject bulletPrefab; // The bullet prefab to instantiate
@@ -17,6 +18,19 @@ public class Uzi : MonoBehaviour
     public float muzzleFlashDuration = 0.05f; // Duration of the muzzle flash
     public float spreadAngle = 5f; // Bullet spread angle
     public string gunName = "Uzi"; // Name of the gun
+=======
+    public Transform firePoint;
+    public Transform flashPoint;
+    public GameObject bulletPrefab;
+    public GameObject muzzleFlashPrefab;
+    public float bulletSpeed = 20f;
+    public float fireRate = 0.1f;
+    public float muzzleFlashDuration = 0.05f;
+    public float spreadAngle = 5f;
+    public AudioClip shootSound;
+    public AudioClip reloadSound;
+    AudioSource audioSource;
+>>>>>>> Stashed changes
 
     private int currentAmmo; // Current ammo count
     private int currentAmmoStorage; // Current ammo storage count
@@ -30,6 +44,7 @@ public class Uzi : MonoBehaviour
 
     void FindUI()
     {
+<<<<<<< Updated upstream
         ammoText = GameObject.Find("AmmoStorage").GetComponent<TextMeshProUGUI>();
         gunNameText = GameObject.Find("GunName").GetComponent<TextMeshProUGUI>();
         reloadSlider = GameObject.Find("GunSlider").GetComponent<Slider>();
@@ -79,6 +94,10 @@ public class Uzi : MonoBehaviour
             reloadSlider.value = Mathf.Lerp(0f, maxAmmo, (maxAmmo - currentAmmo) / (float)maxAmmo); // Update slider value based on reload progress
         }
 
+=======
+        audioSource = GetComponent<AudioSource>();
+        base.Start();
+>>>>>>> Stashed changes
     }
 
     void Update()
@@ -94,6 +113,7 @@ public class Uzi : MonoBehaviour
             {
                 if (currentAmmoStorage > 0)
                 {
+                    audioSource.PlayOneShot(reloadSound);
                     StartCoroutine(Reload());
                 }
                 // No need to destroy the gun object when out of ammo
@@ -117,8 +137,12 @@ public class Uzi : MonoBehaviour
     void Shoot()
     {
         currentAmmo--;
+<<<<<<< Updated upstream
 
         // Instantiate the bullet with spread
+=======
+        audioSource.PlayOneShot(reloadSound);
+>>>>>>> Stashed changes
         float angle = Random.Range(-spreadAngle / 2, spreadAngle / 2);
         Quaternion rotation = firePoint.rotation * Quaternion.Euler(0, 0, angle);
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, rotation);

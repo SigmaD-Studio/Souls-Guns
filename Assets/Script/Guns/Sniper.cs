@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Sniper : MonoBehaviour
 {
+<<<<<<< Updated upstream
     public Transform firePoint; // The point where bullets are instantiated
     public Transform flashPoint; // The point where muzzle flash appears
     public GameObject bulletPrefab; // The bullet prefab to instantiate
@@ -22,6 +23,21 @@ public class Sniper : MonoBehaviour
     private int currentAmmoStorage; // Current ammo storage count
     private float fireTimer; // Timer to handle fire rate
     private bool isReloading = false; // Flag to check if reloading
+=======
+    public Transform firePoint;
+    public Transform flashPoint;
+    public GameObject bulletPrefab;
+    public GameObject muzzleFlashPrefab;
+    public float bulletSpeed = 20f;
+    public float fireRate = 0.1f;
+    public float muzzleFlashDuration = 0.05f;
+    public float spreadAngle = 5f;
+    public AudioClip shootSound;
+    public AudioClip reloadSound;
+
+    private float fireTimer;
+    AudioSource audioSource;
+>>>>>>> Stashed changes
 
 
     public TextMeshProUGUI ammoText; // Reference to UI text for displaying ammo count
@@ -30,6 +46,7 @@ public class Sniper : MonoBehaviour
 
     void FindUI()
     {
+<<<<<<< Updated upstream
         ammoText = GameObject.Find("AmmoStorage").GetComponent<TextMeshProUGUI>();
         gunNameText = GameObject.Find("GunName").GetComponent<TextMeshProUGUI>();
         reloadSlider = GameObject.Find("GunSlider").GetComponent<Slider>();
@@ -79,6 +96,10 @@ public class Sniper : MonoBehaviour
             reloadSlider.value = Mathf.Lerp(0f, maxAmmo, (maxAmmo - currentAmmo) / (float)maxAmmo); // Update slider value based on reload progress
         }
 
+=======
+        base.Start();
+        audioSource = GetComponent<AudioSource>();
+>>>>>>> Stashed changes
     }
 
     void Update()
@@ -94,6 +115,7 @@ public class Sniper : MonoBehaviour
             {
                 if (currentAmmoStorage > 0)
                 {
+                    audioSource.PlayOneShot(reloadSound);
                     StartCoroutine(Reload());
                 }
                 // No need to destroy the gun object when out of ammo
@@ -117,6 +139,7 @@ public class Sniper : MonoBehaviour
     void Shoot()
     {
         currentAmmo--;
+        audioSource.PlayOneShot(shootSound);
 
         // Instantiate the bullet with spread
         float angle = Random.Range(-spreadAngle / 2, spreadAngle / 2);

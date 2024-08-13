@@ -99,21 +99,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99abbb055cbb79d46bc7f34c43ba4824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponName: Flame Thrower
+  maxAmmo: 200
+  maxAmmoStorage: 2000
+  reloadTime: 2
+  isReloading: 0
+  ammoText: {fileID: 0}
+  gunNameText: {fileID: 0}
+  reloadSlider: {fileID: 0}
   firePoint: {fileID: 3787180448820693900}
   flashPoint: {fileID: 0}
   bulletPrefab: {fileID: 7466996168039293280, guid: 61833293818d2264b861c96eb8294c15, type: 3}
   muzzleFlashPrefab: {fileID: 618758049582583760, guid: 4c6e1bb63ae723f448c25e2e30989ee2, type: 3}
   bulletSpeed: 20
   fireRate: 0.1
-  maxAmmo: 200
-  maxAmmoStorage: 2000
-  reloadTime: 2
   muzzleFlashDuration: 0.05
   spreadAngle: 5
-  gunName: Flame Thrower
-  ammoText: {fileID: 0}
-  gunNameText: {fileID: 0}
-  reloadSlider: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: 5ecb3cffd1d3e07419200f2071380dbd, type: 3}
+  reloadSound: {fileID: 8300000, guid: d736762e1b78fa246ab2417a3f7b6bda, type: 3}
 --- !u!61 &6125544992365442086
 BoxCollider2D:
   m_ObjectHideFlags: 0

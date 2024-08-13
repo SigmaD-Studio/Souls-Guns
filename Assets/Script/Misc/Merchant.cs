@@ -15,7 +15,12 @@ public class Merchant : MonoBehaviour
     {
         if (detectPlayer && Input.GetKeyDown(KeyCode.E))
         {
-            GameObject bullet = Instantiate(chest, spawnPos.position, Quaternion.identity);
+            if (PlayerPrefs.GetInt("Money") >= 10)
+            {
+                PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") - 10);
+                GameObject bullet = Instantiate(chest, spawnPos.position, Quaternion.identity);
+            }
+                
         }
 
 
