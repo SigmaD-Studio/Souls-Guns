@@ -17,8 +17,6 @@ public class Enemy : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            int amount = Random.Range(1, 5);
-            GameObject.FindWithTag("Player").GetComponent<UIHPHandler>().GainMoney(amount);
             Die(); // Call the Die method if health is 0 or less
         }
     }

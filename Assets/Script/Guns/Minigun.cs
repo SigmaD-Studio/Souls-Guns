@@ -5,7 +5,6 @@ using TMPro;
 
 public class Minigun : MonoBehaviour
 {
-<<<<<<< Updated upstream
     public Transform firePoint; // The point where bullets are instantiated
     public Transform flashPoint; // The point where muzzle flash appears
     public GameObject bulletPrefab; // The bullet prefab to instantiate
@@ -21,17 +20,6 @@ public class Minigun : MonoBehaviour
     public TextMeshProUGUI ammoText; // Reference to UI text for displaying ammo count
     public TextMeshProUGUI gunNameText; // Reference to UI text for displaying gun name
     public Slider reloadSlider; // Reference to UI Slider for reload progress
-=======
-    public Transform firePoint;
-    public Transform flashPoint;
-    public GameObject bulletPrefab;
-    public GameObject muzzleFlashPrefab;
-    public float bulletSpeed = 20f;
-    public float fireRate = 0.1f;
-    public float muzzleFlashDuration = 0.05f;
-    public float spreadAngle = 5f;
-    public AudioClip reloadSound;
->>>>>>> Stashed changes
 
     private int currentAmmo; // Current ammo count
     private int currentAmmoStorage; // Ammo storage count
@@ -83,7 +71,6 @@ public class Minigun : MonoBehaviour
             {
                 if (currentAmmoStorage > 0)
                 {
-                    audioSource.PlayOneShot(reloadSound);
                     StartCoroutine(Reload());
                 }
                 // No need to destroy the gun object when out of ammo

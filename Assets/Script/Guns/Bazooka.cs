@@ -11,7 +11,6 @@ public class RocketLauncher : MonoBehaviour
     public GameObject bulletPrefab; // The bullet prefab to instantiate
     public GameObject muzzleFlashPrefab; // The muzzle flash prefab to instantiate
     public GameObject backFlashPrefab;
-<<<<<<< Updated upstream
     public float bulletSpeed = 20f; // Speed of the bullet
     public float fireRate = 0.1f; // Time between shots
     public int maxAmmo = 30; // Maximum ammo capacity
@@ -82,25 +81,6 @@ public class RocketLauncher : MonoBehaviour
             reloadSlider.value = Mathf.Lerp(0f, maxAmmo, (maxAmmo - currentAmmo) / (float)maxAmmo); // Update slider value based on reload progress
         }
 
-=======
-    public Transform firePoint;
-    public Transform flashPoint;
-    public GameObject bulletPrefab;
-    public GameObject muzzleFlashPrefab;
-    public float bulletSpeed = 20f;
-    public float fireRate = 0.1f;
-    public float muzzleFlashDuration = 0.05f;
-    public float spreadAngle = 5f;
-    public AudioClip shootSound;
-    public AudioClip reloadSound;
-    private float fireTimer;
-
-    AudioSource audioSource;
-    public override void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-        base.Start();
->>>>>>> Stashed changes
     }
 
     void Update()
@@ -116,7 +96,6 @@ public class RocketLauncher : MonoBehaviour
             {
                 if (currentAmmoStorage > 0)
                 {
-                    audioSource.PlayOneShot(reloadSound);
                     StartCoroutine(Reload());
                 }
                 // No need to destroy the gun object when out of ammo
@@ -143,12 +122,8 @@ public class RocketLauncher : MonoBehaviour
     void Shoot()
     {
         currentAmmo--;
-<<<<<<< Updated upstream
 
         // Instantiate the bullet with spread
-=======
-        audioSource.PlayOneShot(shootSound);
->>>>>>> Stashed changes
         float angle = Random.Range(-spreadAngle / 2, spreadAngle / 2);
         Quaternion rotation = firePoint.rotation * Quaternion.Euler(0, 0, angle);
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, rotation);

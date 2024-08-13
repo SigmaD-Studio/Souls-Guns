@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2232287776102458929}
   - component: {fileID: 940964422293124799}
   - component: {fileID: -4576081894340068519}
-  - component: {fileID: -5928729345134793726}
   m_Layer: 0
   m_Name: PumpShotgun
   m_TagString: Weapon
@@ -100,25 +99,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43e3cf180b34456429ef8c808f7ece5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponName: Shotgun
-  maxAmmo: 8
-  maxAmmoStorage: 80
-  reloadTime: 0.5
-  isReloading: 0
-  ammoText: {fileID: 0}
-  gunNameText: {fileID: 0}
-  reloadSlider: {fileID: 0}
   firePoint: {fileID: 6211476232231397070}
   flashPoint: {fileID: 1886288025984121900}
   bulletPrefab: {fileID: 4339391016594838844, guid: cf119e5fcd09f4a4a8dfcc344ab73626, type: 3}
   muzzleFlashPrefab: {fileID: 618758049582583760, guid: e1f466132fbb00441bd83be847da4eab, type: 3}
   bulletSpeed: 20
   fireRate: 1
+  maxAmmo: 8
+  maxAmmoStorage: 80
+  reloadTime: 0.5
   muzzleFlashDuration: 0.05
-  pellets: 8
   spreadAngle: 10
-  shootSound: {fileID: 8300000, guid: 785744814b52a714b8eddc22941b3e93, type: 3}
-  reloadSound: {fileID: 8300000, guid: f814257ec78cf3843992b8db7bad7bc5, type: 3}
+  gunName: Assault Rifle
+  ammoText: {fileID: 0}
+  gunNameText: {fileID: 0}
+  reloadSlider: {fileID: 0}
 --- !u!61 &-4576081894340068519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -164,102 +159,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4247944, y: 0.4375}
   m_EdgeRadius: 0
---- !u!82 &-5928729345134793726
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522923638847569862}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &5967821378090887337
 GameObject:
   m_ObjectHideFlags: 0
